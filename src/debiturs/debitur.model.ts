@@ -4,7 +4,7 @@ export interface Debitur {
   alamat: string;
   status: DebiturStatus;
 }
-export declare enum DebiturStatus {
+export enum DebiturStatus {
   OPEN = 'OPEN',
   IN_PROGRESS = 'IN_PROGRESS',
   DONE = 'DONE',
