@@ -1,6 +1,7 @@
 import { GetDebiturFiltersDto } from './dto/get-debiturs-filter.dto';
+import { UpdateDebiturStatusDto } from './dto/update-debiturs-status.dto';
+import { Debitur } from './debitur.entity';
 import { CreateDebiturDto } from './dto/create-debitur.dto';
-import { Debitur, DebiturStatus } from './debitur.model';
 import { DebitursService } from './../debiturs/debiturs.service';
 import {
   Body,
@@ -17,40 +18,41 @@ import {
 export class DebitursController {
   constructor(private debitursService: DebitursService) {}
 
-  /* A function that will be called when the user access the route /debiturs */
   @Get()
-  getDebiturs(@Query() filterDto: GetDebiturFiltersDto): Debitur[] {
-    if (Object.keys(filterDto).length) {
-      return this.debitursService.getDebiturWithFilters(filterDto);
-    } else {
-      return this.debitursService.getallDebiturs();
-    }
+  getDebiturs(
+    /* A decorator that is used to get the query parameters from the URL. */
+    @Query() filterDebitur: GetDebiturFiltersDto,
+  ): Promise<Debitur[]> {
+    /* Calling the getDebiturs function in the debiturs.service.ts file. */
+    return this.debitursService.getDebiturs(filterDebitur);
   }
 
-  /* A function that will be called when the user access the route /debiturs/:id. */
   @Get('/:id')
-  getDebiturById(@Param('id') id: string): Debitur {
+  getDebiturById(@Param('id') id: string): Promise<Debitur> {
+    /* Calling the getDebiturById function in the debiturs.service.ts file. */
     return this.debitursService.getDebiturById(id);
   }
 
-  /* A function that will be called when the user access the route /debiturs/:id. */
-  @Delete('/:id')
-  deleteDebitur(@Param('id') id: string): void {
-    this.debitursService.deleteDebitur(id);
-  }
-
-  /* A function that will be called when the user access the route /debiturs/createDebitur */
   @Post()
-  createDebitur(@Body() createDebiturDto: CreateDebiturDto): Debitur {
+  createDebitur(@Body() createDebiturDto: CreateDebiturDto): Promise<Debitur> {
+    /* Calling the createDebitur function in the debiturs.service.ts file. */
     return this.debitursService.createDebitur(createDebiturDto);
   }
 
-  /* A function that will be called when the user access the route /debiturs/:id/status. */
+  @Delete('/:id')
+  deleteDebitur(@Param('id') id: string): Promise<void> {
+    /* Calling the deleteDebitur function in the debiturs.service.ts file. */
+    return this.debitursService.deleteDebitur(id);
+  }
+
   @Patch('/:id/status')
+  /* A function that is used to update the status of the debitur. */
   updateDebiturStatus(
     @Param('id') id: string,
-    @Body('status') status: DebiturStatus,
-  ): Debitur {
+    @Body() updateDebiturStatusDto: UpdateDebiturStatusDto,
+  ): Promise<Debitur> {
+    /* Destructuring the status from the updateDebiturStatusDto. */
+    const { status } = updateDebiturStatusDto;
     return this.debitursService.updateDebiturStatus(id, status);
   }
 }
