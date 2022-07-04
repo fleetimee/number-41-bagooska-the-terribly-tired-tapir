@@ -25,6 +25,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: 'debitur-management',
       autoLoadEntities: true,
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
   ],
 })
