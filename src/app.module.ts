@@ -18,11 +18,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     // }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'ec2-44-198-82-71.compute-1.amazonaws.com',
       port: 5432,
-      username: 'postgres',
-      password: 'postgres',
-      database: 'debitur-management',
+      username: 'suawytuncesjej',
+      password:
+        '0d1f42a603a943a8292370e22b08a2d29b1e77bd625715c1002ecf835099279c',
+      database: 'db2qsjphkj009j',
       autoLoadEntities: true,
       synchronize: true,
       ssl: {
