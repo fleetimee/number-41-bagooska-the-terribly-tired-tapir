@@ -13,11 +13,14 @@ import {
   Post,
   Query,
 } from '@nestjs/common';
+import { ApiOperation, ApiParam, ApiTags } from '@nestjs/swagger';
 
 @Controller('debiturs')
+@ApiTags('Debiturs')
 export class DebitursController {
   constructor(private debitursService: DebitursService) {}
 
+  @ApiOperation({ summary: 'Get debitur with params' })
   @Get()
   getDebiturs(
     /* A decorator that is used to get the query parameters from the URL. */
@@ -27,24 +30,33 @@ export class DebitursController {
     return this.debitursService.getDebiturs(filterDebitur);
   }
 
+  @ApiOperation({ summary: 'Get debitur by id' })
   @Get('/:id')
+  @ApiParam({
+    name: 'id',
+    description: 'The ID of the debitur',
+    required: true,
+  })
   getDebiturById(@Param('id') id: string): Promise<Debitur> {
     /* Calling the getDebiturById function in the debiturs.service.ts file. */
     return this.debitursService.getDebiturById(id);
   }
 
+  @ApiOperation({ summary: 'Create new debitur' })
   @Post()
   createDebitur(@Body() createDebiturDto: CreateDebiturDto): Promise<Debitur> {
     /* Calling the createDebitur function in the debiturs.service.ts file. */
     return this.debitursService.createDebitur(createDebiturDto);
   }
 
+  @ApiOperation({ summary: 'Delete debitur' })
   @Delete('/:id')
   deleteDebitur(@Param('id') id: string): Promise<void> {
     /* Calling the deleteDebitur function in the debiturs.service.ts file. */
     return this.debitursService.deleteDebitur(id);
   }
 
+  @ApiOperation({ summary: 'Update status debitur' })
   @Patch('/:id/status')
   /* A function that is used to update the status of the debitur. */
   updateDebiturStatus(
