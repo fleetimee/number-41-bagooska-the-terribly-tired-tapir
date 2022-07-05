@@ -22,6 +22,9 @@ const config = parse(process.env.DATABASE_URL);
       database: config.database,
       autoLoadEntities: true,
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
   ],
 })
