@@ -1,6 +1,13 @@
+import { Fixed } from './../../fixeds/entities/fixed.entity';
+import { NonFixed } from './../../non-fixeds/entities/non-fixed.entity';
 import { ApiProperty } from '@nestjs/swagger';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { DebiturStatus } from './debitur-status.enum';
+import {
+  Column,
+  Entity,
+  Generated,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 /* It's a decorator that tells TypeORM that this class is an entity. */
 @Entity()
@@ -9,14 +16,17 @@ export class Debitur {
   /* It's a decorator that tells TypeORM that this column is a primary column and it uses uuid for its
 value generation strategy. */
   @ApiProperty()
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn()
   id: string;
 
-  /*  Data pribadi */
+  @Generated('uuid')
   @Column()
+  no_debitur: string;
+
+  @Column('bigint')
   nik: number;
 
-  @Column('')
+  @Column()
   nama_debitur: string;
 
   @Column()
@@ -107,6 +117,10 @@ value generation strategy. */
   kode_pos: number;
   /* End of data lokasi debitur */
 
-  @Column()
-  status: DebiturStatus;
+  // Relation
+  @OneToMany(() => NonFixed, (nonfixed) => nonfixed.debitur)
+  nonfixed: NonFixed[];
+
+  @OneToMany(() => Fixed, (fixed) => fixed.debitur)
+  fixed: Fixed[];
 }
