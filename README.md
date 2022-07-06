@@ -71,7 +71,6 @@ Postman Collection :  [https://raw.githubusercontent.com/fleetimee/solaire-demon
 #### Debiturs Module
 - [x] Search NIK
 http://localhost:3000/debiturs/?s={"nik": "35250105109123133"}
-![image](https://user-images.githubusercontent.com/45744788/177474338-552caba1-03ad-46a9-b5d4-5f11337d1b28.png)
 - [x] Show Debiturs Table 
 - [x] Full CRUD Debiturs Table with validation, pagination & filtering
 - [x] Generate Nomer Debitur menggunakan UUID
