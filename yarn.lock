@@ -749,36 +749,6 @@
   dependencies:
     uuid "8.3.2"
 
-"@nestjsx/crud-request@^5.0.0-alpha.3":
-  version "5.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@nestjsx/crud-request/-/crud-request-5.0.0-alpha.3.tgz#ee62f5ff454daef4973990faf9d1568e2a4b9bc8"
-  integrity sha512-EFeGgh/sSHhD3px9aj4hyjvOqBepMcRFAi5lrYuSUDmnj/eQOa4dg4orehU8gKrSAmgKNe9r0dx0kel7Zgivzg==
-  dependencies:
-    "@nestjsx/util" "^5.0.0-alpha.3"
-    qs "^6.8.0"
-
-"@nestjsx/crud-typeorm@^5.0.0-alpha.3":
-  version "5.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@nestjsx/crud-typeorm/-/crud-typeorm-5.0.0-alpha.3.tgz#069dedb5cc82fd4749082594b5f6952c160fcd51"
-  integrity sha512-9FN4iBELmhhSoVJj8457kaNGFKhm7IA7zJbLJRGuIb0+12WwCOhY0/bhMg1pWgZ1qUYtkYoELyMiMDroPPtARw==
-  dependencies:
-    "@zmotivat0r/o0" "^1.0.2"
-
-"@nestjsx/crud@^5.0.0-alpha.3":
-  version "5.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@nestjsx/crud/-/crud-5.0.0-alpha.3.tgz#84d494ceb5b10135afe53c62ed2a0e8015522f8b"
-  integrity sha512-LPFtrrE4nGT1vvzM+IpA4CNazO67Tz8gc4lAfSjwujIeOHPGfj3vJKUlcU/ESRUW/t+bLOF3S1tY/N0GQ/SRyg==
-  dependencies:
-    "@nestjsx/crud-request" "^5.0.0-alpha.3"
-    "@nestjsx/util" "^5.0.0-alpha.3"
-    deepmerge "^3.2.0"
-    pluralize "^8.0.0"
-
-"@nestjsx/util@^5.0.0-alpha.3":
-  version "5.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@nestjsx/util/-/util-5.0.0-alpha.3.tgz#d1182280e9254f0d335efa369da17fa25d260135"
-  integrity sha512-UTYIxtyx80M42gOZ0VIInSiOLn78P6k1BCziiN8gE3FglzivQ1RGvPpmsRwioYEWG27gOgnMwOQnXv8Zbq8dzQ==
-
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -808,6 +778,36 @@
     chalk "^4.1.0"
     consola "^2.15.0"
     node-fetch "^2.6.1"
+
+"@rewiko/crud-request@^5.1.4":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@rewiko/crud-request/-/crud-request-5.1.4.tgz#ef377da4477d127b34449782f53a5bd7533b8898"
+  integrity sha512-brYimlQ7pTAcxndUc8BWBirB5VYWHsNHSOWtP3AbYs8aFaFFJ1XsR0ThM75FpKCPmYsv/s67hOT/sMG91zJvEg==
+  dependencies:
+    "@rewiko/util" "^5.1.4"
+    qs "^6.8.0"
+
+"@rewiko/crud-typeorm@^5.1.4":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@rewiko/crud-typeorm/-/crud-typeorm-5.1.4.tgz#8a8ef192bbd5175d202aa5f5df5bb5e7f6b8e9f3"
+  integrity sha512-g0d1PVme3LKjAimBul1ZJ84TZ98VjGMaNymoW2BuRxsY+VWNFLNJTIykOIl3ipCDQTTgxPNzI43MJa5CbIYZ/g==
+  dependencies:
+    "@zmotivat0r/o0" "^1.0.2"
+
+"@rewiko/crud@^5.1.4":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@rewiko/crud/-/crud-5.1.4.tgz#a5f297057c6f0c44c37b898346bc7b7b9ad5518a"
+  integrity sha512-n4znLzSxwX1DdXZSVCbWo63hf8YeFXOS9UIHlst5n7xG+fjWKB/24hTxKFE9DOQq4n1QiKEbyvg+mOkg7aYVlg==
+  dependencies:
+    "@rewiko/crud-request" "^5.1.4"
+    "@rewiko/util" "^5.1.4"
+    deepmerge "^3.2.0"
+    pluralize "^8.0.0"
+
+"@rewiko/util@^5.1.4":
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/@rewiko/util/-/util-5.1.4.tgz#1e989fcaed237b8235da10b7152f9210434e4157"
+  integrity sha512-aRQGDaIGUHktOH1smTXJ+2DdI18Ex7xXB8Nujoxk2f9ewwwO4JqWC4y5TLKpvfHeCrITAZW6g7/SINMZOtpgmQ==
 
 "@sinclair/typebox@^0.23.3":
   version "0.23.5"

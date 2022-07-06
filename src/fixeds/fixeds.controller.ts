@@ -4,7 +4,7 @@ import { Fixed } from './entities/fixed.entity';
 import { Controller } from '@nestjs/common';
 import { FixedsService } from './fixeds.service';
 
-import { Crud, CrudController } from '@nestjsx/crud';
+import { Crud, CrudController } from '@rewiko/crud';
 import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Penghasilan Tetap')

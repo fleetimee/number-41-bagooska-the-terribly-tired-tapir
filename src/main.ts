@@ -1,6 +1,6 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { CrudConfigService } from '@nestjsx/crud';
+import { CrudConfigService } from '@rewiko/crud';
 
 CrudConfigService.load({
   query: {

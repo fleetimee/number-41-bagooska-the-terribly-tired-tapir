@@ -1,4 +1,4 @@
-import { TypeOrmCrudService } from '@nestjsx/crud-typeorm';
+import { TypeOrmCrudService } from '@rewiko/crud-typeorm';
 import { Injectable } from '@nestjs/common';
 import { NonFixed } from './entities/non-fixed.entity';
 import { InjectRepository } from '@nestjs/typeorm';

@@ -1,7 +1,7 @@
 import { CreateDebiturDto } from './dto/create-debitur.dto';
 import { Controller } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
-import { Crud, CrudController } from '@nestjsx/crud';
+import { Crud, CrudController } from '@rewiko/crud';
 import { DebitursService } from './debiturs.service';
 import { Debitur } from './entities/debitur.entity';
 
@@ -22,7 +22,6 @@ import { Debitur } from './entities/debitur.entity';
       },
       fixed: {
         eager: true,
-        alias: 'penghasilan_tetap',
       },
     },
   },

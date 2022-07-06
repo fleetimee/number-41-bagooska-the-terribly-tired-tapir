@@ -1,12 +1,6 @@
 import { JenisPenggunaan } from './../enum/jenis-penggunaan.enum';
 import { JenisPengajuan } from './../enum/jenis-pengajuan.enum';
-import {
-  Column,
-  Entity,
-  JoinColumn,
-  ManyToOne,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
 
 @Entity()
@@ -70,6 +64,5 @@ export class Fixed {
 
   // Relationship
   @ManyToOne(() => Debitur, (debitur) => debitur.fixed)
-  @JoinColumn([{ name: 'debitur_id', referencedColumnName: 'id' }])
   debitur: Debitur;
 }

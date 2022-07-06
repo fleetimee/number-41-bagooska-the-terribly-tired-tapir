@@ -1,4 +1,4 @@
-import { TypeOrmCrudService } from '@nestjsx/crud-typeorm';
+import { TypeOrmCrudService } from '@rewiko/crud-typeorm';
 import { Injectable } from '@nestjs/common';
 import { Debitur } from './entities/debitur.entity';
 import { InjectRepository } from '@nestjs/typeorm';
