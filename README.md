@@ -1,5 +1,12 @@
 # Backend AKM menggunakan Express
 
+### Usage
+```
+git clone https://github.com/fleetimee/solaire-demon.git
+cd solaire-demon
+Edit src/app.module for postgres configuration
+yarn start:dev
+```
 ### Kesulitan
 Siang mas Bima saya masih bingung untuk menyimpan data penghasilan tetap dan penghasilan tidak tetap
 
@@ -44,7 +51,6 @@ Response penghasilan tetap :
   "page": 1,
   "pageCount": 1
 }
-
 ```
 
 ### Api Endpoint
@@ -58,7 +64,6 @@ Response penghasilan tetap :
 ![image](https://user-images.githubusercontent.com/45744788/177477728-45037c0d-6a2f-41c7-8c7b-94a2586d1823.png)
 
 API Documentation : [https://fleetime-sigma.herokuapp.com/api/](https://fleetime-sigma.herokuapp.com/api/)
-
 Postman Collection :  [https://raw.githubusercontent.com/fleetimee/solaire-demon/master/postman.json](https://raw.githubusercontent.com/fleetimee/solaire-demon/master/postman.json)
 
 ### Webservice To-do
