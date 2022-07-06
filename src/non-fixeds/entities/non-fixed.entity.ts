@@ -25,16 +25,16 @@ export class NonFixed {
   jangka_waktu: string;
 
   // Riwayat data kredit
-  @Column('bigint')
+  @Column('bigint', { nullable: true })
   no_rekening: number;
 
-  @Column('bigint')
+  @Column('bigint', { nullable: true })
   plafon_kredit: number;
 
-  @Column('date')
+  @Column('date', { nullable: true })
   tanggal_mulai_kredit: string;
 
-  @Column()
+  @Column({ nullable: true })
   jangka_waktu_kredit: string;
 
   // Relation

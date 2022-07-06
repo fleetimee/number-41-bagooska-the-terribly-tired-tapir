@@ -16,12 +16,14 @@ import { ApiTags } from '@nestjs/swagger';
     join: {
       debitur: {
         eager: true,
+        allow: ['nama_debitur', 'no_debitur'],
       },
     },
   },
   dto: {
     create: CreateFixedDto,
     update: UpdateFixedDto,
+    replace: UpdateFixedDto,
   },
 })
 @Controller('fixeds')

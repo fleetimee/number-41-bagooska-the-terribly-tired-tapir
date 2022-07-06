@@ -20,7 +20,7 @@ value generation strategy. */
   id: string;
 
   @Generated('uuid')
-  @Column()
+  @Column({ unique: true })
   no_debitur: string;
 
   @Column('bigint')
