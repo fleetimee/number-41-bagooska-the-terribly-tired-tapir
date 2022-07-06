@@ -1,5 +1,14 @@
 # Backend AKM menggunakan Express
 
+### Api Endpoint
+
+- /debiturs = Untuk menginputkan Data Debitur => Mendapatkan Nomer Debitur Secara Otomatis
+- /fixeds = Formulir Pendapatan Tetap (Mengambil Nama Debitur dan Nomor Debitur dari tabel Debiturs)
+- /non-fixeds = Fomulir Pendapatan Tidak Tetap
+
+![image](https://user-images.githubusercontent.com/45744788/177477728-45037c0d-6a2f-41c7-8c7b-94a2586d1823.png)
+
+API Documentation : [https://fleetime-sigma.herokuapp.com/api/](https://fleetime-sigma.herokuapp.com/api/)
 
 ### Webservice To-do
 
