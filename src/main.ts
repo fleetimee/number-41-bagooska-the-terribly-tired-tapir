@@ -1,14 +1,14 @@
-import { ValidationPipe } from '@nestjs/common';
-import { NestFactory } from '@nestjs/core';
-import { CrudConfigService } from '@rewiko/crud';
+import { ValidationPipe } from "@nestjs/common";
+import { NestFactory } from "@nestjs/core";
+import { CrudConfigService } from "@rewiko/crud";
 
 CrudConfigService.load({
-  query: {
-    alwaysPaginate: true,
-  },
+  // query: {
+  //   alwaysPaginate: true,
+  // },
 });
-import { AppModule } from './app.module';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { AppModule } from "./app.module";
+import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
 
 async function bootstrap() {
   /* It creates an instance of the NestJS application. */
@@ -19,13 +19,13 @@ async function bootstrap() {
 
   /* Creating a swagger documentation. */
   const config = new DocumentBuilder()
-    .setTitle('Analisis Kredit Mikro')
-    .setDescription('API Documentation untuk Analisis Kredit Mikro')
-    .setVersion('1.0')
+    .setTitle("Analisis Kredit Mikro")
+    .setDescription("API Documentation untuk Analisis Kredit Mikro")
+    .setVersion("1.0")
 
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup("api", app, document);
 
   /* A global pipe that validates the data that is passed to the controller. */
   app.useGlobalPipes(new ValidationPipe());
