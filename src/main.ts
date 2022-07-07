@@ -3,9 +3,9 @@ import { NestFactory } from "@nestjs/core";
 import { CrudConfigService } from "@rewiko/crud";
 
 CrudConfigService.load({
-  query: {
-    alwaysPaginate: true,
-  },
+  // query: {
+  //   alwaysPaginate: true,
+  // },
 });
 import { AppModule } from "./app.module";
 import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
