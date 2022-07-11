@@ -118,9 +118,14 @@ value generation strategy. */
   /* End of data lokasi debitur */
 
   // Relation
-  @OneToMany(() => NonFixed, (nonfixed) => nonfixed.debitur)
+  @OneToMany(() => NonFixed, (nonfixed) => nonfixed.debitur, {
+    onDelete: 'SET NULL',
+    onUpdate: 'CASCADE',
+  })
   nonfixed: NonFixed[];
 
-  @OneToMany(() => Fixed, (fixed) => fixed.debitur)
+  @OneToMany(() => Fixed, (fixed) => fixed.debitur, {
+    onDelete: 'CASCADE',
+  })
   fixed: Fixed[];
 }

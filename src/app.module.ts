@@ -6,8 +6,12 @@ import { NonFixedsModule } from './non-fixeds/non-fixeds.module';
 import { DebitursModule } from './debiturs/debiturs.module';
 
 // For Deploying to Heroku
-import { parse } from 'pg-connection-string';
-const config = parse(process.env.DATABASE_URL);
+// import { parse } from 'pg-connection-string';
+import { UsersModule } from './users/users.module';
+import { RolesModule } from './roles/roles.module';
+import { SubmissionsModule } from './submissions/submissions.module';
+
+// const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
 //       type: 'postgres',
 //       host: config.host,
@@ -29,17 +33,18 @@ const config = parse(process.env.DATABASE_URL);
     DebitursModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: config.host,
+      host: 'localhost',
       port: 5432,
-      username: config.user,
-      password: config.password,
-      database: config.database,
+      username: 'postgres',
+      password: 'postgres',
+      database: 'webservice',
       autoLoadEntities: true,
       synchronize: true,
-      ssl: {
-        rejectUnauthorized: false,
-      },
+      logging: true,
     }),
+    UsersModule,
+    RolesModule,
+    SubmissionsModule,
   ],
 })
 export class AppModule {}
