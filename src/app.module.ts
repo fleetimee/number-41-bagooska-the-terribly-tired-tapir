@@ -6,8 +6,16 @@ import { NonFixedsModule } from './non-fixeds/non-fixeds.module';
 import { DebitursModule } from './debiturs/debiturs.module';
 
 // For Deploying to Heroku
-import { parse } from 'pg-connection-string';
-const config = parse(process.env.DATABASE_URL);
+// import { parse } from 'pg-connection-string';
+import { UsersModule } from './users/users.module';
+import { RolesModule } from './roles/roles.module';
+import { SubmissionsModule } from './submissions/submissions.module';
+import { UploadsModule } from './uploads/uploads.module';
+import { CollateralsModule } from './collaterals/collaterals.module';
+import { AnalysisModule } from './business_analysis/analysis.module';
+import { CharacterAnalysisModule } from './character_analysis/character_analysis.module';
+
+// const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
 //       type: 'postgres',
 //       host: config.host,
@@ -29,17 +37,22 @@ const config = parse(process.env.DATABASE_URL);
     DebitursModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: config.host,
+      host: 'localhost',
       port: 5432,
-      username: config.user,
-      password: config.password,
-      database: config.database,
+      username: 'postgres',
+      password: 'postgres',
+      database: 'webservice',
       autoLoadEntities: true,
       synchronize: true,
-      ssl: {
-        rejectUnauthorized: false,
-      },
+      logging: true,
     }),
+    UsersModule,
+    RolesModule,
+    SubmissionsModule,
+    UploadsModule,
+    CollateralsModule,
+    AnalysisModule,
+    CharacterAnalysisModule,
   ],
 })
 export class AppModule {}

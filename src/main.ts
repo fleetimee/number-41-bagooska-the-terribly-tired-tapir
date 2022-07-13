@@ -2,6 +2,7 @@ import { ValidationPipe } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
 import { CrudConfigService } from "@rewiko/crud";
 
+/* A configuration for the Crud module. */
 CrudConfigService.load({
   // query: {
   //   alwaysPaginate: true,
@@ -10,12 +11,21 @@ CrudConfigService.load({
 import { AppModule } from "./app.module";
 import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
 
+/* For hot reloading. */
+declare const module: any;
+
 async function bootstrap() {
   /* It creates an instance of the NestJS application. */
   const app = await NestFactory.create(AppModule);
 
   /* It enables CORS. */
   app.enableCors();
+
+  /* For hot reloading. */
+  if (module.hot) {
+    module.hot.accept();
+    module.hot.dispose(() => app.close());
+  }
 
   /* Creating a swagger documentation. */
   const config = new DocumentBuilder()

@@ -18,7 +18,18 @@ import { ApiTags } from '@nestjs/swagger';
         eager: true,
         allow: ['nama_debitur', 'no_debitur'],
       },
+      createdBy: {
+        eager: true,
+        allow: ['username'],
+        exclude: ['password'],
+      },
     },
+    sort: [
+      {
+        field: 'id',
+        order: 'ASC',
+      },
+    ],
   },
   dto: {
     create: CreateFixedDto,

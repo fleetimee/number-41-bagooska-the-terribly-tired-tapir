@@ -1,7 +1,19 @@
 import { JenisPenggunaan } from './../enum/jenis-penggunaan.enum';
 import { JenisPengajuan } from './../enum/jenis-pengajuan.enum';
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  BeforeInsert,
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToMany,
+  ManyToOne,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
+import { customAlphabet } from 'nanoid/non-secure';
+import { User } from 'src/users/entities/user.entity';
+import { Submission } from 'src/submissions/entities/submission.entity';
 
 @Entity()
 export class Fixed {
@@ -62,7 +74,42 @@ export class Fixed {
   @Column({ nullable: true })
   jangka_waktu_kredit: string;
 
+  // Status
+  @Column({ default: false })
+  is_approved: boolean;
+
+  // Date now
+  // @Column('date', { default: () => 'CURRENT_DATE' })
+  // tanggal_pengajuan: string;
+
+  // Generate nomer pengajuan
+  // @Column('varchar', { default: () => `'${nanoid()}'` })
+  // no_pengajuan: string;
+
+  /* A column definition. */
+  // @Column('varchar', { length: 10, nullable: true })
+  // no_pengajuan: string;
+
+  /* A hook that is called before the entity is inserted into the database. */
+  // @BeforeInsert()
+  // generateNoPengajuan() {
+  //   const nanoid = customAlphabet('1234567890', 10);
+  //   this.no_pengajuan = nanoid();
+  // }
+
   // Relationship
-  @ManyToOne(() => Debitur, (debitur) => debitur.fixed)
+  @ManyToOne(() => Debitur, (debitur) => debitur.fixed, {
+    onDelete: 'CASCADE',
+  })
   debitur: Debitur;
+
+  @ManyToOne(() => User, (user) => user, { nullable: false })
+  createdBy: User;
+
+  @OneToOne(() => User, (user) => user, { nullable: true })
+  @JoinColumn()
+  updatedBy: User;
+
+  @ManyToMany(() => Submission, (submission) => submission.fixed)
+  submission: Submission[];
 }
