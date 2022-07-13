@@ -10,6 +10,7 @@ import { DebitursModule } from './debiturs/debiturs.module';
 import { UsersModule } from './users/users.module';
 import { RolesModule } from './roles/roles.module';
 import { SubmissionsModule } from './submissions/submissions.module';
+import { UploadsModule } from './uploads/uploads.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -45,6 +46,7 @@ import { SubmissionsModule } from './submissions/submissions.module';
     UsersModule,
     RolesModule,
     SubmissionsModule,
+    UploadsModule,
   ],
 })
 export class AppModule {}
