@@ -11,6 +11,9 @@ import { UsersModule } from './users/users.module';
 import { RolesModule } from './roles/roles.module';
 import { SubmissionsModule } from './submissions/submissions.module';
 import { UploadsModule } from './uploads/uploads.module';
+import { CollateralsModule } from './collaterals/collaterals.module';
+import { AnalysisModule } from './business_analysis/analysis.module';
+import { CharacterAnalysisModule } from './character_analysis/character_analysis.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -47,6 +50,9 @@ import { UploadsModule } from './uploads/uploads.module';
     RolesModule,
     SubmissionsModule,
     UploadsModule,
+    CollateralsModule,
+    AnalysisModule,
+    CharacterAnalysisModule,
   ],
 })
 export class AppModule {}

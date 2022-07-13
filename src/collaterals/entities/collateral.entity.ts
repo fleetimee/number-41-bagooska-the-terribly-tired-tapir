@@ -1,31 +1,46 @@
 import { Submission } from 'src/submissions/entities/submission.entity';
 import { User } from 'src/users/entities/user.entity';
 import {
-  Entity,
-  PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
-  UpdateDateColumn,
+  Entity,
   JoinColumn,
   ManyToOne,
   OneToOne,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
 } from 'typeorm';
 
 @Entity()
-export class Upload {
+export class Collateral {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  files: string;
+  barang_agunan: string;
+
+  @Column()
+  asuransi: string;
+
+  @Column('bigint')
+  nilai_agunan: number;
+
+  @Column()
+  bukti_agunan: string;
+
+  @Column()
+  ijin_milik: string;
+
+  @Column('text')
+  deskripsi_agunan: string;
 
   @CreateDateColumn()
-  createdDate: Date;
+  created_at: Date;
 
   @UpdateDateColumn()
-  updatedDate: Date;
+  updated_at: Date;
 
-  // Relation
+  // * Relation fields
 
   @ManyToOne(() => User, (user) => user, { nullable: false })
   createdBy: User;
@@ -34,7 +49,7 @@ export class Upload {
   @JoinColumn()
   updatedBy: User;
 
-  @ManyToOne(() => Submission, (submission) => submission.uploads, {
+  @ManyToOne(() => Submission, (submission) => submission.collateral, {
     cascade: true,
     onDelete: 'CASCADE',
     nullable: false,

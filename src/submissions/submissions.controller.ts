@@ -1,3 +1,4 @@
+import { Upload } from './../uploads/entities/upload.entity';
 import { Crud, CrudController } from '@rewiko/crud';
 import { Controller } from '@nestjs/common';
 import { SubmissionsService } from './submissions.service';
@@ -9,11 +10,6 @@ import { Submission } from './entities/submission.entity';
   },
   query: {
     join: {
-      createdBy: {
-        eager: true,
-        allow: ['username'],
-        exclude: ['password'],
-      },
       nonfixed: {
         eager: true,
       },
@@ -29,6 +25,23 @@ import { Submission } from './entities/submission.entity';
         eager: true,
         allow: ['nama_debitur', 'no_debitur', 'nik'],
         alias: 'debitur_tetap',
+      },
+      collateral: {
+        eager: true,
+      },
+      business_analysis: {
+        eager: true,
+      },
+      character_analysis: {
+        eager: true,
+      },
+      uploads: {
+        eager: true,
+      },
+      createdBy: {
+        eager: true,
+        allow: ['username'],
+        exclude: ['password'],
       },
     },
   },

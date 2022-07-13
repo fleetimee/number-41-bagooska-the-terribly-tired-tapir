@@ -12,6 +12,7 @@ import { UsersService } from './users.service';
     join: {
       roles: {
         eager: true,
+        allow: ['name'],
       },
       createdBy: {
         eager: true,

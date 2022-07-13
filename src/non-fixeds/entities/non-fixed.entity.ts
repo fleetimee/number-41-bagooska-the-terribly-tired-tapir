@@ -58,32 +58,11 @@ export class NonFixed {
   @Column({ default: false })
   is_approved: boolean;
 
-  // // Date now
-  // @Column('date', { default: () => 'CURRENT_DATE' })
-  // tanggal_pengajuan: string;
-
-  // Generate no pengajuan
-  /* A column definition. */
-  // @Column('varchar', { length: 10, nullable: true })
-  // no_pengajuan: string;
-
-  /* A hook that is called before the entity is inserted into the database. */
-  // @BeforeInsert()
-  // generateNoPengajuan() {
-  //   const nanoid = customAlphabet('1234567890', 10);
-  //   this.no_pengajuan = nanoid();
-  // }
-
-  // @Column('varchar', { nullable: true })
-  // nama_analis: string;
-
-  // @BeforeInsert()
-  // generateNamaAnalis() {
-  //   this.nama_analis = faker.name.findName();
-  // }
-
   // Relation
-  @ManyToOne(() => Debitur, (debitur) => debitur.nonfixed)
+  @ManyToOne(() => Debitur, (debitur) => debitur.nonfixed, {
+    cascade: true,
+    onDelete: 'CASCADE',
+  })
   debitur: Debitur;
 
   @ManyToOne(() => User, (user) => user, { nullable: false })
@@ -96,3 +75,27 @@ export class NonFixed {
   @ManyToMany(() => Submission, (submission) => submission.nonfixed)
   submission: Submission[];
 }
+
+// // Date now
+// @Column('date', { default: () => 'CURRENT_DATE' })
+// tanggal_pengajuan: string;
+
+// Generate no pengajuan
+/* A column definition. */
+// @Column('varchar', { length: 10, nullable: true })
+// no_pengajuan: string;
+
+/* A hook that is called before the entity is inserted into the database. */
+// @BeforeInsert()
+// generateNoPengajuan() {
+//   const nanoid = customAlphabet('1234567890', 10);
+//   this.no_pengajuan = nanoid();
+// }
+
+// @Column('varchar', { nullable: true })
+// nama_analis: string;
+
+// @BeforeInsert()
+// generateNamaAnalis() {
+//   this.nama_analis = faker.name.findName();
+// }

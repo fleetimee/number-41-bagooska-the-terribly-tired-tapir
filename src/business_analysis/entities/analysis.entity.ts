@@ -1,29 +1,36 @@
 import { Submission } from 'src/submissions/entities/submission.entity';
 import { User } from 'src/users/entities/user.entity';
 import {
-  Entity,
-  PrimaryGeneratedColumn,
   Column,
-  CreateDateColumn,
-  UpdateDateColumn,
+  Entity,
   JoinColumn,
   ManyToOne,
   OneToOne,
+  PrimaryGeneratedColumn,
 } from 'typeorm';
 
 @Entity()
-export class Upload {
+export class Analysis {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  files: string;
+  omset_penjualan: string;
 
-  @CreateDateColumn()
-  createdDate: Date;
+  @Column()
+  harga_bersaing: string;
 
-  @UpdateDateColumn()
-  updatedDate: Date;
+  @Column()
+  persaingan: string;
+
+  @Column()
+  lokasi: string;
+
+  @Column()
+  kualitas: string;
+
+  @Column('text')
+  deskripsi_bisnis: string;
 
   // Relation
 
@@ -34,10 +41,10 @@ export class Upload {
   @JoinColumn()
   updatedBy: User;
 
-  @ManyToOne(() => Submission, (submission) => submission.uploads, {
+  @ManyToOne(() => Submission, (submission) => submission.business_analysis, {
     cascade: true,
-    onDelete: 'CASCADE',
     nullable: false,
+    onDelete: 'CASCADE',
   })
   submission: Submission;
 }
