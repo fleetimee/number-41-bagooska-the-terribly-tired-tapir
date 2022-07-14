@@ -19,7 +19,8 @@ yarn start:dev
 <p align="center" >Click gambar untuk lebih jelas</p>
 
 ## Alur jalannya API
-Buat **User** berikut dengan **Rolenya**
+Buat **User** berikut dengan **Rolenya**.
+
 `localhost:3000/users`
 <details>
   <summary>Users response</summary>
@@ -53,6 +54,7 @@ Response :
 </details>
 
 Buat **Debitur** dengan menyertakan ***createdById***, disini **no_debitur** akan otomatis ter-generate oleh sistem.
+
 `localhost:3000/debiturs`
 <details>
 <summary>Debiturs response</summary>
@@ -141,7 +143,8 @@ Response :
 ```
 </details>
 
-Setelah membuat **debitur** dan mendapatkan **nomor debitur**, kemudian petugas akan memilih mau di-inputkan kemana, ada 2 path yaitu **Pengajuan Penghasilan Tetap** dan **Pengajuan Penghasilan Tidak Tetap**, tiap debitur **dapat mensubmit banyak pengajuan**. disini kami memberi nama *fixed* untuk **penghasilan tetap** dan *nonfixed* untuk **penghasilan tidak tetap**. Disini juga diinputkan ***createdBy*** dan juga ***debitur*** agar bisa berelasi dengan debitur serta user yang menginput
+Setelah membuat `debitur` dan mendapatkan `nomor debitur`, kemudian petugas akan memilih mau di-inputkan kemana, ada 2 path yaitu **Pengajuan Penghasilan Tetap** dan **Pengajuan Penghasilan Tidak Tetap**, tiap debitur **dapat mensubmit banyak pengajuan**. disini kami memberi nama `fixed` untuk **penghasilan tetap** dan `nonfixed` untuk **penghasilan tidak tetap**. Disini juga diinputkan `createdBy` dan juga `debitur` agar bisa berelasi dengan `debitur` serta `user` yang menginput.
+
 `localhost:3000/fixeds`
 <details>
 <summary>Fixed response</summary>
@@ -190,6 +193,7 @@ Response :
   "tanggal_mulai_kredit": "2022-06-11",
   "jangka_waktu_kredit": "1 Tahun",
   "is_approved": false,
+  "submission": [],
   "debitur": {
     "id": 5,
     "no_debitur": "c7a613bb-cd08-4ec4-844b-d5b6117ce4ce",
@@ -253,6 +257,8 @@ Response :
 ```
 </details>
 
+Setelah menginput penghasilan tetap / tidak tetap, ada kolom `is_approved` dengan tipe data boolean yang di defaultkan menjadi false karena masih belum disetujui. Untuk melanjutkan ke proses selanjutnya yaitu Proses Pengajuan atau disini kami namai `submission`. Tujuan endpoint `submission` ini adalah untuk men-approve pengajuan debitur yang tadi dan di konversi menjadi no_pengajuan dan tanggal_pengajuan beserta yang lainnya seperti (upload file, analisis bisnis, analisis karakter, serta agunan atau collateral)
+
 ## Api Endpoint
 
 - /debiturs = Untuk menginputkan Data Debitur => Mendapatkan Nomer Debitur Secara Otomatis
@@ -264,6 +270,7 @@ Response :
 ![image](https://user-images.githubusercontent.com/45744788/177477728-45037c0d-6a2f-41c7-8c7b-94a2586d1823.png)
 
 API Documentation : [https://fleetime-sigma.herokuapp.com/api/](https://fleetime-sigma.herokuapp.com/api/)
+
 Postman Collection :  [https://raw.githubusercontent.com/fleetimee/solaire-demon/master/postman.json](https://raw.githubusercontent.com/fleetimee/solaire-demon/master/postman.json)
 
 ## Webservice To-do
