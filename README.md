@@ -257,7 +257,72 @@ Response :
 ```
 </details>
 
-Setelah menginput penghasilan tetap / tidak tetap, ada kolom `is_approved` dengan tipe data boolean yang di defaultkan menjadi false karena masih belum disetujui. Untuk melanjutkan ke proses selanjutnya yaitu Proses Pengajuan atau disini kami namai `submission`. Tujuan endpoint `submission` ini adalah untuk men-approve pengajuan debitur yang tadi dan di konversi menjadi no_pengajuan dan tanggal_pengajuan beserta yang lainnya seperti (upload file, analisis bisnis, analisis karakter, serta agunan atau collateral)
+Setelah menginput penghasilan tetap / tidak tetap, ada kolom `is_approved` dengan tipe data boolean yang di defaultkan menjadi false karena masih belum disetujui. Untuk melanjutkan ke proses selanjutnya yaitu Proses Pengajuan atau disini kami namai `submission`. Tujuan endpoint `submission` ini adalah untuk men-approve pengajuan debitur yang tadi dan di konversi menjadi no_pengajuan dan tanggal_pengajuan beserta yang lainnya seperti (upload file, analisis bisnis, analisis karakter, serta agunan atau collateral).
+
+`localhost:3000/submissions/`
+<details>
+<summary>Submissions response</summary>
+
+```
+Request :
+{
+    "createdBy": 3,
+    "fixed": [{
+        "id": 33,
+        "is_approved": true
+    }]
+}
+```
+
+```
+Response : 
+{
+  "id": 10,
+  "no_pengajuan": "2970316707",
+  "tgl_pengajuan": "2022-07-14",
+  "nonfixed": [],
+  "fixed": [
+    {
+      "id": 33,
+      "jenis_pengajuan": "BARU",
+      "plafon_fasilitas": "1000000",
+      "jenis_penggunaan": "INVESTASI",
+      "tujuan_penggunaan": "Membeli hewan qurban",
+      "jangka_waktu": "5 Bulan",
+      "penghasilan_pemohon": "250000",
+      "potongan_gaji": "10000",
+      "sisa_penghasilan": "230000",
+      "nama_pejabat_penanggung_jawab": "Evil La Twin",
+      "jabatan_pejabat_penanggung_jawab": "Platinum",
+      "nama_pejabat_pemotong_gaji": "Eldlich",
+      "jabatan_pejabat_pemotong_gaji": "Gold",
+      "no_rekening": "552454212",
+      "plafon_kredit": "10000000",
+      "tanggal_mulai_kredit": "2022-06-11",
+      "jangka_waktu_kredit": "1 Tahun",
+      "is_approved": true,
+      "debitur": {
+        "id": 5,
+        "no_debitur": "c7a613bb-cd08-4ec4-844b-d5b6117ce4ce",
+        "nik": "500000",
+        "nama_debitur": "Sonia Eka P"
+      }
+    }
+  ],
+  "collateral": null,
+  "business_analysis": null,
+  "character_analysis": null,
+  "uploads": [],
+  "createdBy": {
+    "id": 3,
+    "username": "fleetime"
+  }
+}
+```
+</details>
+
+Setelah berhasil terinput maka akan mendapatkan `no_pengajuan`, `tgl_pengajuan`, `nama_debitur`, `no_debitur`, serta `user` yang menginputkannya, Terlihat ada beberapa field yang masih kosong yang disiapkan untuk proses selanjutnya yang kemudian akan disatukan kedalam tabel proses pengajuan ini
+
 
 ## Api Endpoint
 
