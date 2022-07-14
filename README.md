@@ -9,8 +9,13 @@
 ## Usage
 ```
 git clone https://github.com/fleetimee/solaire-demon.git
-cd solaire-demon
+
+cd brynhildr
+
+make database in postgresql
+
 Edit src/app.module for postgres configuration
+
 yarn start:dev
 ```
 ## Entity Relation Diagram
