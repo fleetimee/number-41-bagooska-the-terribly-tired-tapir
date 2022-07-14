@@ -1,59 +1,73 @@
-# Backend AKM menggunakan Express
+<p align="center">
+<a href="https://user-images.githubusercontent.com/45744788/178934617-15da5f5c-89cf-4fb1-8878-60e3dc99d4b3.png" target="blank"><img src="https://user-images.githubusercontent.com/45744788/178934617-15da5f5c-89cf-4fb1-8878-60e3dc99d4b3.png"  width="1000" alt="Logo" /></a>
+</p>
 
-### Usage
+<p align="center">Backend aplikasi AKM yang dibuat menggunakan Express dan PostgreSQL</p>
+
+
+## Usage
 ```
 git clone https://github.com/fleetimee/solaire-demon.git
 cd solaire-demon
 Edit src/app.module for postgres configuration
 yarn start:dev
 ```
-### Kesulitan
-Siang mas Bima saya masih bingung untuk menyimpan data penghasilan tetap dan penghasilan tidak tetap
+## Entity Relation Diagram
+![webservice - public](https://user-images.githubusercontent.com/45744788/178937450-48649997-0f66-414f-99ef-fe662f787f56.png)
 
-![image](https://user-images.githubusercontent.com/45744788/177489337-331da4a7-d4cb-4cdd-9211-a49004864277.png)
+<p align="center" >Click gambar untuk lebih jelas</p>
 
-Seperti schema diatas tiap form penghasilan tetap dan tidak tetap memiliki nomor debitur dan nama debitur
-Untuk memasukkan ke tabel pro_pengajuan dan mengenerate nomor pengajuan itu bagaimana ya 
+## Alur jalannya API
+Buat User berikut dengan Rolenya
+`localhost:3000/users`
+<details>
+  <summary>Users response</summary>
 
-Terima Kasih
 ```
-Response penghasilan tetap : 
-
+Request :
 {
-  "data": [
-    {
-      "id": 1,
-      "jenis_pengajuan": "ADENDUM",
-      "plafon_fasilitas": "50000",
-      "jenis_penggunaan": "MODAL_KERJA",
-      "tujuan_penggunaan": "Main Slot",
-      "jangka_waktu": "2021-07-10",
-      "penghasilan_pemohon": "1500000",
-      "potongan_gaji": "500000",
-      "sisa_penghasilan": "121212122",
-      "nama_pejabat_penanggung_jawab": "Superman",
-      "jabatan_pejabat_penanggung_jawab": "Diamond",
-      "nama_pejabat_pemotong_gaji": "Batman",
-      "jabatan_pejabat_pemotong_gaji": "Legend",
-      "no_rekening": "5848454545454",
-      "plafon_kredit": "100000000",
-      "tanggal_mulai_kredit": "2021-07-10",
-      "jangka_waktu_kredit": "2021-07-10",
-      "debitur": {
-        "id": 1,
-        "no_debitur": "e9db6866-dd36-4e90-b476-f7de4527c7c5",
-        "nama_debitur": "Novian Andika"
-      }
-    }
-  ],
-  "count": 1,
-  "total": 1,
-  "page": 1,
-  "pageCount": 1
+    "username": "fleetime",
+    "password": "1234567890",
+    "roles": [{
+        "name": "Admin"
+    }]
 }
 ```
+```
+Response : 
+{
+  "id": 3,
+  "username": "fleetime",
+  "createdAt": "2022-07-14T08:50:45.512Z",
+  "roles": [
+    {
+      "id": 6,
+      "name": "Admin"
+    }
+  ],
+  "createdBy": null,
+  "updatedBy": null
+}
+```
+</details>
 
-### Api Endpoint
+Buat Debitur dengan menyertakan createdById
+`http://localhost:3000/debiturs`
+<details>
+<summary>Debiturs response</summary>
+
+```
+Request : 
+```
+
+```
+Response : 
+```
+</details>
+
+
+
+## Api Endpoint
 
 - /debiturs = Untuk menginputkan Data Debitur => Mendapatkan Nomer Debitur Secara Otomatis
 - /fixeds = Formulir Pendapatan Tetap (Mengambil Nama Debitur dan Nomor Debitur dari tabel Debiturs)
@@ -66,7 +80,7 @@ Response penghasilan tetap :
 API Documentation : [https://fleetime-sigma.herokuapp.com/api/](https://fleetime-sigma.herokuapp.com/api/)
 Postman Collection :  [https://raw.githubusercontent.com/fleetimee/solaire-demon/master/postman.json](https://raw.githubusercontent.com/fleetimee/solaire-demon/master/postman.json)
 
-### Webservice To-do
+## Webservice To-do
 
 #### Debiturs Module
 - [x] Search NIK
