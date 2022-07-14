@@ -3,7 +3,7 @@
 <a href="https://user-images.githubusercontent.com/45744788/178934617-15da5f5c-89cf-4fb1-8878-60e3dc99d4b3.png" target="blank"><img src="https://www.seekpng.com/png/full/8-82747_clipart-royalty-free-download-bonfire-clipart-watercolor-dark.png"  width="300" alt="Logo" /></a>
 </p>
 
-<p align="center">Backend aplikasi AKM yang dibuat menggunakan Express dan PostgreSQL</p>
+<p align="center">Brynhildr merupakan backend aplikasi AKM yang dibuat menggunakan Express dan PostgreSQL</p>
 
 
 ## Usage
