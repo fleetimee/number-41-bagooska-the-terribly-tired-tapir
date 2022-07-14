@@ -15,7 +15,6 @@ import {
   ManyToOne,
   OneToMany,
   OneToOne,
-  PrimaryColumn,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Fixed } from 'src/fixeds/entities/fixed.entity';
@@ -58,20 +57,37 @@ export class Submission {
   @OneToMany(() => Upload, (upload) => upload.submission, {})
   uploads: Upload[];
 
-  @OneToMany(() => Collateral, (collateral) => collateral.submission)
-  collateral: Collateral[];
+  @ManyToOne(() => Collateral, (collateral) => collateral.submission, {
+    cascade: true,
+    onDelete: 'SET NULL',
+  })
+  collateral: Collateral;
 
-  @OneToMany(
+  // @OneToMany(
+  //   () => Analysis,
+  //   (business_analysis) => business_analysis.submission,
+  // )
+  // business_analysis: Analysis[];
+
+  @ManyToOne(
     () => Analysis,
     (business_analysis) => business_analysis.submission,
+    {
+      cascade: true,
+      onDelete: 'SET NULL',
+    },
   )
-  business_analysis: Analysis[];
+  business_analysis: Analysis;
 
-  @OneToMany(
+  @ManyToOne(
     () => CharacterAnalysis,
     (character_analysis) => character_analysis.submission,
+    {
+      cascade: true,
+      onDelete: 'SET NULL',
+    },
   )
-  character_analysis: CharacterAnalysis[];
+  character_analysis: CharacterAnalysis;
 
   @BeforeInsert()
   generateId() {

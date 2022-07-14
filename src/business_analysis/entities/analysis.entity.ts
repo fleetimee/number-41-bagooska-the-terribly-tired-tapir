@@ -5,6 +5,7 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
@@ -41,10 +42,6 @@ export class Analysis {
   @JoinColumn()
   updatedBy: User;
 
-  @ManyToOne(() => Submission, (submission) => submission.business_analysis, {
-    cascade: true,
-    nullable: false,
-    onDelete: 'CASCADE',
-  })
-  submission: Submission;
+  @OneToMany(() => Submission, (submission) => submission.business_analysis)
+  submission: Submission[];
 }

@@ -6,6 +6,7 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
@@ -39,17 +40,20 @@ export class CharacterAnalysis {
   deskripsi_karakter: string;
 
   // Relation
-  @ManyToOne(() => User, (user) => user, { nullable: false })
+  @ManyToOne(() => User, (user) => user, { nullable: true })
   createdBy: User;
 
   @OneToOne(() => User, (user) => user, { nullable: true })
   @JoinColumn()
   updatedBy: User;
 
-  @ManyToOne(() => Submission, (submission) => submission.character_analysis, {
-    cascade: true,
-    nullable: false,
-    onDelete: 'CASCADE',
-  })
-  submission: Submission;
+  // @ManyToOne(() => Submission, (submission) => submission.character_analysis, {
+  //   cascade: true,
+  //   nullable: false,
+  //   onDelete: 'CASCADE',
+  // })
+  // submission: Submission;
+
+  @OneToMany(() => Submission, (submission) => submission.character_analysis)
+  submission: Submission[];
 }

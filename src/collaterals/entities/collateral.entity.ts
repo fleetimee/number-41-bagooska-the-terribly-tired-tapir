@@ -6,6 +6,7 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -49,10 +50,13 @@ export class Collateral {
   @JoinColumn()
   updatedBy: User;
 
-  @ManyToOne(() => Submission, (submission) => submission.collateral, {
-    cascade: true,
-    onDelete: 'CASCADE',
-    nullable: false,
-  })
-  submission: Submission;
+  // @ManyToOne(() => Submission, (submission) => submission.collateral, {
+  //   cascade: true,
+  //   onDelete: 'CASCADE',
+  //   nullable: false,
+  // })
+  // submission: Submission;
+
+  @OneToMany(() => Submission, (submission) => submission.collateral)
+  submission: Submission[];
 }

@@ -1,7 +1,6 @@
 import { JenisPenggunaan } from './../enum/jenis-penggunaan.enum';
 import { JenisPengajuan } from './../enum/jenis-pengajuan.enum';
 import {
-  BeforeInsert,
   Column,
   Entity,
   JoinColumn,
@@ -11,7 +10,6 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
-import { customAlphabet } from 'nanoid/non-secure';
 import { User } from 'src/users/entities/user.entity';
 import { Submission } from 'src/submissions/entities/submission.entity';
 
