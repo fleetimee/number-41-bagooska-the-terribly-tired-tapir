@@ -1,3 +1,4 @@
+
 <p align="center">
 <a href="https://user-images.githubusercontent.com/45744788/178934617-15da5f5c-89cf-4fb1-8878-60e3dc99d4b3.png" target="blank"><img src="https://www.seekpng.com/png/full/8-82747_clipart-royalty-free-download-bonfire-clipart-watercolor-dark.png"  width="300" alt="Logo" /></a>
 </p>
@@ -18,7 +19,7 @@ yarn start:dev
 <p align="center" >Click gambar untuk lebih jelas</p>
 
 ## Alur jalannya API
-Buat User berikut dengan Rolenya
+Buat **User** berikut dengan **Rolenya**
 `localhost:3000/users`
 <details>
   <summary>Users response</summary>
@@ -51,21 +52,206 @@ Response :
 ```
 </details>
 
-Buat Debitur dengan menyertakan createdById
-`http://localhost:3000/debiturs`
+Buat **Debitur** dengan menyertakan ***createdById***, disini **no_debitur** akan otomatis ter-generate oleh sistem.
+`localhost:3000/debiturs`
 <details>
 <summary>Debiturs response</summary>
 
 ```
 Request : 
+{
+    "nik": "500000",
+    "nama_debitur": "Sonia Eka P",
+    "alamat": "Jln Affandi No 20",
+    "tempat_lahir": "Yogyakarta",
+    "tanggal_lahir": "1994-11-09",
+    "pekerjaan": "Customer Service",
+    "agama": "Islam",
+    "gender": "Perempuan",
+    "no_telp": "084545245454",
+    "no_seluler": "0828783232",
+    "instansi": "Swasta",
+    "email": "soniaekap2@gmail.com",
+    "nama_ibu": "Dunno",
+    "relationship": "Menikah",
+    "nama_pasangan": "Novian Andika",
+    "pekerjaan_pasangan": "Software Developer",
+    "tgl_lahir_pasangan": "1997-09-04",
+    "tempat_lahir_pasangan": "Jakarta",
+    "nik_pasangan": 54545454,
+    "total_income": "9999999999",
+    "bidang_usaha": "Jasa Pengiriman",
+    "jumlah_tanggungan": "0",
+    "provinsi": "Daerah Istimewa Yogyakarta",
+    "kabupaten": "Sleman",
+    "kecamatan": "Depok",
+    "kelurahan": "Condongcatur",
+    "rt": "01",
+    "rw": "05",
+    "kode_pos": "14045",
+    "createdBy": 3
+}
 ```
 
 ```
 Response : 
+[
+  {
+    "id": 5,
+    "no_debitur": "c7a613bb-cd08-4ec4-844b-d5b6117ce4ce",
+    "nik": "500000",
+    "nama_debitur": "Sonia Eka P",
+    "alamat": "Jln Affandi No 20",
+    "tempat_lahir": "Yogyakarta",
+    "tanggal_lahir": "1994-11-09",
+    "pekerjaan": "Customer Service",
+    "instansi": "Swasta",
+    "agama": "Islam",
+    "gender": "Perempuan",
+    "no_telp": "084545245454",
+    "no_seluler": "0828783232",
+    "email": "soniaekap2@gmail.com",
+    "nama_ibu": "Dunno",
+    "relationship": "Menikah",
+    "nama_pasangan": "Novian Andika",
+    "pekerjaan_pasangan": "Software Developer",
+    "tgl_lahir_pasangan": "1997-09-04",
+    "tempat_lahir_pasangan": "Jakarta",
+    "nik_pasangan": 54545454,
+    "total_income": "9999999999",
+    "bidang_usaha": "Jasa Pengiriman",
+    "jumlah_tanggungan": 0,
+    "provinsi": "Daerah Istimewa Yogyakarta",
+    "kabupaten": "Sleman",
+    "kecamatan": "Depok",
+    "kelurahan": "Condongcatur",
+    "rt": 1,
+    "rw": 5,
+    "kode_pos": 14045,
+    "nonfixed": [],
+    "fixed": [],
+    "createdBy": {
+      "id": 3,
+      "username": "fleetime",
+      "password": "$2b$10$UPO7pzponNYGMELi/kXAI.miIY3qVcBeDpJR1k6VNOTHnWhrjlDNu",
+      "createdAt": "2022-07-14T08:50:45.512Z"
+    }
+  }
+]
 ```
 </details>
 
+Setelah membuat **debitur** dan mendapatkan **nomor debitur**, kemudian petugas akan memilih mau di-inputkan kemana, ada 2 path yaitu **Pengajuan Penghasilan Tetap** dan **Pengajuan Penghasilan Tidak Tetap**, tiap debitur **dapat mensubmit banyak pengajuan**. disini kami memberi nama *fixed* untuk **penghasilan tetap** dan *nonfixed* untuk **penghasilan tidak tetap**. Disini juga diinputkan ***createdBy*** dan juga ***debitur*** agar bisa berelasi dengan debitur serta user yang menginput
+`localhost:3000/fixeds`
+<details>
+<summary>Fixed response</summary>
 
+```
+Request :
+{
+    "jenis_pengajuan": "BARU",
+    "plafon_fasilitas": "1000000",
+    "jenis_penggunaan": "INVESTASI",
+    "tujuan_penggunaan": "Membeli hewan qurban",
+    "jangka_waktu": "5 Bulan",
+    "penghasilan_pemohon": "250000",
+    "potongan_gaji": "10000",
+    "sisa_penghasilan": "230000",
+    "nama_pejabat_penanggung_jawab": "Evil La Twin",
+    "jabatan_pejabat_penanggung_jawab": "Platinum",
+    "nama_pejabat_pemotong_gaji": "Eldlich",
+    "jabatan_pejabat_pemotong_gaji": "Gold",
+    "no_rekening": "552454212",
+    "tanggal_mulai_kredit": "2022-06-11",
+    "jangka_waktu_kredit": "1 Tahun",
+    "plafon_kredit": "10000000",
+    "debitur": "5",
+    "createdBy": 3
+}
+```
+```
+Response : 
+{
+  "id": 33,
+  "jenis_pengajuan": "BARU",
+  "plafon_fasilitas": "1000000",
+  "jenis_penggunaan": "INVESTASI",
+  "tujuan_penggunaan": "Membeli hewan qurban",
+  "jangka_waktu": "5 Bulan",
+  "penghasilan_pemohon": "250000",
+  "potongan_gaji": "10000",
+  "sisa_penghasilan": "230000",
+  "nama_pejabat_penanggung_jawab": "Evil La Twin",
+  "jabatan_pejabat_penanggung_jawab": "Platinum",
+  "nama_pejabat_pemotong_gaji": "Eldlich",
+  "jabatan_pejabat_pemotong_gaji": "Gold",
+  "no_rekening": "552454212",
+  "plafon_kredit": "10000000",
+  "tanggal_mulai_kredit": "2022-06-11",
+  "jangka_waktu_kredit": "1 Tahun",
+  "is_approved": false,
+  "debitur": {
+    "id": 5,
+    "no_debitur": "c7a613bb-cd08-4ec4-844b-d5b6117ce4ce",
+    "nama_debitur": "Sonia Eka P"
+  },
+  "createdBy": {
+    "id": 3,
+    "username": "fleetime"
+  }
+}
+```
+</details>
+
+`localhost:3000/nonfixeds`
+<details>
+<summary>Nonfixed response</summary>
+
+```
+Request : 
+{
+    "jenis_pengajuan": "ADENDUM",
+    "plafon_fasilitas": 2500,
+    "jenis_penggunaan": "KONSUMSI",
+    "tujuan_penggunaan": "Bermain Slot",
+    "jangka_waktu": "6 Bulan",
+    "no_rekening": 8545454545,
+    "plafon_kredit": 2001000,
+    "tanggal_mulai_kredit": "2022-05-21",
+    "jangka_waktu_kredit": "8 Bulan",
+    "debitur": 5,
+    "createdBy": 3
+}
+```
+
+```
+Response :
+{
+  "id": 27,
+  "jenis_pengajuan": "ADENDUM",
+  "plafon_fasilitas": "2500",
+  "jenis_penggunaan": "KONSUMSI",
+  "tujuan_penggunaan": "Bermain Slot",
+  "jangka_waktu": "6 Bulan",
+  "no_rekening": "8545454545",
+  "plafon_kredit": "2001000",
+  "tanggal_mulai_kredit": "2022-05-21",
+  "jangka_waktu_kredit": "8 Bulan",
+  "is_approved": false,
+  "debitur": {
+    "id": 5,
+    "no_debitur": "c7a613bb-cd08-4ec4-844b-d5b6117ce4ce",
+    "nama_debitur": "Sonia Eka P"
+  },
+  "submission": [],
+  "createdBy": {
+    "id": 3,
+    "username": "fleetime"
+  },
+  "updatedBy": null
+} 
+```
+</details>
 
 ## Api Endpoint
 
