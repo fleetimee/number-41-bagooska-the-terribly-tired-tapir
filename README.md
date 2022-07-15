@@ -16,7 +16,7 @@
 
 ## Usage
 ```
-git clone https://github.com/fleetimee/solaire-demon.git
+https://github.com/fleetimee/brynhildr.git
 
 cd brynhildr
 
@@ -593,7 +593,7 @@ Maka jika sudah semua proses dijalankan field submissionnya sudah lengkap dah te
 
 ## Api Endpoint
 
-API Documentation : [https://fleetime-sigma.herokuapp.com/api/](http://localhost:3000/api/)
+API Documentation : [http://localhost:3000/api/](http://localhost:3000/api/)
 
 Postman Collection :  [https://raw.githubusercontent.com/fleetimee/solaire-demon/master/postman.json](https://raw.githubusercontent.com/fleetimee/solaire-demon/master/postman.json)
 
