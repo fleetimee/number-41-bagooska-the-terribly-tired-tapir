@@ -597,13 +597,27 @@ Postman Collection :  [https://raw.githubusercontent.com/fleetimee/solaire-demon
 - [x] Form Penghasilan Tidak Tetap
 - [x] Input Data Pengajuan di Tabel proses pengajuan
 
-#### Upload Berkas Module
-- [ ] Multipart form data menggunakan multer
+#### Upload Berkas
+- [x] Multipart form data menggunakan multer
+- [x] Hubungkan dengan nomor pengajuan
+- [x] Upload single file
+- [ ] Upload multiple files
 
-#### Input Agunan Module
-- [ ] Show Data Pengajuan Kredit 
-- [ ] Input Analisa Kredit Karakter
-- [ ] Input Analisa Bisnis
+#### Input Agunan 
+- [x] Hubungkan dengan nomor pengajuan
+- [x] Show Data Pengajuan Kredit 
+- [x] Cascade Insert Agunan dengan Proses Pengajuan
 
-#### Final
-- [ ] Tampilkan Summary
+#### Analisa Pengajuan Kredit
+- [x] Hubungkan dengan nomor pengajuan
+- [x] Input Analisa Bisnis
+- [x] Input Analisa Karakter
+- [x] Cascade Insert dengan Proses Pengajuan
+
+#### Summary
+- [x] Tampilkan summary
+
+#### Authentication
+- [ ] Add Otentifikasi 
+- [ ] Add Role Based Access Control
+
