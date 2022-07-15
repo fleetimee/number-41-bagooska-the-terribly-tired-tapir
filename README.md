@@ -5,6 +5,10 @@
 
 <p align="center">Brynhildr merupakan backend aplikasi AKM yang dibuat menggunakan Express dan PostgreSQL</p>
 
+## Prerequisite
+- Node 16.16.0 or higher
+- PostgreSQL 10+
+
 
 ## Usage
 ```
@@ -326,8 +330,116 @@ Response :
 ```
 </details>
 
-Setelah berhasil terinput maka akan mendapatkan `no_pengajuan`, `tgl_pengajuan`, `nama_debitur`, `no_debitur`, serta `user` yang menginputkannya, Terlihat ada beberapa field yang masih kosong yang disiapkan untuk proses selanjutnya yang kemudian akan disatukan kedalam tabel proses pengajuan ini
+Setelah berhasil terinput maka akan mendapatkan `no_pengajuan`, `tgl_pengajuan`, `nama_debitur`, `no_debitur`, serta `user` yang menginputkannya, Terlihat ada beberapa field yang masih kosong yang disiapkan untuk proses selanjutnya yang kemudian akan disatukan kedalam tabel proses pengajuan ini dengan menggunakan `PATCH` request. Disini tabel `submission` sudah berelasi ManyToOne dengan tabel `collateral` atau agunan, `business_analysis` dan `character_analysis`, sehingga tabel `submission` memiliki 1 masing masing data dari 3 tabel diatas, sebaliknya 3 tabel diatas memiliki banyak submission dengan relasi OneToMany dengan tabel `submission`. Untuk men-insert kebanyak tabel sekaligus dengan sekali save, maka digunakan metode Cascading Insert.
 
+`localhost:3000/submissions/:id`
+<details>
+<summary>Patching proses pengajuan request</summary>
+
+```
+Request : 
+{
+    "character_analysis": {
+        "ulet_dalam_bisnis": 75,
+        "flexible_kaku": 65,
+        "kreatif_inovatif": 87,
+        "jujur_dlm_bisnis": 95,
+        "deskripsi_karakter": "Consequat erat rebum odio est sit dolor sea amet sed eirmod ipsum eu eirmod dolor no et ut invidunt nostrud est stet euismod clita voluptua tempor ipsum rebum et sit consetetur tempor tation kasd dolore erat diam labore sed eirmod feugiat et vero adipiscing diam consequat sanctus ut enim voluptua",
+        "createdById": 3
+    },
+    "collateral": {
+        "barang_agunan": "Mobil",
+        "asuransi": "takimata iriure erat nulla est lobortis volutpat kasd",
+        "nilai_agunan": 100000,
+        "bukti_agunan": "Lorem ipsum",
+        "ijin_milik": "magna hendrerit labore velit placerat",
+        "deskripsi_agunan": "Consetetur ut sed ut feugait dolor labore eirmod est magna sadipscing elitr labore ipsum labore sanctus nonumy velit magna takimata invidunt magna hendrerit labore velit placerat no dolore dolores diam et sadipscing commodo voluptua consequat gubergren voluptua takimata elitr amet et amet no voluptua in stet doming nulla et sanctus",
+        "createdBy": 3
+    },
+    "business_analysis": {
+        "omset_penjualan": "erat nulla est lobortis volutpat kasd",
+        "harga_bersaing": "lorem lorem delenit ut dolore et",
+        "persaingan": "sed at et elitr at sadipscing",
+        "lokasi": "strategis",
+        "kualitas": "bagus",
+        "deskripsi_bisnis": "Kasd accusam sea accusam iriure enim est elitr et sed sadipscing veniam nonumy lorem nonumy illum gubergren quod vel sea aliquam consetetur imperdiet aliquip et tempor tempor ut diam ipsum rebum sadipscing et stet option iriure voluptua sed sed consetetur nonumy sit consetetur takimata rebum amet clita ex et consetetur",
+        "createdBy": 3
+    }
+    
+}
+```
+```
+Response : 
+{
+  "id": 10,
+  "no_pengajuan": "2970316707",
+  "tgl_pengajuan": "2022-07-14",
+  "nonfixed": [],
+  "fixed": [
+    {
+      "id": 33,
+      "jenis_pengajuan": "BARU",
+      "plafon_fasilitas": "1000000",
+      "jenis_penggunaan": "INVESTASI",
+      "tujuan_penggunaan": "Membeli hewan qurban",
+      "jangka_waktu": "5 Bulan",
+      "penghasilan_pemohon": "250000",
+      "potongan_gaji": "10000",
+      "sisa_penghasilan": "230000",
+      "nama_pejabat_penanggung_jawab": "Evil La Twin",
+      "jabatan_pejabat_penanggung_jawab": "Platinum",
+      "nama_pejabat_pemotong_gaji": "Eldlich",
+      "jabatan_pejabat_pemotong_gaji": "Gold",
+      "no_rekening": "552454212",
+      "plafon_kredit": "10000000",
+      "tanggal_mulai_kredit": "2022-06-11",
+      "jangka_waktu_kredit": "1 Tahun",
+      "is_approved": true,
+      "debitur": {
+        "id": 5,
+        "no_debitur": "c7a613bb-cd08-4ec4-844b-d5b6117ce4ce",
+        "nik": "500000",
+        "nama_debitur": "Sonia Eka P"
+      }
+    }
+  ],
+  "collateral": {
+    "id": 7,
+    "barang_agunan": "Mobil",
+    "asuransi": "takimata iriure erat nulla est lobortis volutpat kasd",
+    "nilai_agunan": "100000",
+    "bukti_agunan": "Lorem ipsum",
+    "ijin_milik": "magna hendrerit labore velit placerat",
+    "deskripsi_agunan": "Consetetur ut sed ut feugait dolor labore eirmod est magna sadipscing elitr labore ipsum labore sanctus nonumy velit magna takimata invidunt magna hendrerit labore velit placerat no dolore dolores diam et sadipscing commodo voluptua consequat gubergren voluptua takimata elitr amet et amet no voluptua in stet doming nulla et sanctus",
+    "created_at": "2022-07-15T01:28:59.231Z",
+    "updated_at": "2022-07-15T01:28:59.231Z"
+  },
+  "business_analysis": {
+    "id": 4,
+    "omset_penjualan": "erat nulla est lobortis volutpat kasd",
+    "harga_bersaing": "lorem lorem delenit ut dolore et",
+    "persaingan": "sed at et elitr at sadipscing",
+    "lokasi": "strategis",
+    "kualitas": "bagus",
+    "deskripsi_bisnis": "Kasd accusam sea accusam iriure enim est elitr et sed sadipscing veniam nonumy lorem nonumy illum gubergren quod vel sea aliquam consetetur imperdiet aliquip et tempor tempor ut diam ipsum rebum sadipscing et stet option iriure voluptua sed sed consetetur nonumy sit consetetur takimata rebum amet clita ex et consetetur"
+  },
+  "character_analysis": {
+    "id": 22,
+    "ulet_dalam_bisnis": 75,
+    "flexible_kaku": 65,
+    "kreatif_inovatif": 87,
+    "jujur_dlm_bisnis": 95,
+    "deskripsi_karakter": "Consequat erat rebum odio est sit dolor sea amet sed eirmod ipsum eu eirmod dolor no et ut invidunt nostrud est stet euismod clita voluptua tempor ipsum rebum et sit consetetur tempor tation kasd dolore erat diam labore sed eirmod feugiat et vero adipiscing diam consequat sanctus ut enim voluptua"
+  },
+  "uploads": [],
+  "createdBy": {
+    "id": 3,
+    "username": "fleetime"
+  }
+}
+```
+
+</details>
 
 ## Api Endpoint
 
