@@ -31,6 +31,16 @@ yarn start:dev
 
 <p align="center" >Click gambar untuk lebih jelas</p>
 
+### Relation Cheatsheet
+
+- Semua endpoints berelasi dengan `user` karena dibutuhkan untuk siapa yang menginput nanti.
+- Tabel `user` berelasi dengan tabel `role` dengan @ManyToMany karena `user` bisa memiliki banyak `role` dan `role` bisa punya banyak `user`.
+- Tabel `user` juga memiliky self reference dengan id.user .
+- `debitur` punya banyak form penghasilan tetap / tidak tetap @OneToMany dengan tabel `fixed` dan `nonfixed`
+- Sebaliknya tabel `fixed` dan `nonfixed` hanya dapat dimiliki oleh 1 debitur @ManyToOne.
+- Tabel `submission` atau Proses Pengajuan berelasi dengan tabel penghasilan tetap `fixed` dan penghasilan tidak tetap `nonfixed` menggunakan @ManyToMany .
+- Tabel `upload` berelasi dengan `submission` menggunakan @ManyToOne, sebaliknya `submission` ke `upload` menggunakan @OneToMany karena tiap pengajuan pasti memiliki banyak files.
+
 ## Alur jalannya API
 Buat **User** berikut dengan **Rolenya**.
 
