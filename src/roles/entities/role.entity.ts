@@ -2,7 +2,6 @@ import { User } from 'src/users/entities/user.entity';
 import {
   Column,
   CreateDateColumn,
-  DeleteDateColumn,
   Entity,
   JoinColumn,
   JoinTable,
@@ -38,9 +37,6 @@ export class Role {
   @JoinColumn()
   updatedBy: number;
 
-  @ManyToMany(() => User, (user) => user.roles, {
-    onDelete: 'CASCADE',
-  })
-  @JoinTable({})
+  @ManyToMany(() => User, (user) => user.roles)
   user: User[];
 }

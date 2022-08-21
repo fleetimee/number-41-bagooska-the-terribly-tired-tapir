@@ -70,7 +70,6 @@ export class CreateDebiturDto {
   tempat_lahir_pasangan: string;
 
   @IsOptional()
-  @IsNumber()
   nik_pasangan: number;
   /* End of status perkawinan */
 

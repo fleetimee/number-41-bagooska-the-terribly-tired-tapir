@@ -5,9 +5,13 @@ import {
   Column,
   Entity,
   Generated,
+  JoinColumn,
+  ManyToOne,
   OneToMany,
+  OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import { User } from 'src/users/entities/user.entity';
 
 /* It's a decorator that tells TypeORM that this class is an entity. */
 @Entity()
@@ -17,104 +21,84 @@ export class Debitur {
 value generation strategy. */
   @ApiProperty()
   @PrimaryGeneratedColumn()
-  id: string;
+  id: number;
 
   @Generated('uuid')
   @Column({ unique: true })
   no_debitur: string;
 
-  @Column('bigint')
-  nik: number;
+  @Column()
+  peminjam1: string;
 
   @Column()
-  nama_debitur: string;
+  ktp1: string;
+
+  @Column({ nullable: true })
+  peminjam2: string;
+
+  @Column({ nullable: true })
+  ktp2: string;
+
+  @Column({ nullable: true })
+  pemilik_agunan_1: string;
+
+  @Column('bigint', { nullable: true })
+  no_ktp1: number;
+
+  @Column({ nullable: true })
+  pemilik_agunan_2: string;
+
+  @Column('bigint', { nullable: true })
+  no_ktp2: number;
 
   @Column()
-  alamat: string;
+  alamat_1: string;
+
+  @Column({ nullable: true })
+  alamat_2: string;
 
   @Column()
   tempat_lahir: string;
 
   @Column('date')
-  tanggal_lahir: string;
+  tanggal_lahir: Date;
 
   @Column()
-  pekerjaan: string;
+  umur: number;
 
   @Column()
-  instansi: string;
+  status_keluarga: string;
 
   @Column()
-  agama: string;
+  lamanya_berusaha: number;
 
   @Column()
-  gender: string;
+  lokasi_usaha: string;
 
   @Column()
-  no_telp: string;
-
-  @Column()
-  no_seluler: string;
-
-  @Column()
-  email: string;
-
-  @Column()
-  nama_ibu: string;
-  /* End of data pribadi */
-
-  /* Data status perkawinan */
-  @Column({ nullable: true })
-  relationship: string;
-
-  @Column({ nullable: true })
-  nama_pasangan: string;
-
-  @Column({ nullable: true })
-  pekerjaan_pasangan: string;
-
-  @Column('date', { nullable: true })
-  tgl_lahir_pasangan: string;
-
-  @Column({ nullable: true })
-  tempat_lahir_pasangan: string;
-
-  @Column({ nullable: true })
-  nik_pasangan: number;
-  /* End of status perkawinan */
-
-  /* Data finansial debitur */
-  @Column()
-  total_income: string;
+  jenis_usaha: string;
 
   @Column()
   bidang_usaha: string;
 
   @Column()
-  jumlah_tanggungan: number;
-  /* End of data finansial debitur */
-
-  /* Data lokasi debitur */
-  @Column()
-  provinsi: string;
+  pendidikan: string;
 
   @Column()
-  kabupaten: string;
+  pekerjaan1: string;
 
   @Column()
-  kecamatan: string;
+  pekerjaan2: string;
 
-  @Column()
-  kelurahan: string;
+  @Column('bigint')
+  no_skpk: number;
 
-  @Column('int')
-  rt: number;
+  @Column('date')
+  tgl_sekarang: Date;
 
-  @Column('int')
-  rw: number;
+  @Column('text')
+  deskripsi_debitur: string;
 
-  @Column('int')
-  kode_pos: number;
   /* End of data lokasi debitur */
 
   // Relation
@@ -128,4 +112,14 @@ value generation strategy. */
     onDelete: 'CASCADE',
   })
   fixed: Fixed[];
+
+  @ManyToOne(() => User, (user) => user, {
+    nullable: true,
+    onDelete: 'CASCADE',
+  })
+  createdBy: User;
+
+  @OneToOne(() => User, (user) => user, { nullable: true })
+  @JoinColumn()
+  updatedBy: User;
 }
