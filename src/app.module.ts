@@ -14,6 +14,8 @@ import { UploadsModule } from './uploads/uploads.module';
 import { CollateralsModule } from './collaterals/collaterals.module';
 import { AnalysisModule } from './business_analysis/analysis.module';
 import { CharacterAnalysisModule } from './character_analysis/character_analysis.module';
+import { AppService } from './app.service';
+import { AppController } from './app.controller';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -54,5 +56,7 @@ import { CharacterAnalysisModule } from './character_analysis/character_analysis
     AnalysisModule,
     CharacterAnalysisModule,
   ],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
