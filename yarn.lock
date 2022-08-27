@@ -842,35 +842,35 @@
     consola "^2.15.0"
     node-fetch "^2.6.1"
 
-"@rewiko/crud-request@^5.1.9":
-  version "5.1.9"
-  resolved "https://registry.yarnpkg.com/@rewiko/crud-request/-/crud-request-5.1.9.tgz#7690bfa5d334bfea7c5d51cd84221bd30f047cb3"
-  integrity sha512-Qjvhdz5sbAAXbbt5F4tNhZVCbhM0ZxYFTHzCCtg7OGl9kFqn1uKU8X7K2oo5nVEG5iWY4n7XuUioveX763Wa1A==
+"@rewiko/crud-request@^5.1.12":
+  version "5.1.12"
+  resolved "https://registry.yarnpkg.com/@rewiko/crud-request/-/crud-request-5.1.12.tgz#0f3f128c08de47da68e474b3f18e4c2601900a1e"
+  integrity sha512-lnmtoYo2xFn4uCmnG6+F85AWiCa5BvWmmFg2ywOmJm/zXFnxHTDr6MuQneJhqS5QVg+3TDSPoG5VSTvvjnn6dw==
   dependencies:
-    "@rewiko/util" "^5.1.9"
+    "@rewiko/util" "^5.1.12"
     qs "^6.8.0"
 
-"@rewiko/crud-typeorm@^5.1.9":
-  version "5.1.9"
-  resolved "https://registry.yarnpkg.com/@rewiko/crud-typeorm/-/crud-typeorm-5.1.9.tgz#e5f9ad8e1b7c5f08ddc3bb669e260784e0fa0b38"
-  integrity sha512-7pMUNKJYaaqduTNQNB1zAJnYoVXZ5Dg3RKUJQSyBOKsRIJZ7nAUc1lOcMb7pzMgX9rtkgVTEaLUuv31Ghk77RA==
+"@rewiko/crud-typeorm@^5.1.12":
+  version "5.1.12"
+  resolved "https://registry.yarnpkg.com/@rewiko/crud-typeorm/-/crud-typeorm-5.1.12.tgz#4ac85ed5cf90b82444dbd8642b0a1a239f5aac94"
+  integrity sha512-hJeMVS66i3urMpCZKNQaV/dFfrxgtWBI1bwoVSZSB31HuNzv41RtHLBzale82q9yo/HTKzZ+LwMP51MV+JLDNg==
   dependencies:
     "@zmotivat0r/o0" "^1.0.2"
 
-"@rewiko/crud@^5.1.9":
-  version "5.1.9"
-  resolved "https://registry.yarnpkg.com/@rewiko/crud/-/crud-5.1.9.tgz#9b28739402d23083944795bb0a2ff8606d7d6aa2"
-  integrity sha512-os72qt7zodEWTuaLsPlmP8eFIwofXFiKMYk23is2rv+FwFyF0mE7xnk918fk68IvZ1MWDkHkkUXY+RW9cpWeBw==
+"@rewiko/crud@^5.1.12":
+  version "5.1.12"
+  resolved "https://registry.yarnpkg.com/@rewiko/crud/-/crud-5.1.12.tgz#f512aaf511a6c17eaaf2adb5fb9ccff5aae6c97e"
+  integrity sha512-wG7ROBzdFi/E/fpxYkQ8M3N+0ZO3kzjkLzfAcpZSATUEjR+5Dnh3pzpVO2Bk7dwyswLJOpA0vhSSc+kauU+d2A==
   dependencies:
-    "@rewiko/crud-request" "^5.1.9"
-    "@rewiko/util" "^5.1.9"
+    "@rewiko/crud-request" "^5.1.12"
+    "@rewiko/util" "^5.1.12"
     deepmerge "^3.2.0"
     pluralize "^8.0.0"
 
-"@rewiko/util@^5.1.9":
-  version "5.1.9"
-  resolved "https://registry.yarnpkg.com/@rewiko/util/-/util-5.1.9.tgz#a9448b98824d73dc3609c49dea5d596c364199b3"
-  integrity sha512-c8zlQwCqfhP15jv0Ej2ziWt+JinMs1d3jILdmH2hI9xjQS3x6AwHmLwnbYNQzLTtzdCDWIbM9XdXGQzupxeVKQ==
+"@rewiko/util@^5.1.12":
+  version "5.1.12"
+  resolved "https://registry.yarnpkg.com/@rewiko/util/-/util-5.1.12.tgz#d0b95824485a57f0e0d366f4d75bd06cd1f1380d"
+  integrity sha512-lf0B6lZGwo0aGmI8MmHTVhhe7DN288aPTzawmfoFLaLXsf8Dxr0WBZu/uTLCqLsCFQ/rOGdwZZN0XrNMclIlJQ==
 
 "@sinclair/typebox@^0.23.3":
   version "0.23.5"

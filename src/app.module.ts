@@ -16,6 +16,8 @@ import { AnalysisModule } from './business_analysis/analysis.module';
 import { CharacterAnalysisModule } from './character_analysis/character_analysis.module';
 import { AppService } from './app.service';
 import { AppController } from './app.controller';
+import { InputKeuanganModule } from './input_keuangan/input_keuangan.module';
+import { AnalisaKeuanganModule } from './analisa_keuangan/analisa_keuangan.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -55,6 +57,8 @@ import { AppController } from './app.controller';
     CollateralsModule,
     AnalysisModule,
     CharacterAnalysisModule,
+    InputKeuanganModule,
+    AnalisaKeuanganModule,
   ],
   controllers: [AppController],
   providers: [AppService],
