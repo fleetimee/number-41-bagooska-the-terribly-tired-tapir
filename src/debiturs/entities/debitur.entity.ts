@@ -1,3 +1,4 @@
+import { InputKeuangan } from './../../input_keuangan/entities/input_keuangan.entity';
 import { Fixed } from './../../fixeds/entities/fixed.entity';
 import { NonFixed } from './../../non-fixeds/entities/non-fixed.entity';
 import { ApiProperty } from '@nestjs/swagger';
@@ -125,4 +126,10 @@ value generation strategy. */
   @OneToOne(() => User, (user) => user, { nullable: true })
   @JoinColumn()
   updatedBy: User;
+
+  @OneToMany(() => InputKeuangan, (inputKeuangan) => inputKeuangan.debitur, {
+    onDelete: 'CASCADE',
+    nullable: true,
+  })
+  inputKeuangan: InputKeuangan[];
 }

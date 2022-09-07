@@ -7,6 +7,14 @@ import { InputKeuanganService } from './input_keuangan.service';
   model: {
     type: InputKeuangan,
   },
+  query: {
+    join: {
+      debitur: {
+        eager: true,
+        allow: ['peminjam1', 'no_debitur'],
+      },
+    },
+  },
 })
 @Controller('input-keuangan')
 export class InputKeuanganController implements CrudController<InputKeuangan> {

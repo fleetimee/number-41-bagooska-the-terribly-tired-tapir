@@ -13,10 +13,7 @@ import { Debitur } from './entities/debitur.entity';
   query: {
     /* Telling the crud controller to join the nonfixed and fixed tables. */
     join: {
-      nonfixed: {
-        eager: true,
-      },
-      fixed: {
+      inputKeuangan: {
         eager: true,
       },
       createdBy: {

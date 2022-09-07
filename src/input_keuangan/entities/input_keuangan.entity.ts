@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Debitur } from 'src/debiturs/entities/debitur.entity';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class InputKeuangan {
@@ -70,4 +71,11 @@ export class InputKeuangan {
 
   @Column('int')
   trade_cycle: number;
+
+  // Many to one with inputKeuangan
+  @ManyToOne(() => Debitur, (debitur) => debitur.inputKeuangan, {
+    cascade: true,
+    onDelete: 'CASCADE',
+  })
+  debitur: Debitur;
 }
