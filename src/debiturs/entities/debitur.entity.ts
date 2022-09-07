@@ -69,6 +69,9 @@ value generation strategy. */
   @Column()
   status_keluarga: string;
 
+  @Column('int', { nullable: true })
+  jumlah_tanggungan: number;
+
   @Column()
   lamanya_berusaha: number;
 

@@ -1,0 +1,11 @@
+{
+  "tanggal_input": "2019-10-01",
+  "kas_on_hand": 1500000,
+  "tabungan": 1000000,
+  "jumlah_kas_dan_tabungan": 2500000,
+  "jumlah_piutang": 1000000,
+  "jumlah_persediaan": 500000,
+  "hutang_usaha": 500000,
+  "hutang_bank": 500000,
+  "aktiva_tetap": 1000000
+}

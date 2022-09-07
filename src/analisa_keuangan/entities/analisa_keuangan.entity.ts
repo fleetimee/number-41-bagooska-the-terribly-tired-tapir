@@ -11,24 +11,6 @@ export class AnalisaKeuangan {
   @Column('bigint')
   jumlah_aset_kini: number;
 
-  @Column('double precision')
-  flat_initial: number;
-
-  @Column('double precision')
-  efektif_initial: number;
-
-  @Column('double precision')
-  total_flat_efektif_in_percentage: number;
-
-  @Column('bigint')
-  efektif_in_rp: number;
-
-  @Column('bigint')
-  flat_in_rp: number;
-
-  @Column('bigint')
-  total_flat_efektif_in_rp: number;
-
   @Column('bigint')
   total_angsuran_keseluruhan: number;
 
@@ -116,7 +98,7 @@ export class AnalisaKeuangan {
   @Column()
   keterangan_dsc: string;
 
-  @Column({ default: false })
+  @Column('bool')
   kredit_disetujuin: boolean;
 
   @Column('bigint')

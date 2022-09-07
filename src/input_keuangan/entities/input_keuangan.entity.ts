@@ -26,14 +26,14 @@ export class InputKeuangan {
   @Column('bigint')
   angsuran_rp: number;
 
-  @Column('bigint')
-  pinjaman_lainnya: number;
+  // @Column('bigint')
+  // pinjaman_lainnya: number;
 
-  @Column('bigint')
-  angsuran_pinjaman_lainnya: number;
+  // @Column('bigint')
+  // angsuran_pinjaman_lainnya: number;
 
-  @Column('bigint')
-  nilai_aset: number;
+  // @Column('bigint')
+  // nilai_aset: number;
 
   @Column('int')
   hpp: number;
