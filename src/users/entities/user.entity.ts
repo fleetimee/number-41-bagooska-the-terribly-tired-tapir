@@ -4,12 +4,13 @@ import {
   Column,
   Entity,
   JoinColumn,
+  JoinTable,
   ManyToMany,
   ManyToOne,
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 import { Role } from 'src/roles/entities/role.entity';
 
 @Entity({
@@ -21,7 +22,8 @@ export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ unique: true })
+  // Validate if username exists
   username: string;
 
   @Column()
@@ -37,7 +39,11 @@ export class User {
   @JoinColumn()
   updatedBy: User;
 
-  @ManyToMany(() => Role, (role) => role.user)
+  @ManyToMany(() => Role, (role) => role.user, {
+    cascade: true,
+    onDelete: 'SET NULL',
+  })
+  @JoinTable()
   roles: Role[];
 
   @BeforeInsert()

@@ -40,7 +40,10 @@ export class CharacterAnalysis {
   deskripsi_karakter: string;
 
   // Relation
-  @ManyToOne(() => User, (user) => user, { nullable: true })
+  @ManyToOne(() => User, (user) => user, {
+    nullable: true,
+    onDelete: 'CASCADE',
+  })
   createdBy: User;
 
   @OneToOne(() => User, (user) => user, { nullable: true })

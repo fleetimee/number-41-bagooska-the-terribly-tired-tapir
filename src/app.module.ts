@@ -14,6 +14,12 @@ import { UploadsModule } from './uploads/uploads.module';
 import { CollateralsModule } from './collaterals/collaterals.module';
 import { AnalysisModule } from './business_analysis/analysis.module';
 import { CharacterAnalysisModule } from './character_analysis/character_analysis.module';
+import { AppService } from './app.service';
+import { AppController } from './app.controller';
+import { InputKeuanganModule } from './input_keuangan/input_keuangan.module';
+import { AnalisaKeuanganModule } from './analisa_keuangan/analisa_keuangan.module';
+import { InputNeracaModule } from './input_neraca/input_neraca.module';
+import { InputRugiLabaModule } from './input_rugi_laba/input_rugi_laba.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -53,6 +59,12 @@ import { CharacterAnalysisModule } from './character_analysis/character_analysis
     CollateralsModule,
     AnalysisModule,
     CharacterAnalysisModule,
+    InputKeuanganModule,
+    AnalisaKeuanganModule,
+    InputNeracaModule,
+    InputRugiLabaModule,
   ],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

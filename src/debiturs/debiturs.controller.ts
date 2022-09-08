@@ -1,4 +1,3 @@
-import { CreateDebiturDto } from './dto/create-debitur.dto';
 import { Controller } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { Crud, CrudController } from '@rewiko/crud';
@@ -11,17 +10,19 @@ import { Debitur } from './entities/debitur.entity';
   model: {
     type: Debitur,
   },
-  dto: {
-    create: CreateDebiturDto,
-  },
   query: {
     /* Telling the crud controller to join the nonfixed and fixed tables. */
     join: {
-      nonfixed: {
+      inputNeraca: {
         eager: true,
       },
-      fixed: {
+      'inputNeraca.inputRugiLaba': {
         eager: true,
+      },
+      createdBy: {
+        eager: true,
+        exclude: ['password'],
+        allow: ['username'],
       },
     },
   },

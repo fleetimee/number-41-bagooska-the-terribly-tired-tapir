@@ -35,7 +35,10 @@ export class Analysis {
 
   // Relation
 
-  @ManyToOne(() => User, (user) => user, { nullable: false })
+  @ManyToOne(() => User, (user) => user, {
+    nullable: false,
+    onDelete: 'CASCADE',
+  })
   createdBy: User;
 
   @OneToOne(() => User, (user) => user, { nullable: true })
