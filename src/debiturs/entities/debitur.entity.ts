@@ -1,3 +1,4 @@
+import { InputNeraca } from './../../input_neraca/entities/input_neraca.entity';
 import { InputKeuangan } from './../../input_keuangan/entities/input_keuangan.entity';
 import { Fixed } from './../../fixeds/entities/fixed.entity';
 import { NonFixed } from './../../non-fixeds/entities/non-fixed.entity';
@@ -127,9 +128,9 @@ value generation strategy. */
   @JoinColumn()
   updatedBy: User;
 
-  @OneToMany(() => InputKeuangan, (inputKeuangan) => inputKeuangan.debitur, {
+  @OneToMany(() => InputNeraca, (inputNeraca) => inputNeraca.debitur, {
     onDelete: 'CASCADE',
     nullable: true,
   })
-  inputKeuangan: InputKeuangan[];
+  inputNeraca: InputNeraca[];
 }

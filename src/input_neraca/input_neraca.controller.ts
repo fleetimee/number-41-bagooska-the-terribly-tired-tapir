@@ -7,6 +7,14 @@ import { Crud, CrudController } from '@rewiko/crud';
   model: {
     type: InputNeraca,
   },
+  query: {
+    join: {
+      debitur: {
+        eager: true,
+        allow: ['peminjam1', 'no_debitur'],
+      },
+    },
+  },
 })
 @Controller('input-neraca')
 export class InputNeracaController implements CrudController<InputNeraca> {

@@ -1,5 +1,5 @@
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class InputNeraca {
@@ -32,4 +32,11 @@ export class InputNeraca {
 
   @Column('bigint')
   aktiva_tetap: number;
+
+  // Relationship
+  @ManyToOne(() => Debitur, (debitur) => debitur.inputNeraca, {
+    cascade: true,
+    onDelete: 'CASCADE',
+  })
+  debitur: Debitur;
 }

@@ -73,9 +73,9 @@ export class InputKeuangan {
   trade_cycle: number;
 
   // Many to one with inputKeuangan
-  @ManyToOne(() => Debitur, (debitur) => debitur.inputKeuangan, {
-    cascade: true,
-    onDelete: 'CASCADE',
-  })
-  debitur: Debitur;
+  // @ManyToOne(() => Debitur, (debitur) => debitur.inputKeuangan, {
+  //   cascade: true,
+  //   onDelete: 'CASCADE',
+  // })
+  // debitur: Debitur;
 }
