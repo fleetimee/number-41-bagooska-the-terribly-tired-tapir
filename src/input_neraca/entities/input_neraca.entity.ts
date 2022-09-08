@@ -1,5 +1,12 @@
+import { InputRugiLaba } from './../../input_rugi_laba/entities/input_rugi_laba.entity';
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class InputNeraca {
@@ -34,9 +41,19 @@ export class InputNeraca {
   aktiva_tetap: number;
 
   // Relationship
-  @ManyToOne(() => Debitur, (debitur) => debitur.inputNeraca, {
+  // @ManyToOne(() => Debitur, (debitur) => debitur.inputNeraca, {
+  //   cascade: true,
+  //   onDelete: 'CASCADE',
+  // })
+  // debitur: Debitur;
+
+  @OneToOne(() => Debitur, (debitur) => debitur, {
     cascade: true,
     onDelete: 'CASCADE',
   })
+  @JoinColumn()
   debitur: Debitur;
+
+  @OneToOne(() => InputRugiLaba, (inputRugiLaba) => inputRugiLaba.neraca)
+  inputRugiLaba: InputRugiLaba;
 }

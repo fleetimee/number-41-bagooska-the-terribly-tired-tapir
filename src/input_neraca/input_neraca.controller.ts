@@ -13,6 +13,9 @@ import { Crud, CrudController } from '@rewiko/crud';
         eager: true,
         allow: ['peminjam1', 'no_debitur'],
       },
+      inputRugiLaba: {
+        eager: true,
+      },
     },
   },
 })

@@ -7,6 +7,13 @@ import { Crud, CrudController } from '@rewiko/crud';
   model: {
     type: InputRugiLaba,
   },
+  query: {
+    join: {
+      neraca: {
+        eager: true,
+      },
+    },
+  },
 })
 @Controller('input-rugi-laba')
 export class InputRugiLabaController implements CrudController<InputRugiLaba> {

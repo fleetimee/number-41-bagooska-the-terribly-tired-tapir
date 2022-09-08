@@ -128,9 +128,6 @@ value generation strategy. */
   @JoinColumn()
   updatedBy: User;
 
-  @OneToMany(() => InputNeraca, (inputNeraca) => inputNeraca.debitur, {
-    onDelete: 'CASCADE',
-    nullable: true,
-  })
-  inputNeraca: InputNeraca[];
+  @OneToOne(() => InputNeraca, (inputNeraca) => inputNeraca.debitur)
+  inputNeraca: InputNeraca;
 }

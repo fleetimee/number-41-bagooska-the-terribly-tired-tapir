@@ -16,6 +16,9 @@ import { Debitur } from './entities/debitur.entity';
       inputNeraca: {
         eager: true,
       },
+      'inputNeraca.inputRugiLaba': {
+        eager: true,
+      },
       createdBy: {
         eager: true,
         exclude: ['password'],
