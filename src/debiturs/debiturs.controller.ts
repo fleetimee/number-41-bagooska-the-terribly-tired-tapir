@@ -16,7 +16,22 @@ import { Debitur } from './entities/debitur.entity';
       inputNeraca: {
         eager: true,
       },
-      'inputNeraca.inputRugiLaba': {
+      // 'inputNeraca.inputRugiLaba': {
+      //   eager: true,
+      // },
+      inputRugiLaba: {
+        eager: true,
+      },
+      inputKeuangan: {
+        eager: true,
+      },
+      analisaKeuangan: {
+        eager: true,
+      },
+      analisaBisnis: {
+        eager: true,
+      },
+      analisaKarakter: {
         eager: true,
       },
       createdBy: {

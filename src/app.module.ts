@@ -20,6 +20,8 @@ import { InputKeuanganModule } from './input_keuangan/input_keuangan.module';
 import { AnalisaKeuanganModule } from './analisa_keuangan/analisa_keuangan.module';
 import { InputNeracaModule } from './input_neraca/input_neraca.module';
 import { InputRugiLabaModule } from './input_rugi_laba/input_rugi_laba.module';
+import { AnalisaBisnisModule } from './analisa_bisnis/analisa_bisnis.module';
+import { AnalisaKarakterModule } from './analisa_karakter/analisa_karakter.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -63,6 +65,8 @@ import { InputRugiLabaModule } from './input_rugi_laba/input_rugi_laba.module';
     AnalisaKeuanganModule,
     InputNeracaModule,
     InputRugiLabaModule,
+    AnalisaBisnisModule,
+    AnalisaKarakterModule,
   ],
   controllers: [AppController],
   providers: [AppService],

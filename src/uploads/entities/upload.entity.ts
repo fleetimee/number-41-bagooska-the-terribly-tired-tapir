@@ -17,6 +17,9 @@ export class Upload {
   id: number;
 
   @Column()
+  test: string;
+
+  @Column()
   files: string;
 
   @CreateDateColumn()
@@ -27,20 +30,20 @@ export class Upload {
 
   // Relation
 
-  @ManyToOne(() => User, (user) => user, {
-    nullable: false,
-    onDelete: 'CASCADE',
-  })
-  createdBy: User;
+  // @ManyToOne(() => User, (user) => user, {
+  //   nullable: false,
+  //   onDelete: 'CASCADE',
+  // })
+  // createdBy: User;
 
   @OneToOne(() => User, (user) => user, { nullable: true })
   @JoinColumn()
   updatedBy: User;
 
-  @ManyToOne(() => Submission, (submission) => submission.uploads, {
-    cascade: true,
-    onDelete: 'CASCADE',
-    nullable: false,
-  })
-  submission: Submission;
+  // @ManyToOne(() => Submission, (submission) => submission.uploads, {
+  //   cascade: true,
+  //   onDelete: 'CASCADE',
+  //   nullable: false,
+  // })
+  // submission: Submission;
 }

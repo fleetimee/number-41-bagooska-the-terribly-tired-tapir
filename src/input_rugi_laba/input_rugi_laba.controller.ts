@@ -12,6 +12,9 @@ import { Crud, CrudController } from '@rewiko/crud';
       neraca: {
         eager: true,
       },
+      debitur: {
+        eager: true,
+      },
     },
   },
 })

@@ -37,6 +37,21 @@ export class InputNeraca {
   @Column('bigint')
   hutang_bank: number;
 
+  @Column('bigint', {
+    nullable: true,
+  })
+  peralatan: number;
+
+  @Column('bigint', {
+    nullable: true,
+  })
+  kendaraan: number;
+
+  @Column('bigint', {
+    nullable: true,
+  })
+  tanah_bangunan: number;
+
   @Column('bigint')
   aktiva_tetap: number;
 

@@ -1,4 +1,12 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Debitur } from 'src/debiturs/entities/debitur.entity';
+import { InputKeuangan } from 'src/input_keuangan/entities/input_keuangan.entity';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class AnalisaKeuangan {
@@ -115,4 +123,19 @@ export class AnalisaKeuangan {
 
   @Column('double precision')
   total_crr_keuangan: number;
+
+  @OneToOne(() => InputKeuangan, (inputKeuangan) => inputKeuangan, {
+    onDelete: 'CASCADE',
+    cascade: true,
+  })
+  @JoinColumn()
+  keuangan: InputKeuangan;
+
+  // OneToOne with debitur
+  @OneToOne(() => Debitur, (debitur) => debitur, {
+    onDelete: 'CASCADE',
+    cascade: true,
+  })
+  @JoinColumn()
+  debitur: Debitur;
 }

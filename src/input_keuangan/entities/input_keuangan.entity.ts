@@ -1,5 +1,12 @@
-import { Debitur } from 'src/debiturs/entities/debitur.entity';
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Debitur } from './../../debiturs/entities/debitur.entity';
+import { InputRugiLaba } from './../../input_rugi_laba/entities/input_rugi_laba.entity';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class InputKeuangan {
@@ -26,15 +33,6 @@ export class InputKeuangan {
 
   @Column('bigint')
   angsuran_rp: number;
-
-  // @Column('bigint')
-  // pinjaman_lainnya: number;
-
-  // @Column('bigint')
-  // angsuran_pinjaman_lainnya: number;
-
-  // @Column('bigint')
-  // nilai_aset: number;
 
   @Column('int')
   hpp: number;
@@ -72,10 +70,17 @@ export class InputKeuangan {
   @Column('int')
   trade_cycle: number;
 
-  // Many to one with inputKeuangan
-  // @ManyToOne(() => Debitur, (debitur) => debitur.inputKeuangan, {
-  //   cascade: true,
-  //   onDelete: 'CASCADE',
-  // })
-  // debitur: Debitur;
+  @OneToOne(() => InputRugiLaba, (inputRugiLaba) => inputRugiLaba, {
+    cascade: true,
+    onDelete: 'CASCADE',
+  })
+  @JoinColumn()
+  rugilaba: InputRugiLaba;
+
+  @OneToOne(() => Debitur, (debitur) => debitur, {
+    cascade: true,
+    onDelete: 'CASCADE',
+  })
+  @JoinColumn()
+  debitur: Debitur;
 }

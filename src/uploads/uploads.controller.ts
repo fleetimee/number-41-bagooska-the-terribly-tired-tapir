@@ -78,6 +78,26 @@ export class UploadsController implements CrudController<Upload> {
       },
     }),
   )
+  @UseInterceptors(
+    FileInterceptor('files', {
+      storage: diskStorage({
+        destination: './uploads/files',
+        filename: (req, files, cb) => {
+          const randomName = Array(32)
+            .fill(null)
+            .map(() => Math.round(Math.random() * 16).toString(16))
+            .join('');
+          return cb(null, `${randomName}${extname(files.originalname)}`);
+        },
+      }),
+      fileFilter: (req, files, cb) => {
+        if (!files.originalname.match(/\.(pdf|docx|doc)$/)) {
+          return cb(null, false);
+        }
+        cb(null, true);
+      },
+    }),
+  )
   @Override()
   createOne(
     @ParsedRequest() req: CrudRequest,
