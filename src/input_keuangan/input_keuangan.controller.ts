@@ -13,6 +13,9 @@ import { InputKeuanganService } from './input_keuangan.service';
         eager: true,
         allow: ['peminjam1', 'no_debitur'],
       },
+      rugilaba: {
+        eager: true,
+      },
     },
   },
 })

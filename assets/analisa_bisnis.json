@@ -1,0 +1,17 @@
+{
+  "nilai_omzet": 80,
+  "keterangan_omzet": "s/d 80%",
+  "nilai_harga_bersaing": 60,
+  "keterangan_harga_bersaing": "Sama dgn pesaing",
+  "nilai_persaingan": 70,
+  "keterangan_persaingan": "Cukup ketat",
+  "nilai_lokasi_usaha": 70,
+  "keterangan_lokasi_usaha": "Cukup Strategis",
+  "nilai_produktivitas": 70,
+  "keterangan_produktivitas": "s/d 70%",
+  "nilai_kualitas": 80,
+  "keterangan_kualitas": "s/d 80%",
+  "deskripsi_bisnis": "Lorem ipsum",
+  "hasil_crr_bisnis": 75,
+  "debitur": 100
+}

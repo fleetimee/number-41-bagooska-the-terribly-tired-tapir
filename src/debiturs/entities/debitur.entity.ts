@@ -1,5 +1,9 @@
-import { InputNeraca } from './../../input_neraca/entities/input_neraca.entity';
+import { AnalisaKarakter } from './../../analisa_karakter/entities/analisa_karakter.entity';
+import { AnalisaBisni } from './../../analisa_bisnis/entities/analisa_bisni.entity';
+import { AnalisaKeuangan } from './../../analisa_keuangan/entities/analisa_keuangan.entity';
 import { InputKeuangan } from './../../input_keuangan/entities/input_keuangan.entity';
+import { InputRugiLaba } from './../../input_rugi_laba/entities/input_rugi_laba.entity';
+import { InputNeraca } from './../../input_neraca/entities/input_neraca.entity';
 import { Fixed } from './../../fixeds/entities/fixed.entity';
 import { NonFixed } from './../../non-fixeds/entities/non-fixed.entity';
 import { ApiProperty } from '@nestjs/swagger';
@@ -128,6 +132,41 @@ value generation strategy. */
   @JoinColumn()
   updatedBy: User;
 
-  @OneToOne(() => InputNeraca, (inputNeraca) => inputNeraca.debitur)
+  @OneToOne(() => InputNeraca, (inputNeraca) => inputNeraca.debitur, {
+    onDelete: 'CASCADE',
+  })
   inputNeraca: InputNeraca;
+
+  @OneToOne(() => InputRugiLaba, (inputRugiLaba) => inputRugiLaba.debitur, {
+    onDelete: 'CASCADE',
+  })
+  inputRugiLaba: InputRugiLaba;
+
+  @OneToOne(() => InputKeuangan, (inputKeuangan) => inputKeuangan.debitur, {
+    onDelete: 'CASCADE',
+  })
+  inputKeuangan: InputKeuangan;
+
+  @OneToOne(
+    () => AnalisaKeuangan,
+    (analisaKeuangan) => analisaKeuangan.debitur,
+    {
+      onDelete: 'CASCADE',
+    },
+  )
+  analisaKeuangan: AnalisaKeuangan;
+
+  @OneToOne(() => AnalisaBisni, (analisaBisnis) => analisaBisnis.debitur, {
+    onDelete: 'CASCADE',
+  })
+  analisaBisnis: AnalisaBisni;
+
+  @OneToOne(
+    () => AnalisaKarakter,
+    (analisaKarakter) => analisaKarakter.debitur,
+    {
+      onDelete: 'CASCADE',
+    },
+  )
+  analisaKarakter: AnalisaKarakter;
 }

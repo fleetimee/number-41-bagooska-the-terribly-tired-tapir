@@ -7,6 +7,16 @@ import { AnalisaKeuanganService } from './analisa_keuangan.service';
   model: {
     type: AnalisaKeuangan,
   },
+  query: {
+    join: {
+      debitur: {
+        eager: true,
+      },
+      keuangan: {
+        eager: true,
+      },
+    },
+  },
 })
 @Controller('analisa-keuangan')
 export class AnalisaKeuanganController

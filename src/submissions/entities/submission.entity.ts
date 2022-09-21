@@ -1,7 +1,6 @@
 import { CharacterAnalysis } from './../../character_analysis/entities/character_analysis.entity';
 import { Analysis } from './../../business_analysis/entities/analysis.entity';
 import { Collateral } from './../../collaterals/entities/collateral.entity';
-import { Upload } from './../../uploads/entities/upload.entity';
 import { NonFixed } from './../../non-fixeds/entities/non-fixed.entity';
 import { customAlphabet } from 'nanoid';
 import { User } from 'src/users/entities/user.entity';
@@ -13,7 +12,6 @@ import {
   JoinTable,
   ManyToMany,
   ManyToOne,
-  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
@@ -57,8 +55,8 @@ export class Submission {
   @JoinColumn()
   updatedBy: User;
 
-  @OneToMany(() => Upload, (upload) => upload.submission, {})
-  uploads: Upload[];
+  // @OneToMany(() => Upload, (upload) => upload.submission, {})
+  // uploads: Upload[];
 
   @ManyToOne(() => Collateral, (collateral) => collateral.submission, {
     cascade: true,

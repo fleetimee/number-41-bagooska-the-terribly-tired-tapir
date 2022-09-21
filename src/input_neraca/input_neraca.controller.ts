@@ -17,6 +17,12 @@ import { Crud, CrudController } from '@rewiko/crud';
         eager: true,
       },
     },
+    sort: [
+      {
+        field: 'id',
+        order: 'ASC',
+      },
+    ],
   },
 })
 @Controller('input-neraca')

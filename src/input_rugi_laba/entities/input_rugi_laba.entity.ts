@@ -1,3 +1,4 @@
+import { Debitur } from 'src/debiturs/entities/debitur.entity';
 import { InputNeraca } from './../../input_neraca/entities/input_neraca.entity';
 import {
   Column,
@@ -26,6 +27,21 @@ export class InputRugiLaba {
 
   @Column('bigint')
   jumlah_aktiva_lancar: number;
+
+  @Column('bigint', {
+    nullable: true,
+  })
+  peralatan: number;
+
+  @Column('bigint', {
+    nullable: true,
+  })
+  kendaraan: number;
+
+  @Column('bigint', {
+    nullable: true,
+  })
+  tanah_bangunan: number;
 
   @Column('bigint')
   jumlah_aktiva_tetap: number;
@@ -96,4 +112,11 @@ export class InputRugiLaba {
   })
   @JoinColumn()
   neraca: InputNeraca;
+
+  @OneToOne(() => Debitur, (debitur) => debitur, {
+    cascade: true,
+    onDelete: 'CASCADE',
+  })
+  @JoinColumn()
+  debitur: Debitur;
 }
