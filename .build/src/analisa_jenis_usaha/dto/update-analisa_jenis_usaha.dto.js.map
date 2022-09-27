@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/analisa_jenis_usaha/dto/update-analisa_jenis_usaha.dto.ts"],
+  "sourcesContent": ["import { PartialType } from '@nestjs/swagger';\nimport { CreateAnalisaJenisUsahaDto } from './create-analisa_jenis_usaha.dto';\n\nexport class UpdateAnalisaJenisUsahaDto extends PartialType(CreateAnalisaJenisUsahaDto) {}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA4B;AAC5B,wCAA2C;AAEpC,yCAAyC,gCAAY,8DAA4B;AAAA;",
+  "names": []
+}

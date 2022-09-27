@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../dist/utils/file-upload.utils.d.ts"],
+  "sourcesContent": ["export declare class FileUploadingUtils {\n    static singleFileUploader(name: string, dest?: string): import(\"@nestjs/common\").Type<import(\"@nestjs/common\").NestInterceptor<any, any>>;\n    static multipleFileUploader(name: string, dest?: string, maxFileNumber?: number): import(\"@nestjs/common\").Type<import(\"@nestjs/common\").NestInterceptor<any, any>>;\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

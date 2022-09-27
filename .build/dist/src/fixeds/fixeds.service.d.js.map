@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/fixeds/fixeds.service.d.ts"],
+  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Fixed } from './entities/fixed.entity';\nexport declare class FixedsService extends TypeOrmCrudService<Fixed> {\n    constructor(repo: any);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

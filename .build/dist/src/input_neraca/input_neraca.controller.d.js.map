@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/input_neraca/input_neraca.controller.d.ts"],
+  "sourcesContent": ["import { InputNeraca } from './entities/input_neraca.entity';\nimport { InputNeracaService } from './input_neraca.service';\nimport { CrudController } from '@rewiko/crud';\nexport declare class InputNeracaController implements CrudController<InputNeraca> {\n    service: InputNeracaService;\n    constructor(service: InputNeracaService);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

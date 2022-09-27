@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/roles/roles.module.d.ts"],
+  "sourcesContent": ["export declare class RolesModule {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

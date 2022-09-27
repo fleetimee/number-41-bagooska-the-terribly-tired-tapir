@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/submissions/dto/update-submission.dto.d.ts"],
+  "sourcesContent": ["import { CreateSubmissionDto } from './create-submission.dto';\ndeclare const UpdateSubmissionDto_base: import(\"@nestjs/common\").Type<Partial<CreateSubmissionDto>>;\nexport declare class UpdateSubmissionDto extends UpdateSubmissionDto_base {\n}\nexport {};\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

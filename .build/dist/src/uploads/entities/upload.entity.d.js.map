@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/uploads/entities/upload.entity.d.ts"],
+  "sourcesContent": ["import { User } from 'src/users/entities/user.entity';\nexport declare class Upload {\n    id: number;\n    test: string;\n    files: string;\n    createdDate: Date;\n    updatedDate: Date;\n    updatedBy: User;\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/collaterals/collaterals.service.ts"],
+  "sourcesContent": ["import { Collateral } from './entities/collateral.entity';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Injectable } from '@nestjs/common';\nimport { InjectRepository } from '@nestjs/typeorm';\n\n@Injectable()\nexport class CollateralsService extends TypeOrmCrudService<Collateral> {\n  constructor(@InjectRepository(Collateral) repo) {\n    super(repo);\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,wBAA2B;AAC3B,0BAAmC;AACnC,oBAA2B;AAC3B,qBAAiC;AAG1B,uCAAiC,uCAA+B;AAAA,EACrE,YAA0C,MAAM;AAC9C,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/analisa_bisnis/analisa_bisnis.controller.ts"],
+  "sourcesContent": ["import { AnalisaBisni } from './entities/analisa_bisni.entity';\nimport { Controller } from '@nestjs/common';\nimport { Crud, CrudController } from '@rewiko/crud';\nimport { AnalisaBisnisService } from './analisa_bisnis.service';\n\n@Crud({\n  model: {\n    type: AnalisaBisni,\n  },\n  query: {\n    join: {\n      debitur: {\n        eager: true,\n      },\n    },\n  },\n})\n@Controller('analisa-bisnis')\nexport class AnalisaBisnisController implements CrudController<AnalisaBisni> {\n  constructor(public service: AnalisaBisnisService) {}\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,2BAA6B;AAC7B,oBAA2B;AAC3B,kBAAqC;AAgB9B,oCAAsE;AAAA,EAC3E,YAAmB,SAA+B;AAA/B;AAAA;AAAA;AADd;AAAA,EAbN,sBAAK;AAAA,IACJ,OAAO;AAAA,MACL,MAAM;AAAA;AAAA,IAER,OAAO;AAAA,MACL,MAAM;AAAA,QACJ,SAAS;AAAA,UACP,OAAO;AAAA;AAAA;AAAA;AAAA;AAAA,EAKd,8BAAW;AAAA,GACL;",
+  "names": []
+}

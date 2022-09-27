@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/input_neraca/input_neraca.module.d.ts"],
+  "sourcesContent": ["export declare class InputNeracaModule {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

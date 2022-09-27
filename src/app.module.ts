@@ -46,11 +46,11 @@ import { AnalisaJenisUsahaModule } from './analisa_jenis_usaha/analisa_jenis_usa
     DebitursModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'tiny.db.elephantsql.com',
       port: 5432,
-      username: 'postgres',
-      password: 'postgres',
-      database: 'webservice',
+      username: 'tldlahwl',
+      password: 'R2LwSynWBu6jY7u_hC4b_A04Gf1s5Z5a',
+      database: 'tldlahwl',
       autoLoadEntities: true,
       synchronize: true,
       logging: true,
@@ -73,4 +73,4 @@ import { AnalisaJenisUsahaModule } from './analisa_jenis_usaha/analisa_jenis_usa
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

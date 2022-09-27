@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/input_neraca/dto/update-input_neraca.dto.d.ts"],
+  "sourcesContent": ["import { CreateInputNeracaDto } from './create-input_neraca.dto';\ndeclare const UpdateInputNeracaDto_base: import(\"@nestjs/common\").Type<Partial<CreateInputNeracaDto>>;\nexport declare class UpdateInputNeracaDto extends UpdateInputNeracaDto_base {\n}\nexport {};\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

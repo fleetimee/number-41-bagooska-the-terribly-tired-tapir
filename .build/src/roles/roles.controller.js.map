@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/roles/roles.controller.ts"],
+  "sourcesContent": ["import { Crud, CrudController } from '@rewiko/crud';\nimport { Controller } from '@nestjs/common';\nimport { RolesService } from './roles.service';\nimport { Role } from './entities/role.entity';\n\n@Crud({\n  model: {\n    type: Role,\n  },\n  query: {\n    join: {\n      user: {\n        eager: true,\n        exclude: ['password'],\n      },\n      'user.role': {\n        eager: false,\n      },\n    },\n  },\n  routes: {},\n})\n@Controller('roles')\nexport class RolesController implements CrudController<Role> {\n  constructor(public service: RolesService) {}\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,kBAAqC;AACrC,oBAA2B;AAE3B,kBAAqB;AAoBd,4BAAsD;AAAA,EAC3D,YAAmB,SAAuB;AAAvB;AAAA;AAAA;AADd;AAAA,EAlBN,sBAAK;AAAA,IACJ,OAAO;AAAA,MACL,MAAM;AAAA;AAAA,IAER,OAAO;AAAA,MACL,MAAM;AAAA,QACJ,MAAM;AAAA,UACJ,OAAO;AAAA,UACP,SAAS,CAAC;AAAA;AAAA,QAEZ,aAAa;AAAA,UACX,OAAO;AAAA;AAAA;AAAA;AAAA,IAIb,QAAQ;AAAA;AAAA,EAET,8BAAW;AAAA,GACL;",
+  "names": []
+}

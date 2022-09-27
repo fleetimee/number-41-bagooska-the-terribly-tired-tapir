@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/submissions/dto/update-submission.dto.ts"],
+  "sourcesContent": ["import { PartialType } from '@nestjs/swagger';\nimport { CreateSubmissionDto } from './create-submission.dto';\n\nexport class UpdateSubmissionDto extends PartialType(CreateSubmissionDto) {}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA4B;AAC5B,+BAAoC;AAE7B,kCAAkC,gCAAY,8CAAqB;AAAA;",
+  "names": []
+}

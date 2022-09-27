@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/collaterals/collaterals.controller.d.ts"],
+  "sourcesContent": ["import { CrudController } from '@rewiko/crud';\nimport { CollateralsService } from './collaterals.service';\nimport { Collateral } from './entities/collateral.entity';\nexport declare class CollateralsController implements CrudController<Collateral> {\n    service: CollateralsService;\n    constructor(service: CollateralsService);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

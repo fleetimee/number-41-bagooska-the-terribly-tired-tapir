@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/submissions/submissions.service.d.ts"],
+  "sourcesContent": ["import { Submission } from './entities/submission.entity';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nexport declare class SubmissionsService extends TypeOrmCrudService<Submission> {\n    constructor(repo: any);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

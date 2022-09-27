@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/analisa_karakter/analisa_karakter.module.d.ts"],
+  "sourcesContent": ["export declare class AnalisaKarakterModule {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

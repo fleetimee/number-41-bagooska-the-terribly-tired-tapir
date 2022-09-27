@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/input_rugi_laba/input_rugi_laba.controller.ts"],
+  "sourcesContent": ["import { InputRugiLaba } from './entities/input_rugi_laba.entity';\nimport { Controller } from '@nestjs/common';\nimport { InputRugiLabaService } from './input_rugi_laba.service';\nimport { Crud, CrudController } from '@rewiko/crud';\n\n@Crud({\n  model: {\n    type: InputRugiLaba,\n  },\n  query: {\n    join: {\n      neraca: {\n        eager: true,\n      },\n      debitur: {\n        eager: true,\n      },\n    },\n  },\n})\n@Controller('input-rugi-laba')\nexport class InputRugiLabaController implements CrudController<InputRugiLaba> {\n  constructor(public service: InputRugiLabaService) {}\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,6BAA8B;AAC9B,oBAA2B;AAE3B,kBAAqC;AAkB9B,oCAAuE;AAAA,EAC5E,YAAmB,SAA+B;AAA/B;AAAA;AAAA;AADd;AAAA,EAhBN,sBAAK;AAAA,IACJ,OAAO;AAAA,MACL,MAAM;AAAA;AAAA,IAER,OAAO;AAAA,MACL,MAAM;AAAA,QACJ,QAAQ;AAAA,UACN,OAAO;AAAA;AAAA,QAET,SAAS;AAAA,UACP,OAAO;AAAA;AAAA;AAAA;AAAA;AAAA,EAKd,8BAAW;AAAA,GACL;",
+  "names": []
+}

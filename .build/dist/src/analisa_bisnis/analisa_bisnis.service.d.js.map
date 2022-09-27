@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/analisa_bisnis/analisa_bisnis.service.d.ts"],
+  "sourcesContent": ["import { AnalisaBisni } from './entities/analisa_bisni.entity';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nexport declare class AnalisaBisnisService extends TypeOrmCrudService<AnalisaBisni> {\n    constructor(repo: any);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/input_neraca/input_neraca.service.ts"],
+  "sourcesContent": ["import { InputNeraca } from './entities/input_neraca.entity';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Injectable } from '@nestjs/common';\nimport { InjectRepository } from '@nestjs/typeorm';\n\n@Injectable()\nexport class InputNeracaService extends TypeOrmCrudService<InputNeraca> {\n  constructor(@InjectRepository(InputNeraca) repo) {\n    super(repo);\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,0BAA4B;AAC5B,0BAAmC;AACnC,oBAA2B;AAC3B,qBAAiC;AAG1B,uCAAiC,uCAAgC;AAAA,EACtE,YAA2C,MAAM;AAC/C,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/character_analysis/character_analysis.controller.ts"],
+  "sourcesContent": ["import { Crud, CrudController } from '@rewiko/crud';\nimport { Controller } from '@nestjs/common';\nimport { CharacterAnalysisService } from './character_analysis.service';\nimport { CharacterAnalysis } from './entities/character_analysis.entity';\n\n@Crud({\n  model: {\n    type: CharacterAnalysis,\n  },\n  query: {\n    join: {\n      submission: {\n        eager: true,\n      },\n      'submission.fixed': {\n        eager: true,\n      },\n      'submission.nonfixed': {\n        eager: true,\n      },\n      createdBy: {\n        eager: true,\n        exclude: ['password'],\n        allow: ['username'],\n      },\n    },\n  },\n})\n@Controller('character_analysis')\nexport class CharacterAnalysisController\n  implements CrudController<CharacterAnalysis>\n{\n  constructor(public service: CharacterAnalysisService) {}\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,kBAAqC;AACrC,oBAA2B;AAE3B,iCAAkC;AA0B3B,wCAEP;AAAA,EACE,YAAmB,SAAmC;AAAnC;AAAA;AAAA;AAHd;AAAA,EAxBN,sBAAK;AAAA,IACJ,OAAO;AAAA,MACL,MAAM;AAAA;AAAA,IAER,OAAO;AAAA,MACL,MAAM;AAAA,QACJ,YAAY;AAAA,UACV,OAAO;AAAA;AAAA,QAET,oBAAoB;AAAA,UAClB,OAAO;AAAA;AAAA,QAET,uBAAuB;AAAA,UACrB,OAAO;AAAA;AAAA,QAET,WAAW;AAAA,UACT,OAAO;AAAA,UACP,SAAS,CAAC;AAAA,UACV,OAAO,CAAC;AAAA;AAAA;AAAA;AAAA;AAAA,EAKf,8BAAW;AAAA,GACL;",
+  "names": []
+}

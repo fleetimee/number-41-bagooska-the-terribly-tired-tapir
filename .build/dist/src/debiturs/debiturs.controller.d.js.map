@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/debiturs/debiturs.controller.d.ts"],
+  "sourcesContent": ["import { CrudController } from '@rewiko/crud';\nimport { DebitursService } from './debiturs.service';\nimport { Debitur } from './entities/debitur.entity';\nexport declare class DebitursController implements CrudController<Debitur> {\n    service: DebitursService;\n    constructor(service: DebitursService);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

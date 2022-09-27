@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/input_keuangan/entities/input_keuangan.entity.d.ts"],
+  "sourcesContent": ["import { Debitur } from './../../debiturs/entities/debitur.entity';\nimport { InputRugiLaba } from './../../input_rugi_laba/entities/input_rugi_laba.entity';\nexport declare class InputKeuangan {\n    id: number;\n    kredit_diusulkan: number;\n    angsuran: number;\n    bunga_per_tahun: number;\n    provisi: number;\n    sistem_angsuran: string;\n    digunakan_untuk: string;\n    angsuran_rp: number;\n    hpp: number;\n    penjualan_kini: number;\n    biaya_bahan_kini: number;\n    biaya_operasional_kini: number;\n    biaya_upah_kini: number;\n    biaya_hidup_kini: number;\n    penjualan_asumsi: number;\n    biaya_bahan_asumsi: number;\n    biaya_operasional_asumsi: number;\n    biaya_upah_asumsi: number;\n    biaya_hidup_asumsi: number;\n    trade_cycle: number;\n    rugilaba: InputRugiLaba;\n    debitur: Debitur;\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

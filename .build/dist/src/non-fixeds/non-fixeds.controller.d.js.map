@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/non-fixeds/non-fixeds.controller.d.ts"],
+  "sourcesContent": ["import { CreateManyDto, CrudController, CrudRequest } from '@rewiko/crud';\nimport { NonFixed } from './entities/non-fixed.entity';\nimport { NonFixedsService } from './non-fixeds.service';\nexport declare class NonFixedsController implements CrudController<NonFixed> {\n    service: NonFixedsService;\n    constructor(service: NonFixedsService);\n    get base(): CrudController<NonFixed>;\n    getMany(req: CrudRequest): Promise<import(\"@rewiko/crud\").GetManyDefaultResponse<NonFixed> | NonFixed[]>;\n    getOneAndDoStuff(req: CrudRequest): Promise<NonFixed>;\n    createOne(req: CrudRequest, dto: NonFixed): Promise<NonFixed>;\n    createMany(req: CrudRequest, dto: CreateManyDto<NonFixed>): Promise<NonFixed[]>;\n    coolFunction(req: CrudRequest, dto: NonFixed): Promise<NonFixed>;\n    awesomePUT(req: CrudRequest, dto: NonFixed): Promise<NonFixed>;\n    deleteOne(req: CrudRequest): Promise<void | NonFixed>;\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

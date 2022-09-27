@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/analisa_jenis_usaha/analisa_jenis_usaha.module.ts"],
+  "sourcesContent": ["import { TypeOrmModule } from '@nestjs/typeorm';\nimport { Module } from '@nestjs/common';\nimport { AnalisaJenisUsahaService } from './analisa_jenis_usaha.service';\nimport { AnalisaJenisUsahaController } from './analisa_jenis_usaha.controller';\nimport { AnalisaJenisUsaha } from './entities/analisa_jenis_usaha.entity';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([AnalisaJenisUsaha])],\n  controllers: [AnalisaJenisUsahaController],\n  providers: [AnalisaJenisUsahaService],\n})\nexport class AnalisaJenisUsahaModule {}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA8B;AAC9B,oBAAuB;AACvB,iCAAyC;AACzC,kCAA4C;AAC5C,kCAAkC;AAO3B,oCAA8B;AAAA;AAA9B;AAAA,EALN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA;AAAA,GAEP;",
+  "names": []
+}

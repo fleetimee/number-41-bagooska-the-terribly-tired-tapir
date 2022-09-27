@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/analisa_keuangan/analisa_keuangan.module.ts"],
+  "sourcesContent": ["import { Module } from '@nestjs/common';\nimport { AnalisaKeuanganService } from './analisa_keuangan.service';\nimport { AnalisaKeuanganController } from './analisa_keuangan.controller';\nimport { TypeOrmModule } from '@nestjs/typeorm';\nimport { AnalisaKeuangan } from './entities/analisa_keuangan.entity';\n\n@Module({\n  controllers: [AnalisaKeuanganController],\n  providers: [AnalisaKeuanganService],\n  imports: [TypeOrmModule.forFeature([AnalisaKeuangan])],\n  exports: [AnalisaKeuanganService],\n})\nexport class AnalisaKeuanganModule {}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,oBAAuB;AACvB,8BAAuC;AACvC,+BAA0C;AAC1C,qBAA8B;AAC9B,+BAAgC;AAQzB,kCAA4B;AAAA;AAA5B;AAAA,EANN,0BAAO;AAAA,IACN,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA,IACZ,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,SAAS,CAAC;AAAA;AAAA,GAEL;",
+  "names": []
+}

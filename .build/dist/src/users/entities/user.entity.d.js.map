@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/users/entities/user.entity.d.ts"],
+  "sourcesContent": ["import { Role } from 'src/roles/entities/role.entity';\nexport declare class User {\n    id: number;\n    username: string;\n    password: string;\n    createdAt: Date;\n    createdBy: User;\n    updatedBy: User;\n    roles: Role[];\n    hashPassword(): Promise<void>;\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

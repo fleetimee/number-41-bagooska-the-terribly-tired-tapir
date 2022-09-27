@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/fixeds/entities/fixed.entity.d.ts"],
+  "sourcesContent": ["import { JenisPenggunaan } from './../enum/jenis-penggunaan.enum';\nimport { JenisPengajuan } from './../enum/jenis-pengajuan.enum';\nimport { Debitur } from 'src/debiturs/entities/debitur.entity';\nimport { User } from 'src/users/entities/user.entity';\nimport { Submission } from 'src/submissions/entities/submission.entity';\nexport declare class Fixed {\n    id: string;\n    jenis_pengajuan: JenisPengajuan;\n    plafon_fasilitas: number;\n    jenis_penggunaan: JenisPenggunaan;\n    tujuan_penggunaan: string;\n    jangka_waktu: string;\n    penghasilan_pemohon: number;\n    potongan_gaji: number;\n    sisa_penghasilan: number;\n    nama_pejabat_penanggung_jawab: string;\n    jabatan_pejabat_penanggung_jawab: string;\n    nama_pejabat_pemotong_gaji: string;\n    jabatan_pejabat_pemotong_gaji: string;\n    no_rekening: number;\n    plafon_kredit: number;\n    tanggal_mulai_kredit: string;\n    jangka_waktu_kredit: string;\n    is_approved: boolean;\n    debitur: Debitur;\n    createdBy: User;\n    updatedBy: User;\n    submission: Submission[];\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

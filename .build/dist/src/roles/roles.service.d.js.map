@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/roles/roles.service.d.ts"],
+  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Role } from './entities/role.entity';\nexport declare class RolesService extends TypeOrmCrudService<Role> {\n    constructor(repo: any);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

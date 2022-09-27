@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/character_analysis/character_analysis.module.d.ts"],
+  "sourcesContent": ["export declare class CharacterAnalysisModule {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

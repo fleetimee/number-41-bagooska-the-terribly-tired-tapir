@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/analisa_keuangan/dto/update-analisa_keuangan.dto.ts"],
+  "sourcesContent": ["import { PartialType } from '@nestjs/swagger';\nimport { CreateAnalisaKeuanganDto } from './create-analisa_keuangan.dto';\n\nexport class UpdateAnalisaKeuanganDto extends PartialType(CreateAnalisaKeuanganDto) {}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA4B;AAC5B,qCAAyC;AAElC,uCAAuC,gCAAY,yDAA0B;AAAA;",
+  "names": []
+}

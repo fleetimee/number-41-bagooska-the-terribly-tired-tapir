@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../dist/src/app.service.d.ts"],
+  "sourcesContent": ["export declare class AppService {\n    getHello(): string;\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

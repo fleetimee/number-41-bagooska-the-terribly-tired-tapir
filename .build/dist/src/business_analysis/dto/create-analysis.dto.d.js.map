@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/business_analysis/dto/create-analysis.dto.d.ts"],
+  "sourcesContent": ["export declare class CreateAnalysisDto {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

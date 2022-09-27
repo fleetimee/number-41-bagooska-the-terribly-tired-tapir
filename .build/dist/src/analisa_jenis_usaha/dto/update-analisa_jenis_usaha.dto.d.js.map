@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/analisa_jenis_usaha/dto/update-analisa_jenis_usaha.dto.d.ts"],
+  "sourcesContent": ["import { CreateAnalisaJenisUsahaDto } from './create-analisa_jenis_usaha.dto';\ndeclare const UpdateAnalisaJenisUsahaDto_base: import(\"@nestjs/common\").Type<Partial<CreateAnalisaJenisUsahaDto>>;\nexport declare class UpdateAnalisaJenisUsahaDto extends UpdateAnalisaJenisUsahaDto_base {\n}\nexport {};\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

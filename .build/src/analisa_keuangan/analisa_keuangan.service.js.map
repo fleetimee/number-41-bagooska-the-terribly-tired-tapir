@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/analisa_keuangan/analisa_keuangan.service.ts"],
+  "sourcesContent": ["import { AnalisaKeuangan } from './entities/analisa_keuangan.entity';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Injectable } from '@nestjs/common';\nimport { InjectRepository } from '@nestjs/typeorm';\n\n@Injectable()\nexport class AnalisaKeuanganService extends TypeOrmCrudService<AnalisaKeuangan> {\n  constructor(@InjectRepository(AnalisaKeuangan) repo) {\n    super(repo);\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,8BAAgC;AAChC,0BAAmC;AACnC,oBAA2B;AAC3B,qBAAiC;AAG1B,2CAAqC,uCAAoC;AAAA,EAC9E,YAA+C,MAAM;AACnD,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
+  "names": []
+}

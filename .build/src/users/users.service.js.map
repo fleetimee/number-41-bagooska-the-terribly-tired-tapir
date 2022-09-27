@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/users/users.service.ts"],
+  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Injectable } from '@nestjs/common';\nimport { User } from './entities/user.entity';\nimport { InjectRepository } from '@nestjs/typeorm';\n\n@Injectable()\nexport class UsersService extends TypeOrmCrudService<User> {\n  constructor(@InjectRepository(User) repo) {\n    super(repo);\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,0BAAmC;AACnC,oBAA2B;AAC3B,kBAAqB;AACrB,qBAAiC;AAG1B,iCAA2B,uCAAyB;AAAA,EACzD,YAAoC,MAAM;AACxC,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
+  "names": []
+}

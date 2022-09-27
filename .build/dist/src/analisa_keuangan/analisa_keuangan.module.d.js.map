@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/analisa_keuangan/analisa_keuangan.module.d.ts"],
+  "sourcesContent": ["export declare class AnalisaKeuanganModule {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/submissions/dto/create-submission.dto.d.ts"],
+  "sourcesContent": ["export declare class CreateSubmissionDto {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

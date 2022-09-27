@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/analisa_jenis_usaha/entities/analisa_jenis_usaha.entity.ts"],
+  "sourcesContent": ["import { Debitur } from 'src/debiturs/entities/debitur.entity';\nimport {\n  Column,\n  Entity,\n  JoinColumn,\n  OneToOne,\n  PrimaryGeneratedColumn,\n} from 'typeorm';\n\n@Entity()\nexport class AnalisaJenisUsaha {\n  @PrimaryGeneratedColumn()\n  id: number;\n\n  @Column('int')\n  total_crr_usaha: number;\n\n  @OneToOne(() => Debitur, (debitur) => debitur, {\n    onDelete: 'CASCADE',\n    cascade: true,\n  })\n  @JoinColumn()\n  debitur: Debitur;\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAAwB;AACxB,qBAMO;AAGA,8BAAwB;AAAA;AAE7B;AAAA,EADC;AAAA,GACD,AAFK,kBAEL;AAGA;AAAA,EADC,2BAAO;AAAA,GACR,AALK,kBAKL;AAOA;AAAA,EALC,6BAAS,MAAM,wBAAS,CAAC,YAAY,SAAS;AAAA,IAC7C,UAAU;AAAA,IACV,SAAS;AAAA;AAAA,EAEV;AAAA,GACD,AAZK,kBAYL;AAZK;AAAA,EADN;AAAA,GACM;",
+  "names": []
+}

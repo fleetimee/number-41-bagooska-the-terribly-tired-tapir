@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/analisa_karakter/analisa_karakter.controller.d.ts"],
+  "sourcesContent": ["import { AnalisaKarakter } from './entities/analisa_karakter.entity';\nimport { CrudController } from '@rewiko/crud';\nimport { AnalisaKarakterService } from './analisa_karakter.service';\nexport declare class AnalisaKarakterController implements CrudController<AnalisaKarakter> {\n    service: AnalisaKarakterService;\n    constructor(service: AnalisaKarakterService);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

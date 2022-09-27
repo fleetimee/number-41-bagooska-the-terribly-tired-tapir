@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/input_neraca/entities/input_neraca.entity.d.ts"],
+  "sourcesContent": ["import { InputRugiLaba } from './../../input_rugi_laba/entities/input_rugi_laba.entity';\nimport { Debitur } from 'src/debiturs/entities/debitur.entity';\nexport declare class InputNeraca {\n    id: number;\n    tanggal_input: Date;\n    kas_on_hand: number;\n    tabungan: number;\n    jumlah_kas_dan_tabungan: number;\n    jumlah_piutang: number;\n    jumlah_persediaan: number;\n    hutang_usaha: number;\n    hutang_bank: number;\n    peralatan: number;\n    kendaraan: number;\n    tanah_bangunan: number;\n    aktiva_tetap: number;\n    debitur: Debitur;\n    inputRugiLaba: InputRugiLaba;\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

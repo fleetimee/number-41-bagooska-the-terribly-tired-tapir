@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/character_analysis/character_analysis.module.ts"],
+  "sourcesContent": ["import { TypeOrmModule } from '@nestjs/typeorm';\nimport { Module } from '@nestjs/common';\nimport { CharacterAnalysisService } from './character_analysis.service';\nimport { CharacterAnalysisController } from './character_analysis.controller';\nimport { CharacterAnalysis } from './entities/character_analysis.entity';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([CharacterAnalysis])],\n  controllers: [CharacterAnalysisController],\n  providers: [CharacterAnalysisService],\n})\nexport class CharacterAnalysisModule {}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA8B;AAC9B,oBAAuB;AACvB,gCAAyC;AACzC,iCAA4C;AAC5C,iCAAkC;AAO3B,oCAA8B;AAAA;AAA9B;AAAA,EALN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA;AAAA,GAEP;",
+  "names": []
+}

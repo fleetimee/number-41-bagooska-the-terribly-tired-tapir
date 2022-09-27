@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/analisa_karakter/analisa_karakter.service.ts"],
+  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Injectable } from '@nestjs/common';\nimport { AnalisaKarakter } from './entities/analisa_karakter.entity';\nimport { InjectRepository } from '@nestjs/typeorm';\n\n@Injectable()\nexport class AnalisaKarakterService extends TypeOrmCrudService<AnalisaKarakter> {\n  constructor(@InjectRepository(AnalisaKarakter) repo) {\n    super(repo);\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,0BAAmC;AACnC,oBAA2B;AAC3B,8BAAgC;AAChC,qBAAiC;AAG1B,2CAAqC,uCAAoC;AAAA,EAC9E,YAA+C,MAAM;AACnD,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
+  "names": []
+}

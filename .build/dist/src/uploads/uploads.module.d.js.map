@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/uploads/uploads.module.d.ts"],
+  "sourcesContent": ["export declare class UploadsModule {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

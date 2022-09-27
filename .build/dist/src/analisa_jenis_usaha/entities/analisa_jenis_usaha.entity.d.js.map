@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/analisa_jenis_usaha/entities/analisa_jenis_usaha.entity.d.ts"],
+  "sourcesContent": ["import { Debitur } from 'src/debiturs/entities/debitur.entity';\nexport declare class AnalisaJenisUsaha {\n    id: number;\n    total_crr_usaha: number;\n    debitur: Debitur;\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

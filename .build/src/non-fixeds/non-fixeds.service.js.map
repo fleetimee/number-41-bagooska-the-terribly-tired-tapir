@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/non-fixeds/non-fixeds.service.ts"],
+  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Injectable } from '@nestjs/common';\nimport { NonFixed } from './entities/non-fixed.entity';\nimport { InjectRepository } from '@nestjs/typeorm';\n\n@Injectable()\nexport class NonFixedsService extends TypeOrmCrudService<NonFixed> {\n  constructor(@InjectRepository(NonFixed) repo) {\n    super(repo);\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,0BAAmC;AACnC,oBAA2B;AAC3B,uBAAyB;AACzB,qBAAiC;AAG1B,qCAA+B,uCAA6B;AAAA,EACjE,YAAwC,MAAM;AAC5C,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
+  "names": []
+}

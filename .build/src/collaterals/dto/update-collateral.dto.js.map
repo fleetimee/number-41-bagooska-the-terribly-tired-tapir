@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/collaterals/dto/update-collateral.dto.ts"],
+  "sourcesContent": ["import { PartialType } from '@nestjs/swagger';\nimport { CreateCollateralDto } from './create-collateral.dto';\n\nexport class UpdateCollateralDto extends PartialType(CreateCollateralDto) {}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA4B;AAC5B,+BAAoC;AAE7B,kCAAkC,gCAAY,8CAAqB;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/analisa_keuangan/analisa_keuangan.controller.ts"],
+  "sourcesContent": ["import { AnalisaKeuangan } from './entities/analisa_keuangan.entity';\nimport { Controller } from '@nestjs/common';\nimport { Crud, CrudController } from '@rewiko/crud';\nimport { AnalisaKeuanganService } from './analisa_keuangan.service';\n\n@Crud({\n  model: {\n    type: AnalisaKeuangan,\n  },\n  query: {\n    join: {\n      debitur: {\n        eager: true,\n      },\n      keuangan: {\n        eager: true,\n      },\n    },\n  },\n})\n@Controller('analisa-keuangan')\nexport class AnalisaKeuanganController\n  implements CrudController<AnalisaKeuangan>\n{\n  constructor(public service: AnalisaKeuanganService) {}\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,8BAAgC;AAChC,oBAA2B;AAC3B,kBAAqC;AAmB9B,sCAEP;AAAA,EACE,YAAmB,SAAiC;AAAjC;AAAA;AAAA;AAHd;AAAA,EAhBN,sBAAK;AAAA,IACJ,OAAO;AAAA,MACL,MAAM;AAAA;AAAA,IAER,OAAO;AAAA,MACL,MAAM;AAAA,QACJ,SAAS;AAAA,UACP,OAAO;AAAA;AAAA,QAET,UAAU;AAAA,UACR,OAAO;AAAA;AAAA;AAAA;AAAA;AAAA,EAKd,8BAAW;AAAA,GACL;",
+  "names": []
+}

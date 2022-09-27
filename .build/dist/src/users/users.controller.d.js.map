@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/users/users.controller.d.ts"],
+  "sourcesContent": ["import { User } from './entities/user.entity';\nimport { CrudController } from '@rewiko/crud';\nimport { UsersService } from './users.service';\nexport declare class UsersController implements CrudController<User> {\n    service: UsersService;\n    constructor(service: UsersService);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

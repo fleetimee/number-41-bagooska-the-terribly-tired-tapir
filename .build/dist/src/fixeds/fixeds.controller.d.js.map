@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/fixeds/fixeds.controller.d.ts"],
+  "sourcesContent": ["import { Fixed } from './entities/fixed.entity';\nimport { FixedsService } from './fixeds.service';\nimport { CrudController } from '@rewiko/crud';\nexport declare class FixedsController implements CrudController<Fixed> {\n    service: FixedsService;\n    constructor(service: FixedsService);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/input_keuangan/dto/update-input_keuangan.dto.d.ts"],
+  "sourcesContent": ["import { CreateInputKeuanganDto } from './create-input_keuangan.dto';\ndeclare const UpdateInputKeuanganDto_base: import(\"@nestjs/common\").Type<Partial<CreateInputKeuanganDto>>;\nexport declare class UpdateInputKeuanganDto extends UpdateInputKeuanganDto_base {\n}\nexport {};\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

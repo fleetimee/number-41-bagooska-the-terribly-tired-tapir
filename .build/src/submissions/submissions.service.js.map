@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/submissions/submissions.service.ts"],
+  "sourcesContent": ["import { Submission } from './entities/submission.entity';\nimport { Injectable } from '@nestjs/common';\nimport { InjectRepository } from '@nestjs/typeorm';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\n\n@Injectable()\nexport class SubmissionsService extends TypeOrmCrudService<Submission> {\n  constructor(@InjectRepository(Submission) repo) {\n    super(repo);\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,wBAA2B;AAC3B,oBAA2B;AAC3B,qBAAiC;AACjC,0BAAmC;AAG5B,uCAAiC,uCAA+B;AAAA,EACrE,YAA0C,MAAM;AAC9C,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
+  "names": []
+}

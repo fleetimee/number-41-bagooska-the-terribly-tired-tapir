@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/uploads/uploads.service.spec.ts"],
+  "sourcesContent": ["import { Test, TestingModule } from '@nestjs/testing';\nimport { UploadsService } from './uploads.service';\n\ndescribe('UploadsService', () => {\n  let service: UploadsService;\n\n  beforeEach(async () => {\n    const module: TestingModule = await Test.createTestingModule({\n      providers: [UploadsService],\n    }).compile();\n\n    service = module.get<UploadsService>(UploadsService);\n  });\n\n  it('should be defined', () => {\n    expect(service).toBeDefined();\n  });\n});\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,qBAAoC;AACpC,qBAA+B;AAE/B,SAAS,kBAAkB,MAAM;AAC/B,MAAI;AAEJ,aAAW,YAAY;AACrB,UAAM,UAAwB,MAAM,oBAAK,oBAAoB;AAAA,MAC3D,WAAW,CAAC;AAAA,OACX;AAEH,cAAU,QAAO,IAAoB;AAAA;AAGvC,KAAG,qBAAqB,MAAM;AAC5B,WAAO,SAAS;AAAA;AAAA;",
+  "names": []
+}

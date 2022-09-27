@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/input_rugi_laba/input_rugi_laba.module.ts"],
+  "sourcesContent": ["import { InputRugiLaba } from './entities/input_rugi_laba.entity';\nimport { Module } from '@nestjs/common';\nimport { InputRugiLabaService } from './input_rugi_laba.service';\nimport { InputRugiLabaController } from './input_rugi_laba.controller';\nimport { TypeOrmModule } from '@nestjs/typeorm';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([InputRugiLaba])],\n  exports: [InputRugiLabaService],\n  controllers: [InputRugiLabaController],\n  providers: [InputRugiLabaService],\n})\nexport class InputRugiLabaModule {}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,6BAA8B;AAC9B,oBAAuB;AACvB,8BAAqC;AACrC,8BAAwC;AACxC,qBAA8B;AAQvB,gCAA0B;AAAA;AAA1B;AAAA,EANN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,SAAS,CAAC;AAAA,IACV,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA;AAAA,GAEP;",
+  "names": []
+}

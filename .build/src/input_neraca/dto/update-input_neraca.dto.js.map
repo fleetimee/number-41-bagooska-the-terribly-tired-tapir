@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/input_neraca/dto/update-input_neraca.dto.ts"],
+  "sourcesContent": ["import { PartialType } from '@nestjs/swagger';\nimport { CreateInputNeracaDto } from './create-input_neraca.dto';\n\nexport class UpdateInputNeracaDto extends PartialType(CreateInputNeracaDto) {}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA4B;AAC5B,iCAAqC;AAE9B,mCAAmC,gCAAY,iDAAsB;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/submissions/submissions.controller.d.ts"],
+  "sourcesContent": ["import { CrudController } from '@rewiko/crud';\nimport { SubmissionsService } from './submissions.service';\nimport { Submission } from './entities/submission.entity';\nexport declare class SubmissionsController implements CrudController<Submission> {\n    service: SubmissionsService;\n    constructor(service: SubmissionsService);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

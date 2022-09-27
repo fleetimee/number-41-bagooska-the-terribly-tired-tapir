@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/roles/entities/role.entity.ts"],
+  "sourcesContent": ["import { User } from 'src/users/entities/user.entity';\nimport {\n  Column,\n  CreateDateColumn,\n  Entity,\n  JoinColumn,\n  JoinTable,\n  ManyToMany,\n  OneToOne,\n  PrimaryGeneratedColumn,\n  UpdateDateColumn,\n} from 'typeorm';\n\n@Entity({\n  orderBy: {\n    id: 'ASC',\n  },\n})\nexport class Role {\n  @PrimaryGeneratedColumn()\n  id: number;\n\n  @Column()\n  name: string;\n\n  @CreateDateColumn()\n  createdDate: Date;\n\n  @ManyToMany(() => User, (user) => user)\n  @JoinColumn()\n  createdBy: number;\n\n  @UpdateDateColumn({ nullable: true })\n  updatedDate: Date;\n\n  @OneToOne(() => User, { nullable: true })\n  @JoinColumn()\n  updatedBy: number;\n\n  @ManyToMany(() => User, (user) => user.roles)\n  user: User[];\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,kBAAqB;AACrB,qBAUO;AAOA,iBAAW;AAAA;AAEhB;AAAA,EADC;AAAA,GACD,AAFK,KAEL;AAGA;AAAA,EADC;AAAA,GACD,AALK,KAKL;AAGA;AAAA,EADC;AAAA,GACD,AARK,KAQL;AAIA;AAAA,EAFC,+BAAW,MAAM,kBAAM,CAAC,SAAS;AAAA,EACjC;AAAA,GACD,AAZK,KAYL;AAGA;AAAA,EADC,qCAAiB,EAAE,UAAU;AAAA,GAC9B,AAfK,KAeL;AAIA;AAAA,EAFC,6BAAS,MAAM,kBAAM,EAAE,UAAU;AAAA,EACjC;AAAA,GACD,AAnBK,KAmBL;AAGA;AAAA,EADC,+BAAW,MAAM,kBAAM,CAAC,SAAS,KAAK;AAAA,GACvC,AAtBK,KAsBL;AAtBK;AAAA,EALN,2BAAO;AAAA,IACN,SAAS;AAAA,MACP,IAAI;AAAA;AAAA;AAAA,GAGD;",
+  "names": []
+}

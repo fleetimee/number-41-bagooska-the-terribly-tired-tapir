@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/debiturs/dto/update-debitur.dto.d.ts"],
+  "sourcesContent": ["import { CreateDebiturDto } from './create-debitur.dto';\ndeclare const UpdateDebiturDto_base: import(\"@nestjs/common\").Type<Partial<CreateDebiturDto>>;\nexport declare class UpdateDebiturDto extends UpdateDebiturDto_base {\n}\nexport {};\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

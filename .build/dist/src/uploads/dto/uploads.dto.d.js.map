@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/uploads/dto/uploads.dto.d.ts"],
+  "sourcesContent": ["export declare class UploadDto {\n    name: string;\n    images: string;\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

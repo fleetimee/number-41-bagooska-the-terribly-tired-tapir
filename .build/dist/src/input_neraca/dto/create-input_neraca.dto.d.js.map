@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/input_neraca/dto/create-input_neraca.dto.d.ts"],
+  "sourcesContent": ["export declare class CreateInputNeracaDto {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

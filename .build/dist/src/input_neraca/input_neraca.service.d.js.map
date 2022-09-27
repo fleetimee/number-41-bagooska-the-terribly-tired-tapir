@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/input_neraca/input_neraca.service.d.ts"],
+  "sourcesContent": ["import { InputNeraca } from './entities/input_neraca.entity';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nexport declare class InputNeracaService extends TypeOrmCrudService<InputNeraca> {\n    constructor(repo: any);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

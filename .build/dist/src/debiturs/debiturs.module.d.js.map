@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/debiturs/debiturs.module.d.ts"],
+  "sourcesContent": ["export declare class DebitursModule {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/collaterals/dto/create-collateral.dto.d.ts"],
+  "sourcesContent": ["export declare class CreateCollateralDto {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

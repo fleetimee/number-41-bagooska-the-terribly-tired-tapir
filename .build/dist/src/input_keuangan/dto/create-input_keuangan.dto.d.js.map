@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/input_keuangan/dto/create-input_keuangan.dto.d.ts"],
+  "sourcesContent": ["export declare class CreateInputKeuanganDto {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

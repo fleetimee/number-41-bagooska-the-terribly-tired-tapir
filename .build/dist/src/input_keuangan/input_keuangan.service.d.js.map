@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../dist/src/input_keuangan/input_keuangan.service.d.ts"],
+  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { InputKeuangan } from './entities/input_keuangan.entity';\nexport declare class InputKeuanganService extends TypeOrmCrudService<InputKeuangan> {\n    constructor(repo: any);\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/input_rugi_laba/dto/create-input_rugi_laba.dto.d.ts"],
+  "sourcesContent": ["export declare class CreateInputRugiLabaDto {\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

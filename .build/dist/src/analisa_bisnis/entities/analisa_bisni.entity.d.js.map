@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/analisa_bisnis/entities/analisa_bisni.entity.d.ts"],
+  "sourcesContent": ["import { Debitur } from 'src/debiturs/entities/debitur.entity';\nexport declare class AnalisaBisni {\n    id: number;\n    nilai_omzet: number;\n    keterangan_omzet: string;\n    nilai_harga_bersaing: number;\n    keterangan_harga_bersaing: string;\n    nilai_persaingan: number;\n    keterangan_persaingan: string;\n    nilai_lokasi_usaha: number;\n    keterangan_lokasi_usaha: string;\n    nilai_produktivitas: number;\n    keterangan_produktivitas: string;\n    nilai_kualitas: number;\n    keterangan_kualitas: string;\n    deskripsi_bisnis: string;\n    hasil_crr_bisnis: number;\n    debitur: Debitur;\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

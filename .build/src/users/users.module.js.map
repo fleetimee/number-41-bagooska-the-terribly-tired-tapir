@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/users/users.module.ts"],
+  "sourcesContent": ["import { TypeOrmModule } from '@nestjs/typeorm';\nimport { Module } from '@nestjs/common';\nimport { UsersService } from './users.service';\nimport { UsersController } from './users.controller';\nimport { User } from './entities/user.entity';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([User])],\n  controllers: [UsersController],\n  providers: [UsersService],\n})\nexport class UsersModule {}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA8B;AAC9B,oBAAuB;AACvB,mBAA6B;AAC7B,oBAAgC;AAChC,kBAAqB;AAOd,wBAAkB;AAAA;AAAlB;AAAA,EALN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA;AAAA,GAEP;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../dist/src/non-fixeds/entities/non-fixed.entity.d.ts"],
+  "sourcesContent": ["import { Submission } from './../../submissions/entities/submission.entity';\nimport { User } from 'src/users/entities/user.entity';\nimport { Debitur } from './../../debiturs/entities/debitur.entity';\nimport { JenisPengajuan } from 'src/fixeds/enum/jenis-pengajuan.enum';\nimport { JenisPenggunaan } from 'src/fixeds/enum/jenis-penggunaan.enum';\nexport declare class NonFixed {\n    id: string;\n    jenis_pengajuan: JenisPengajuan;\n    plafon_fasilitas: number;\n    jenis_penggunaan: JenisPenggunaan;\n    tujuan_penggunaan: string;\n    jangka_waktu: string;\n    no_rekening: number;\n    plafon_kredit: number;\n    tanggal_mulai_kredit: string;\n    jangka_waktu_kredit: string;\n    is_approved: boolean;\n    debitur: Debitur;\n    createdBy: User;\n    updatedBy: User;\n    submission: Submission[];\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

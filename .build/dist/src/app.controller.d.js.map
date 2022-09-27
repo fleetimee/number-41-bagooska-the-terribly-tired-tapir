@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../dist/src/app.controller.d.ts"],
+  "sourcesContent": ["import { AppService } from './app.service';\nexport declare class AppController {\n    private readonly appService;\n    constructor(appService: AppService);\n    getHello(): string;\n}\n"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

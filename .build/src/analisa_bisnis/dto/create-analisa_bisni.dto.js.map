@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/analisa_bisnis/dto/create-analisa_bisni.dto.ts"],
+  "sourcesContent": ["export class CreateAnalisaBisniDto {}\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,4BAA4B;AAAA;",
+  "names": []
+}
