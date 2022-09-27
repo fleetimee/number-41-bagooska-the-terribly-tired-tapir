@@ -1,3 +1,4 @@
+import { AnalisaJenisUsaha } from './../../analisa_jenis_usaha/entities/analisa_jenis_usaha.entity';
 import { AnalisaKarakter } from './../../analisa_karakter/entities/analisa_karakter.entity';
 import { AnalisaBisni } from './../../analisa_bisnis/entities/analisa_bisni.entity';
 import { AnalisaKeuangan } from './../../analisa_keuangan/entities/analisa_keuangan.entity';
@@ -99,7 +100,7 @@ value generation strategy. */
   @Column()
   pekerjaan2: string;
 
-  @Column('bigint')
+  @Column('bigint', { nullable: true })
   no_skpk: number;
 
   @Column('date')
@@ -169,4 +170,13 @@ value generation strategy. */
     },
   )
   analisaKarakter: AnalisaKarakter;
+
+  @OneToOne(
+    () => AnalisaJenisUsaha,
+    (analisaJenisUsaha) => analisaJenisUsaha.debitur,
+    {
+      onDelete: 'CASCADE',
+    },
+  )
+  analisaJenisUsaha: AnalisaJenisUsaha;
 }

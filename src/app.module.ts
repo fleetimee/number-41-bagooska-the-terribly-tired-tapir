@@ -22,6 +22,7 @@ import { InputNeracaModule } from './input_neraca/input_neraca.module';
 import { InputRugiLabaModule } from './input_rugi_laba/input_rugi_laba.module';
 import { AnalisaBisnisModule } from './analisa_bisnis/analisa_bisnis.module';
 import { AnalisaKarakterModule } from './analisa_karakter/analisa_karakter.module';
+import { AnalisaJenisUsahaModule } from './analisa_jenis_usaha/analisa_jenis_usaha.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -67,6 +68,7 @@ import { AnalisaKarakterModule } from './analisa_karakter/analisa_karakter.modul
     InputRugiLabaModule,
     AnalisaBisnisModule,
     AnalisaKarakterModule,
+    AnalisaJenisUsahaModule,
   ],
   controllers: [AppController],
   providers: [AppService],

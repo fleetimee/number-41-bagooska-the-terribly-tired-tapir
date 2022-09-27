@@ -11,14 +11,10 @@ import { Debitur } from './entities/debitur.entity';
     type: Debitur,
   },
   query: {
-    /* Telling the crud controller to join the nonfixed and fixed tables. */
     join: {
       inputNeraca: {
         eager: true,
       },
-      // 'inputNeraca.inputRugiLaba': {
-      //   eager: true,
-      // },
       inputRugiLaba: {
         eager: true,
       },
@@ -32,6 +28,9 @@ import { Debitur } from './entities/debitur.entity';
         eager: true,
       },
       analisaKarakter: {
+        eager: true,
+      },
+      analisaJenisUsaha: {
         eager: true,
       },
       createdBy: {
