@@ -23,6 +23,7 @@ import { InputRugiLabaModule } from './input_rugi_laba/input_rugi_laba.module';
 import { AnalisaBisnisModule } from './analisa_bisnis/analisa_bisnis.module';
 import { AnalisaKarakterModule } from './analisa_karakter/analisa_karakter.module';
 import { AnalisaJenisUsahaModule } from './analisa_jenis_usaha/analisa_jenis_usaha.module';
+import { AgunanModule } from './agunan/agunan.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -44,13 +45,24 @@ import { AnalisaJenisUsahaModule } from './analisa_jenis_usaha/analisa_jenis_usa
     FixedsModule,
     NonFixedsModule,
     DebitursModule,
+    // TypeOrmModule.forRoot({
+    //   type: 'postgres',
+    //   host: 'tiny.db.elephantsql.com',
+    //   port: 5432,
+    //   username: 'tldlahwl',
+    //   password: 'R2LwSynWBu6jY7u_hC4b_A04Gf1s5Z5a',
+    //   database: 'tldlahwl',
+    //   autoLoadEntities: true,
+    //   synchronize: true,
+    //   logging: true,
+    // }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'tiny.db.elephantsql.com',
+      host: 'localhost',
       port: 5432,
-      username: 'tldlahwl',
-      password: 'R2LwSynWBu6jY7u_hC4b_A04Gf1s5Z5a',
-      database: 'tldlahwl',
+      username: 'postgres',
+      password: 'postgres',
+      database: 'webservice',
       autoLoadEntities: true,
       synchronize: true,
       logging: true,
@@ -69,8 +81,9 @@ import { AnalisaJenisUsahaModule } from './analisa_jenis_usaha/analisa_jenis_usa
     AnalisaBisnisModule,
     AnalisaKarakterModule,
     AnalisaJenisUsahaModule,
+    AgunanModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule {}

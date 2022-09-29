@@ -33,6 +33,9 @@ import { Debitur } from './entities/debitur.entity';
       analisaJenisUsaha: {
         eager: true,
       },
+      agunan: {
+        eager: true,
+      },
       createdBy: {
         eager: true,
         exclude: ['password'],
