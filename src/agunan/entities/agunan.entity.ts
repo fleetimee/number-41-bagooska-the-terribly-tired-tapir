@@ -5,6 +5,7 @@ import {
   Column,
   ManyToMany,
   OneToOne,
+  ManyToOne,
 } from 'typeorm';
 
 @Entity()
@@ -27,6 +28,9 @@ export class Agunan {
   // )
   // keteranganAgunan: KeteranganAgunan;
 
-  @ManyToMany(() => Debitur, (debitur) => debitur.agunan)
-  debitur: Debitur[];
+  // @ManyToMany(() => Debitur, (debitur) => debitur.agunan)
+  // debitur: Debitur[];
+
+  // @ManyToOne(() => Debitur, (debitur) => debitur.agunan)
+  // debitur: Debitur;
 }

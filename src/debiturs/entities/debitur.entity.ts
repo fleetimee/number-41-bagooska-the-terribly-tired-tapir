@@ -6,8 +6,7 @@ import { AnalisaKeuangan } from './../../analisa_keuangan/entities/analisa_keuan
 import { InputKeuangan } from './../../input_keuangan/entities/input_keuangan.entity';
 import { InputRugiLaba } from './../../input_rugi_laba/entities/input_rugi_laba.entity';
 import { InputNeraca } from './../../input_neraca/entities/input_neraca.entity';
-import { Fixed } from './../../fixeds/entities/fixed.entity';
-import { NonFixed } from './../../non-fixeds/entities/non-fixed.entity';
+
 import { ApiProperty } from '@nestjs/swagger';
 import {
   Column,
@@ -17,7 +16,6 @@ import {
   JoinTable,
   ManyToMany,
   ManyToOne,
-  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
@@ -114,17 +112,18 @@ value generation strategy. */
 
   /* End of data lokasi debitur */
 
-  // Relation
-  @OneToMany(() => NonFixed, (nonfixed) => nonfixed.debitur, {
-    onDelete: 'SET NULL',
-    onUpdate: 'CASCADE',
-  })
-  nonfixed: NonFixed[];
+  // @OneToMany(() => NonFixed, (nonfixed) => nonfixed.debitur, {
+  //   onDelete: 'SET NULL',
+  //   onUpdate: 'CASCADE',
+  // })
+  // nonfixed: NonFixed[];
 
-  @OneToMany(() => Fixed, (fixed) => fixed.debitur, {
-    onDelete: 'CASCADE',
-  })
-  fixed: Fixed[];
+  // @OneToMany(() => Fixed, (fixed) => fixed.debitur, {
+  //   onDelete: 'CASCADE',
+  // })
+  // fixed: Fixed[];
+
+  // Relation
 
   @ManyToOne(() => User, (user) => user, {
     nullable: true,
@@ -183,12 +182,12 @@ value generation strategy. */
   )
   analisaJenisUsaha: AnalisaJenisUsaha;
 
-  @ManyToMany(() => Agunan, (agunan) => agunan.debitur, {
-    onDelete: 'SET NULL',
-    cascade: true,
-  })
-  @JoinTable()
-  agunan: Agunan[];
+  // @ManyToMany(() => Agunan, (agunan) => agunan.debitur, {
+  //   onDelete: 'SET NULL',
+  //   cascade: true,
+  // })
+  // @JoinTable()
+  // agunan: Agunan[];
 
   // @OneToMany(() => Agunan, (agunan) => agunan.debitur, {
   //   onDelete: 'SET NULL',
