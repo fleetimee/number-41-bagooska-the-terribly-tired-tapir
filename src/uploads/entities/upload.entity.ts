@@ -1,4 +1,3 @@
-import { Submission } from 'src/submissions/entities/submission.entity';
 import { User } from 'src/users/entities/user.entity';
 import {
   Entity,
@@ -7,7 +6,6 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   JoinColumn,
-  ManyToOne,
   OneToOne,
 } from 'typeorm';
 

@@ -1,3 +1,4 @@
+import { Agunan } from './../../agunan/entities/agunan.entity';
 import { AnalisaJenisUsaha } from './../../analisa_jenis_usaha/entities/analisa_jenis_usaha.entity';
 import { AnalisaKarakter } from './../../analisa_karakter/entities/analisa_karakter.entity';
 import { AnalisaBisni } from './../../analisa_bisnis/entities/analisa_bisni.entity';
@@ -5,16 +6,16 @@ import { AnalisaKeuangan } from './../../analisa_keuangan/entities/analisa_keuan
 import { InputKeuangan } from './../../input_keuangan/entities/input_keuangan.entity';
 import { InputRugiLaba } from './../../input_rugi_laba/entities/input_rugi_laba.entity';
 import { InputNeraca } from './../../input_neraca/entities/input_neraca.entity';
-import { Fixed } from './../../fixeds/entities/fixed.entity';
-import { NonFixed } from './../../non-fixeds/entities/non-fixed.entity';
+
 import { ApiProperty } from '@nestjs/swagger';
 import {
   Column,
   Entity,
   Generated,
   JoinColumn,
+  JoinTable,
+  ManyToMany,
   ManyToOne,
-  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
@@ -111,17 +112,18 @@ value generation strategy. */
 
   /* End of data lokasi debitur */
 
-  // Relation
-  @OneToMany(() => NonFixed, (nonfixed) => nonfixed.debitur, {
-    onDelete: 'SET NULL',
-    onUpdate: 'CASCADE',
-  })
-  nonfixed: NonFixed[];
+  // @OneToMany(() => NonFixed, (nonfixed) => nonfixed.debitur, {
+  //   onDelete: 'SET NULL',
+  //   onUpdate: 'CASCADE',
+  // })
+  // nonfixed: NonFixed[];
 
-  @OneToMany(() => Fixed, (fixed) => fixed.debitur, {
-    onDelete: 'CASCADE',
-  })
-  fixed: Fixed[];
+  // @OneToMany(() => Fixed, (fixed) => fixed.debitur, {
+  //   onDelete: 'CASCADE',
+  // })
+  // fixed: Fixed[];
+
+  // Relation
 
   @ManyToOne(() => User, (user) => user, {
     nullable: true,
@@ -179,4 +181,17 @@ value generation strategy. */
     },
   )
   analisaJenisUsaha: AnalisaJenisUsaha;
+
+  // @ManyToMany(() => Agunan, (agunan) => agunan.debitur, {
+  //   onDelete: 'SET NULL',
+  //   cascade: true,
+  // })
+  // @JoinTable()
+  // agunan: Agunan[];
+
+  // @OneToMany(() => Agunan, (agunan) => agunan.debitur, {
+  //   onDelete: 'SET NULL',
+  //   onUpdate: 'CASCADE',
+  // })
+  // agunan: Agunan[];
 }
