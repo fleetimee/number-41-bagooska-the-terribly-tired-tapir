@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/submissions/submissions.module.d.ts"],
-  "sourcesContent": ["export declare class SubmissionsModule {\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

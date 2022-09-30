@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/fixeds/fixeds.service.ts"],
-  "sourcesContent": ["import { Injectable } from '@nestjs/common';\nimport { InjectRepository } from '@nestjs/typeorm';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Fixed } from './entities/fixed.entity';\n\n@Injectable()\nexport class FixedsService extends TypeOrmCrudService<Fixed> {\n  /**\n   * A constructor function that injects the repository into the class.\n   * @param repo - The repository that will be used to perform the CRUD operations.\n   */\n  constructor(@InjectRepository(Fixed) repo) {\n    super(repo);\n  }\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,oBAA2B;AAC3B,qBAAiC;AACjC,0BAAmC;AACnC,mBAAsB;AAGf,kCAA4B,uCAA0B;AAAA,EAK3D,YAAqC,MAAM;AACzC,UAAM;AAAA;AAAA;AANH;AAAA,EADN;AAAA,EAMc,wDAAiB;AAAA,GALzB;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/character_analysis/entities/character_analysis.entity.d.ts"],
-  "sourcesContent": ["import { Submission } from 'src/submissions/entities/submission.entity';\nimport { User } from 'src/users/entities/user.entity';\nexport declare class CharacterAnalysis {\n    id: number;\n    ulet_dalam_bisnis: number;\n    flexible_kaku: number;\n    kreatif_inovatif: number;\n    jujur_dlm_bisnis: number;\n    deskripsi_karakter: string;\n    createdBy: User;\n    updatedBy: User;\n    submission: Submission[];\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

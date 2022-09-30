@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/uploads/entities/upload.entity.ts"],
-  "sourcesContent": ["import { Submission } from 'src/submissions/entities/submission.entity';\nimport { User } from 'src/users/entities/user.entity';\nimport {\n  Entity,\n  PrimaryGeneratedColumn,\n  Column,\n  CreateDateColumn,\n  UpdateDateColumn,\n  JoinColumn,\n  ManyToOne,\n  OneToOne,\n} from 'typeorm';\n\n@Entity()\nexport class Upload {\n  @PrimaryGeneratedColumn()\n  id: number;\n\n  @Column()\n  test: string;\n\n  @Column()\n  files: string;\n\n  @CreateDateColumn()\n  createdDate: Date;\n\n  @UpdateDateColumn()\n  updatedDate: Date;\n\n  // Relation\n\n  // @ManyToOne(() => User, (user) => user, {\n  //   nullable: false,\n  //   onDelete: 'CASCADE',\n  // })\n  // createdBy: User;\n\n  @OneToOne(() => User, (user) => user, { nullable: true })\n  @JoinColumn()\n  updatedBy: User;\n\n  // @ManyToOne(() => Submission, (submission) => submission.uploads, {\n  //   cascade: true,\n  //   onDelete: 'CASCADE',\n  //   nullable: false,\n  // })\n  // submission: Submission;\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AACA,kBAAqB;AACrB,qBASO;AAGA,mBAAa;AAAA;AAElB;AAAA,EADC;AAAA,GACD,AAFK,OAEL;AAGA;AAAA,EADC;AAAA,GACD,AALK,OAKL;AAGA;AAAA,EADC;AAAA,GACD,AARK,OAQL;AAGA;AAAA,EADC;AAAA,GACD,AAXK,OAWL;AAGA;AAAA,EADC;AAAA,GACD,AAdK,OAcL;AAYA;AAAA,EAFC,6BAAS,MAAM,kBAAM,CAAC,SAAS,MAAM,EAAE,UAAU;AAAA,EACjD;AAAA,GACD,AA1BK,OA0BL;AA1BK;AAAA,EADN;AAAA,GACM;",
-  "names": []
-}

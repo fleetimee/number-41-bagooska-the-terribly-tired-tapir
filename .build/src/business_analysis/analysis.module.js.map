@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/business_analysis/analysis.module.ts"],
-  "sourcesContent": ["import { TypeOrmModule } from '@nestjs/typeorm';\nimport { Module } from '@nestjs/common';\nimport { AnalysisService } from './analysis.service';\nimport { AnalysisController } from './analysis.controller';\nimport { Analysis } from './entities/analysis.entity';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([Analysis])],\n  controllers: [AnalysisController],\n  providers: [AnalysisService],\n})\nexport class AnalysisModule {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA8B;AAC9B,oBAAuB;AACvB,sBAAgC;AAChC,uBAAmC;AACnC,uBAAyB;AAOlB,2BAAqB;AAAA;AAArB;AAAA,EALN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA;AAAA,GAEP;",
-  "names": []
-}

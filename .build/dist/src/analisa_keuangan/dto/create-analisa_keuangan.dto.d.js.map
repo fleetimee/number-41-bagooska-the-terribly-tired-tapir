@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/analisa_keuangan/dto/create-analisa_keuangan.dto.d.ts"],
-  "sourcesContent": ["export declare class CreateAnalisaKeuanganDto {\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../dist/src/main.d.ts"],
-  "sourcesContent": ["export {};\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

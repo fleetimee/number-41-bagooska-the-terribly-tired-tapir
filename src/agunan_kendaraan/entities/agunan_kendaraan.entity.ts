@@ -49,4 +49,7 @@ export class AgunanKendaraan {
 
   @Column()
   pengikatan: string;
+
+  @Column('text')
+  deskripsi_panjang: string;
 }

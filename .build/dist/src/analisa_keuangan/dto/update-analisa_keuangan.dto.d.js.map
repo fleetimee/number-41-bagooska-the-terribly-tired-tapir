@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/analisa_keuangan/dto/update-analisa_keuangan.dto.d.ts"],
-  "sourcesContent": ["import { CreateAnalisaKeuanganDto } from './create-analisa_keuangan.dto';\ndeclare const UpdateAnalisaKeuanganDto_base: import(\"@nestjs/common\").Type<Partial<CreateAnalisaKeuanganDto>>;\nexport declare class UpdateAnalisaKeuanganDto extends UpdateAnalisaKeuanganDto_base {\n}\nexport {};\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

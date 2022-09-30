@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/repl.ts"],
-  "sourcesContent": ["import { repl } from '@nestjs/core';\nimport { AppModule } from './app.module';\n\nasync function bootstrap() {\n  await repl(AppModule);\n}\nbootstrap();\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,kBAAqB;AACrB,iBAA0B;AAE1B,2BAA2B;AACzB,QAAM,sBAAK;AAAA;AAEb;",
-  "names": []
-}

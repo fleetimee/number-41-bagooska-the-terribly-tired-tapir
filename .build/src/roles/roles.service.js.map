@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/roles/roles.service.ts"],
-  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Injectable } from '@nestjs/common';\nimport { Role } from './entities/role.entity';\nimport { InjectRepository } from '@nestjs/typeorm';\n\n@Injectable()\nexport class RolesService extends TypeOrmCrudService<Role> {\n  constructor(@InjectRepository(Role) repo) {\n    super(repo);\n  }\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,0BAAmC;AACnC,oBAA2B;AAC3B,kBAAqB;AACrB,qBAAiC;AAG1B,iCAA2B,uCAAyB;AAAA,EACzD,YAAoC,MAAM;AACxC,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
-  "names": []
-}

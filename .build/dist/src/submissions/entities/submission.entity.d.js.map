@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/submissions/entities/submission.entity.d.ts"],
-  "sourcesContent": ["import { CharacterAnalysis } from './../../character_analysis/entities/character_analysis.entity';\nimport { Analysis } from './../../business_analysis/entities/analysis.entity';\nimport { Collateral } from './../../collaterals/entities/collateral.entity';\nimport { NonFixed } from './../../non-fixeds/entities/non-fixed.entity';\nimport { User } from 'src/users/entities/user.entity';\nimport { Fixed } from 'src/fixeds/entities/fixed.entity';\nexport declare class Submission {\n    id: string;\n    no_pengajuan: string;\n    tgl_pengajuan: string;\n    nonfixed: NonFixed;\n    fixed: Fixed;\n    createdBy: User;\n    updatedBy: User;\n    collateral: Collateral;\n    business_analysis: Analysis;\n    character_analysis: CharacterAnalysis;\n    generateId(): void;\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

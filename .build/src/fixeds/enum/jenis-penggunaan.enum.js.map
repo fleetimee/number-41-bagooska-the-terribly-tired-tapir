@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/fixeds/enum/jenis-penggunaan.enum.ts"],
-  "sourcesContent": ["export enum JenisPenggunaan {\n  MODAL_KERJA = 'MODAL_KERJA',\n  INVESTASI = 'INVESTASI',\n  KONSUMSI = 'KONSUMSI',\n}\n"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,IAAK;AAAL,UAAK,kBAAL;AACL,oCAAc;AACd,kCAAY;AACZ,iCAAW;AAAA,GAHD;",
-  "names": []
-}

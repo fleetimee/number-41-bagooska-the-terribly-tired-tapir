@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/users/users.service.d.ts"],
-  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { User } from './entities/user.entity';\nexport declare class UsersService extends TypeOrmCrudService<User> {\n    constructor(repo: any);\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

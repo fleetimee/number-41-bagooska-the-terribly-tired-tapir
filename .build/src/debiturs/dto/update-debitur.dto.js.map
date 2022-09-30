@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/debiturs/dto/update-debitur.dto.ts"],
-  "sourcesContent": ["import { PartialType } from '@nestjs/swagger';\nimport { CreateDebiturDto } from './create-debitur.dto';\n\nexport class UpdateDebiturDto extends PartialType(CreateDebiturDto) {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA4B;AAC5B,4BAAiC;AAE1B,+BAA+B,gCAAY,wCAAkB;AAAA;",
-  "names": []
-}

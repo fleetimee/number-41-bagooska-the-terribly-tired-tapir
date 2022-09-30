@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/roles/roles.module.ts"],
-  "sourcesContent": ["import { TypeOrmModule } from '@nestjs/typeorm';\nimport { Module } from '@nestjs/common';\nimport { RolesService } from './roles.service';\nimport { RolesController } from './roles.controller';\nimport { Role } from './entities/role.entity';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([Role])],\n  controllers: [RolesController],\n  providers: [RolesService],\n})\nexport class RolesModule {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA8B;AAC9B,oBAAuB;AACvB,mBAA6B;AAC7B,oBAAgC;AAChC,kBAAqB;AAOd,wBAAkB;AAAA;AAAlB;AAAA,EALN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA;AAAA,GAEP;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/input_keuangan/input_keuangan.service.ts"],
-  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Injectable } from '@nestjs/common';\n\nimport { InputKeuangan } from './entities/input_keuangan.entity';\nimport { InjectRepository } from '@nestjs/typeorm';\n\n@Injectable()\nexport class InputKeuanganService extends TypeOrmCrudService<InputKeuangan> {\n  constructor(@InjectRepository(InputKeuangan) repo) {\n    super(repo);\n  }\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,0BAAmC;AACnC,oBAA2B;AAE3B,4BAA8B;AAC9B,qBAAiC;AAG1B,yCAAmC,uCAAkC;AAAA,EAC1E,YAA6C,MAAM;AACjD,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
-  "names": []
-}

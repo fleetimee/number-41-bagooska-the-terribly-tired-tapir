@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/fixeds/dto/update-fixed.dto.d.ts"],
-  "sourcesContent": ["import { JenisPengajuan } from '../enum/jenis-pengajuan.enum';\nimport { JenisPenggunaan } from '../enum/jenis-penggunaan.enum';\nimport { CreateFixedDto } from './create-fixed.dto';\ndeclare const UpdateFixedDto_base: import(\"@nestjs/common\").Type<Partial<CreateFixedDto>>;\nexport declare class UpdateFixedDto extends UpdateFixedDto_base {\n    jenis_pengajuan: JenisPengajuan;\n    jenis_penggunaan: JenisPenggunaan;\n}\nexport {};\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

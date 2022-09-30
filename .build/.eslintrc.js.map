@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../.eslintrc.js"],
-  "sourcesContent": ["module.exports = {\n  parser: '@typescript-eslint/parser',\n  parserOptions: {\n    project: 'tsconfig.json',\n    tsconfigRootDir : __dirname, \n    sourceType: 'module',\n  },\n  plugins: ['@typescript-eslint/eslint-plugin'],\n  extends: [\n    'plugin:@typescript-eslint/recommended',\n    'plugin:prettier/recommended',\n  ],\n  root: true,\n  env: {\n    node: true,\n    jest: true,\n  },\n  ignorePatterns: ['.eslintrc.js'],\n  rules: {\n    '@typescript-eslint/interface-name-prefix': 'off',\n    '@typescript-eslint/explicit-function-return-type': 'off',\n    '@typescript-eslint/explicit-module-boundary-types': 'off',\n    '@typescript-eslint/no-explicit-any': 'off',\n  },\n};\n"],
-  "mappings": "AAAA,OAAO,UAAU;AAAA,EACf,QAAQ;AAAA,EACR,eAAe;AAAA,IACb,SAAS;AAAA,IACT,iBAAkB;AAAA,IAClB,YAAY;AAAA;AAAA,EAEd,SAAS,CAAC;AAAA,EACV,SAAS;AAAA,IACP;AAAA,IACA;AAAA;AAAA,EAEF,MAAM;AAAA,EACN,KAAK;AAAA,IACH,MAAM;AAAA,IACN,MAAM;AAAA;AAAA,EAER,gBAAgB,CAAC;AAAA,EACjB,OAAO;AAAA,IACL,4CAA4C;AAAA,IAC5C,oDAAoD;AAAA,IACpD,qDAAqD;AAAA,IACrD,sCAAsC;AAAA;AAAA;",
-  "names": []
-}

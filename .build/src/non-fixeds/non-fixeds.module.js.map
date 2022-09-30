@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/non-fixeds/non-fixeds.module.ts"],
-  "sourcesContent": ["import { TypeOrmModule } from '@nestjs/typeorm';\nimport { Module } from '@nestjs/common';\nimport { NonFixedsService } from './non-fixeds.service';\nimport { NonFixedsController } from './non-fixeds.controller';\nimport { NonFixed } from './entities/non-fixed.entity';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([NonFixed])],\n  controllers: [NonFixedsController],\n  providers: [NonFixedsService],\n  exports: [NonFixedsService],\n})\nexport class NonFixedsModule {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA8B;AAC9B,oBAAuB;AACvB,wBAAiC;AACjC,yBAAoC;AACpC,uBAAyB;AAQlB,4BAAsB;AAAA;AAAtB;AAAA,EANN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA,IACZ,SAAS,CAAC;AAAA;AAAA,GAEL;",
-  "names": []
-}

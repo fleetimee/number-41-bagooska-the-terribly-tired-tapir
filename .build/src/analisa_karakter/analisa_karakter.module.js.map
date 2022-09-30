@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/analisa_karakter/analisa_karakter.module.ts"],
-  "sourcesContent": ["import { TypeOrmModule } from '@nestjs/typeorm';\nimport { Module } from '@nestjs/common';\nimport { AnalisaKarakterService } from './analisa_karakter.service';\nimport { AnalisaKarakterController } from './analisa_karakter.controller';\nimport { AnalisaKarakter } from './entities/analisa_karakter.entity';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([AnalisaKarakter])],\n  controllers: [AnalisaKarakterController],\n  exports: [AnalisaKarakterService],\n  providers: [AnalisaKarakterService],\n})\nexport class AnalisaKarakterModule {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA8B;AAC9B,oBAAuB;AACvB,8BAAuC;AACvC,+BAA0C;AAC1C,+BAAgC;AAQzB,kCAA4B;AAAA;AAA5B;AAAA,EANN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,aAAa,CAAC;AAAA,IACd,SAAS,CAAC;AAAA,IACV,WAAW,CAAC;AAAA;AAAA,GAEP;",
-  "names": []
-}

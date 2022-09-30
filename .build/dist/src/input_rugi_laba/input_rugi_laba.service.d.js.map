@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/input_rugi_laba/input_rugi_laba.service.d.ts"],
-  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { InputRugiLaba } from './entities/input_rugi_laba.entity';\nexport declare class InputRugiLabaService extends TypeOrmCrudService<InputRugiLaba> {\n    constructor(repo: any);\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

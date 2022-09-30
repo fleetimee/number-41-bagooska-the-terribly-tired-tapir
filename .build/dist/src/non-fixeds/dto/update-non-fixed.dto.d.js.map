@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/non-fixeds/dto/update-non-fixed.dto.d.ts"],
-  "sourcesContent": ["import { JenisPengajuan } from 'src/fixeds/enum/jenis-pengajuan.enum';\nimport { JenisPenggunaan } from 'src/fixeds/enum/jenis-penggunaan.enum';\nimport { CreateNonFixedDto } from './create-non-fixed.dto';\ndeclare const UpdateNonFixedDto_base: import(\"@nestjs/common\").Type<Partial<CreateNonFixedDto>>;\nexport declare class UpdateNonFixedDto extends UpdateNonFixedDto_base {\n    jenis_pengajuan: JenisPengajuan;\n    jenis_penggunaan: JenisPenggunaan;\n}\nexport {};\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

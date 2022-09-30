@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/debiturs/enum/gender.enum.d.ts"],
-  "sourcesContent": ["export declare enum Gender {\n    LAKI_LAKI = \"LAKI-LAKI\",\n    PEREMPUAN = \"PEREMPUAN\"\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

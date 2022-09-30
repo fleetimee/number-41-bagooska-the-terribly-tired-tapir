@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/input_keuangan/dto/update-input_keuangan.dto.ts"],
-  "sourcesContent": ["import { PartialType } from '@nestjs/swagger';\nimport { CreateInputKeuanganDto } from './create-input_keuangan.dto';\n\nexport class UpdateInputKeuanganDto extends PartialType(\n  CreateInputKeuanganDto,\n) {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA4B;AAC5B,mCAAuC;AAEhC,qCAAqC,gCAC1C,qDACA;AAAA;",
-  "names": []
-}

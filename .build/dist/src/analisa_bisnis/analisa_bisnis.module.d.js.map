@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/analisa_bisnis/analisa_bisnis.module.d.ts"],
-  "sourcesContent": ["export declare class AnalisaBisnisModule {\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

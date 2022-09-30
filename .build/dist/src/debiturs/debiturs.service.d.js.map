@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/debiturs/debiturs.service.d.ts"],
-  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Debitur } from './entities/debitur.entity';\nexport declare class DebitursService extends TypeOrmCrudService<Debitur> {\n    constructor(repo: any);\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

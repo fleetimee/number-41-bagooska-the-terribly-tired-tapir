@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/uploads/uploads.module.ts"],
-  "sourcesContent": ["import { TypeOrmModule } from '@nestjs/typeorm';\nimport { Module } from '@nestjs/common';\nimport { UploadsService } from './uploads.service';\nimport { UploadsController } from './uploads.controller';\nimport { Upload } from './entities/upload.entity';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([Upload])],\n  controllers: [UploadsController],\n  providers: [UploadsService],\n})\nexport class UploadsModule {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA8B;AAC9B,oBAAuB;AACvB,qBAA+B;AAC/B,sBAAkC;AAClC,oBAAuB;AAOhB,0BAAoB;AAAA;AAApB;AAAA,EALN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA;AAAA,GAEP;",
-  "names": []
-}

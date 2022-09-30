@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/input_rugi_laba/dto/update-input_rugi_laba.dto.ts"],
-  "sourcesContent": ["import { PartialType } from '@nestjs/swagger';\nimport { CreateInputRugiLabaDto } from './create-input_rugi_laba.dto';\n\nexport class UpdateInputRugiLabaDto extends PartialType(CreateInputRugiLabaDto) {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA4B;AAC5B,oCAAuC;AAEhC,qCAAqC,gCAAY,sDAAwB;AAAA;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/non-fixeds/non-fixeds.service.d.ts"],
-  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { NonFixed } from './entities/non-fixed.entity';\nexport declare class NonFixedsService extends TypeOrmCrudService<NonFixed> {\n    constructor(repo: any);\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

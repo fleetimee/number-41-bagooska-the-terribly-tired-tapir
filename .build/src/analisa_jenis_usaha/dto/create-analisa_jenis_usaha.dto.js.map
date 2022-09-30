@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/analisa_jenis_usaha/dto/create-analisa_jenis_usaha.dto.ts"],
-  "sourcesContent": ["export class CreateAnalisaJenisUsahaDto {}\n"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,iCAAiC;AAAA;",
-  "names": []
-}

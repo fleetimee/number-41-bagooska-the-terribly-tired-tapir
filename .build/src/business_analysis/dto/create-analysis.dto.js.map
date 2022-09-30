@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/business_analysis/dto/create-analysis.dto.ts"],
-  "sourcesContent": ["export class CreateAnalysisDto {}\n"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,wBAAwB;AAAA;",
-  "names": []
-}

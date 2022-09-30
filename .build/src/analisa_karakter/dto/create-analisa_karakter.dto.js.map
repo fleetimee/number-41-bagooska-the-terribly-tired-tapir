@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/analisa_karakter/dto/create-analisa_karakter.dto.ts"],
-  "sourcesContent": ["export class CreateAnalisaKarakterDto {}\n"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,+BAA+B;AAAA;",
-  "names": []
-}

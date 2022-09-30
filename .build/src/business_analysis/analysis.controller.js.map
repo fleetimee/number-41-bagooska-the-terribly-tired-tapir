@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/business_analysis/analysis.controller.ts"],
-  "sourcesContent": ["import { Crud, CrudController } from '@rewiko/crud';\nimport { Controller } from '@nestjs/common';\nimport { AnalysisService } from './analysis.service';\nimport { Analysis } from './entities/analysis.entity';\n\n@Crud({\n  model: {\n    type: Analysis,\n  },\n  query: {\n    join: {\n      submission: {\n        eager: true,\n      },\n      'submission.fixed': {\n        eager: true,\n      },\n      'submission.nonfixed': {\n        eager: true,\n      },\n      createdBy: {\n        eager: true,\n        allow: ['username'],\n        exclude: ['password'],\n      },\n    },\n  },\n})\n@Controller('business_analysis')\nexport class AnalysisController implements CrudController<Analysis> {\n  constructor(public service: AnalysisService) {}\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,kBAAqC;AACrC,oBAA2B;AAE3B,uBAAyB;AA0BlB,+BAA6D;AAAA,EAClE,YAAmB,SAA0B;AAA1B;AAAA;AAAA;AADd;AAAA,EAxBN,sBAAK;AAAA,IACJ,OAAO;AAAA,MACL,MAAM;AAAA;AAAA,IAER,OAAO;AAAA,MACL,MAAM;AAAA,QACJ,YAAY;AAAA,UACV,OAAO;AAAA;AAAA,QAET,oBAAoB;AAAA,UAClB,OAAO;AAAA;AAAA,QAET,uBAAuB;AAAA,UACrB,OAAO;AAAA;AAAA,QAET,WAAW;AAAA,UACT,OAAO;AAAA,UACP,OAAO,CAAC;AAAA,UACR,SAAS,CAAC;AAAA;AAAA;AAAA;AAAA;AAAA,EAKjB,8BAAW;AAAA,GACL;",
-  "names": []
-}

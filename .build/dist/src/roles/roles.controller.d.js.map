@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/roles/roles.controller.d.ts"],
-  "sourcesContent": ["import { CrudController } from '@rewiko/crud';\nimport { RolesService } from './roles.service';\nimport { Role } from './entities/role.entity';\nexport declare class RolesController implements CrudController<Role> {\n    service: RolesService;\n    constructor(service: RolesService);\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

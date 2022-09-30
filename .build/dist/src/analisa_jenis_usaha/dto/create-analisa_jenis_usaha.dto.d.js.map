@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/analisa_jenis_usaha/dto/create-analisa_jenis_usaha.dto.d.ts"],
-  "sourcesContent": ["export declare class CreateAnalisaJenisUsahaDto {\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

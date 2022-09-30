@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/collaterals/dto/update-collateral.dto.d.ts"],
-  "sourcesContent": ["import { CreateCollateralDto } from './create-collateral.dto';\ndeclare const UpdateCollateralDto_base: import(\"@nestjs/common\").Type<Partial<CreateCollateralDto>>;\nexport declare class UpdateCollateralDto extends UpdateCollateralDto_base {\n}\nexport {};\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

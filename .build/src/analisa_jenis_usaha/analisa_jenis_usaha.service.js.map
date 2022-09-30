@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/analisa_jenis_usaha/analisa_jenis_usaha.service.ts"],
-  "sourcesContent": ["import { AnalisaJenisUsaha } from './entities/analisa_jenis_usaha.entity';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Injectable } from '@nestjs/common';\nimport { InjectRepository } from '@nestjs/typeorm';\n\n@Injectable()\nexport class AnalisaJenisUsahaService extends TypeOrmCrudService<AnalisaJenisUsaha> {\n  constructor(@InjectRepository(AnalisaJenisUsaha) repo) {\n    super(repo);\n  }\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,iCAAkC;AAClC,0BAAmC;AACnC,oBAA2B;AAC3B,qBAAiC;AAG1B,6CAAuC,uCAAsC;AAAA,EAClF,YAAiD,MAAM;AACrD,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
-  "names": []
-}

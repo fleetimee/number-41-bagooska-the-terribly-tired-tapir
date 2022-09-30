@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/character_analysis/dto/update-character_analysis.dto.d.ts"],
-  "sourcesContent": ["import { CreateCharacterAnalysisDto } from './create-character_analysis.dto';\ndeclare const UpdateCharacterAnalysisDto_base: import(\"@nestjs/common\").Type<Partial<CreateCharacterAnalysisDto>>;\nexport declare class UpdateCharacterAnalysisDto extends UpdateCharacterAnalysisDto_base {\n}\nexport {};\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

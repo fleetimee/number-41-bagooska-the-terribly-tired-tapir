@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/fixeds/dto/create-fixed.dto.d.ts"],
-  "sourcesContent": ["import { JenisPenggunaan } from './../enum/jenis-penggunaan.enum';\nimport { JenisPengajuan } from '../enum/jenis-pengajuan.enum';\nexport declare class CreateFixedDto {\n    plafon_fasilitas: number;\n    jenis_pengajuan: JenisPengajuan;\n    jenis_penggunaan: JenisPenggunaan;\n    jangka_waktu: string;\n    tujuan_penggunaan: string;\n    penghasilan_pemohon: number;\n    potongan_gaji: number;\n    sisa_penghasilan: number;\n    nama_pejabat_penanggung_jawab: string;\n    jabatan_pejabat_penanggung_jawab: string;\n    nama_pejabat_pemotong_gaji: string;\n    jabatan_pejabat_pemotong_gaji: string;\n    no_rekening: number;\n    plafon_kredit: number;\n    tanggal_mulai_kredit: string;\n    jangka_waktu_kredit: string;\n    debitur: number;\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

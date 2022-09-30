@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/collaterals/collaterals.service.d.ts"],
-  "sourcesContent": ["import { Collateral } from './entities/collateral.entity';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nexport declare class CollateralsService extends TypeOrmCrudService<Collateral> {\n    constructor(repo: any);\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

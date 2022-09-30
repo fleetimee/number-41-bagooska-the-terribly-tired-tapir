@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/debiturs/debiturs.module.ts"],
-  "sourcesContent": ["import { Debitur } from './entities/debitur.entity';\nimport { TypeOrmModule } from '@nestjs/typeorm';\nimport { Module } from '@nestjs/common';\nimport { DebitursService } from './debiturs.service';\nimport { DebitursController } from './debiturs.controller';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([Debitur])],\n  exports: [DebitursService],\n  controllers: [DebitursController],\n  providers: [DebitursService],\n})\nexport class DebitursModule {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAAwB;AACxB,qBAA8B;AAC9B,oBAAuB;AACvB,sBAAgC;AAChC,uBAAmC;AAQ5B,2BAAqB;AAAA;AAArB;AAAA,EANN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,SAAS,CAAC;AAAA,IACV,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA;AAAA,GAEP;",
-  "names": []
-}

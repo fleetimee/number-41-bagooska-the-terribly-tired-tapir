@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/input_rugi_laba/entities/input_rugi_laba.entity.d.ts"],
-  "sourcesContent": ["import { Debitur } from 'src/debiturs/entities/debitur.entity';\nimport { InputNeraca } from './../../input_neraca/entities/input_neraca.entity';\nexport declare class InputRugiLaba {\n    id: number;\n    kas: number;\n    bank: number;\n    piutang: number;\n    persediaan: number;\n    jumlah_aktiva_lancar: number;\n    peralatan: number;\n    kendaraan: number;\n    tanah_bangunan: number;\n    jumlah_aktiva_tetap: number;\n    sum_aktiva: number;\n    hutang_usaha: number;\n    hutang_bank: number;\n    hutang_lainnya: number;\n    jumlah_hutang: number;\n    jumlah_modal: number;\n    sum_pasiva: number;\n    omzet: number;\n    harga_pokok: number;\n    laba_kotor: number;\n    biaya_tenaga_kerja: number;\n    biaya_operasional: number;\n    biaya_lainnya: number;\n    total_biaya: number;\n    laba_sebelum_pajak: number;\n    perkiraan_pajak: number;\n    laba_setelah_pajak: number;\n    penghasilan: number;\n    biaya_hidup: number;\n    sisa_penghasilan: number;\n    neraca: InputNeraca;\n    debitur: Debitur;\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

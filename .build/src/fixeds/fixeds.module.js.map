@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/fixeds/fixeds.module.ts"],
-  "sourcesContent": ["import { Fixed } from './entities/fixed.entity';\nimport { TypeOrmModule } from '@nestjs/typeorm';\nimport { Module } from '@nestjs/common';\nimport { FixedsService } from './fixeds.service';\nimport { FixedsController } from './fixeds.controller';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([Fixed])],\n  controllers: [FixedsController],\n  providers: [FixedsService],\n  exports: [FixedsService],\n})\nexport class FixedsModule {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAsB;AACtB,qBAA8B;AAC9B,oBAAuB;AACvB,oBAA8B;AAC9B,qBAAiC;AAQ1B,yBAAmB;AAAA;AAAnB;AAAA,EANN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA,IACZ,SAAS,CAAC;AAAA;AAAA,GAEL;",
-  "names": []
-}

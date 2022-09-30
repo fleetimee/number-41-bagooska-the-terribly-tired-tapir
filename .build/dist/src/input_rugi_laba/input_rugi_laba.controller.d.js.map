@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/input_rugi_laba/input_rugi_laba.controller.d.ts"],
-  "sourcesContent": ["import { InputRugiLaba } from './entities/input_rugi_laba.entity';\nimport { InputRugiLabaService } from './input_rugi_laba.service';\nimport { CrudController } from '@rewiko/crud';\nexport declare class InputRugiLabaController implements CrudController<InputRugiLaba> {\n    service: InputRugiLabaService;\n    constructor(service: InputRugiLabaService);\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

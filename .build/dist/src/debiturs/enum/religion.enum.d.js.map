@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/debiturs/enum/religion.enum.d.ts"],
-  "sourcesContent": ["export declare enum Religion {\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

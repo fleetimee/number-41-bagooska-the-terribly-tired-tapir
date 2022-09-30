@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/collaterals/entities/collateral.entity.d.ts"],
-  "sourcesContent": ["import { Submission } from 'src/submissions/entities/submission.entity';\nimport { User } from 'src/users/entities/user.entity';\nexport declare class Collateral {\n    id: number;\n    barang_agunan: string;\n    asuransi: string;\n    nilai_agunan: number;\n    bukti_agunan: string;\n    ijin_milik: string;\n    deskripsi_agunan: string;\n    created_at: Date;\n    updated_at: Date;\n    createdBy: User;\n    updatedBy: User;\n    submission: Submission[];\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

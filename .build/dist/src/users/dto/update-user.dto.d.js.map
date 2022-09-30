@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/users/dto/update-user.dto.d.ts"],
-  "sourcesContent": ["import { CreateUserDto } from './create-user.dto';\ndeclare const UpdateUserDto_base: import(\"@nestjs/common\").Type<Partial<CreateUserDto>>;\nexport declare class UpdateUserDto extends UpdateUserDto_base {\n}\nexport {};\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

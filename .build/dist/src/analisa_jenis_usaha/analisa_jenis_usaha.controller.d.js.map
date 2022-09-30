@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/analisa_jenis_usaha/analisa_jenis_usaha.controller.d.ts"],
-  "sourcesContent": ["import { CrudController } from '@rewiko/crud';\nimport { AnalisaJenisUsahaService } from './analisa_jenis_usaha.service';\nimport { AnalisaJenisUsaha } from './entities/analisa_jenis_usaha.entity';\nexport declare class AnalisaJenisUsahaController implements CrudController<AnalisaJenisUsaha> {\n    service: AnalisaJenisUsahaService;\n    constructor(service: AnalisaJenisUsahaService);\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

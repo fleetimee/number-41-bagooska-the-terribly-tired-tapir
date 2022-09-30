@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/non-fixeds/dto/update-non-fixed.dto.ts"],
-  "sourcesContent": ["import { PartialType } from '@nestjs/swagger';\nimport { IsEnum, IsNotEmpty } from 'class-validator';\nimport { JenisPengajuan } from 'src/fixeds/enum/jenis-pengajuan.enum';\nimport { JenisPenggunaan } from 'src/fixeds/enum/jenis-penggunaan.enum';\nimport { CreateNonFixedDto } from './create-non-fixed.dto';\n\nexport class UpdateNonFixedDto extends PartialType(CreateNonFixedDto) {\n  @IsNotEmpty()\n  @IsEnum(JenisPengajuan, {\n    message: 'Jenis pengajuan tidak valid (BARU/ADENDUM/RESTRUK)',\n  })\n  jenis_pengajuan: JenisPengajuan;\n\n  @IsNotEmpty()\n  @IsEnum(JenisPenggunaan, {\n    message: 'Jenis penggunaan tidak valid (MODAL_USAHA/INVESTASI/KONSUMSI)',\n  })\n  jenis_penggunaan: JenisPenggunaan;\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA4B;AAC5B,6BAAmC;AACnC,6BAA+B;AAC/B,8BAAgC;AAChC,8BAAkC;AAE3B,gCAAgC,gCAAY,2CAAmB;AAAA;AAKpE;AAAA,EAJC;AAAA,EACA,mCAAO,uCAAgB;AAAA,IACtB,SAAS;AAAA;AAAA,GAEX,AALK,kBAKL;AAMA;AAAA,EAJC;AAAA,EACA,mCAAO,yCAAiB;AAAA,IACvB,SAAS;AAAA;AAAA,GAEX,AAXK,kBAWL;",
-  "names": []
-}

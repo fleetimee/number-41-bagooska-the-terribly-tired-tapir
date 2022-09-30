@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/non-fixeds/dto/create-non-fixed.dto.d.ts"],
-  "sourcesContent": ["import { JenisPengajuan } from 'src/fixeds/enum/jenis-pengajuan.enum';\nimport { JenisPenggunaan } from 'src/fixeds/enum/jenis-penggunaan.enum';\nexport declare class CreateNonFixedDto {\n    plafon_fasilitas: number;\n    jenis_pengajuan: JenisPengajuan;\n    jenis_penggunaan: JenisPenggunaan;\n    tujuan_penggunaan: string;\n    jangka_waktu: string;\n    no_rekening: number;\n    plafon_kredit: number;\n    tanggal_mulai_kredit: string;\n    jangka_waktu_kredit: string;\n    debitur: string;\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

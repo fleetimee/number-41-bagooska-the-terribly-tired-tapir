@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../webpack-hmr.config.js"],
-  "sourcesContent": ["/* eslint-disable @typescript-eslint/no-var-requires */\nconst nodeExternals = require('webpack-node-externals');\nconst { RunScriptWebpackPlugin } = require('run-script-webpack-plugin');\n\nmodule.exports = function (options, webpack) {\n  return {\n    ...options,\n    entry: ['webpack/hot/poll?100', options.entry],\n    externals: [\n      nodeExternals({\n        allowlist: ['webpack/hot/poll?100'],\n      }),\n    ],\n    plugins: [\n      ...options.plugins,\n      new webpack.HotModuleReplacementPlugin(),\n      new webpack.WatchIgnorePlugin({\n        paths: [/\\.js$/, /\\.d\\.ts$/],\n      }),\n      new RunScriptWebpackPlugin({ name: options.output.filename }),\n    ],\n  };\n};\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;AACA,MAAM,gBAAgB,QAAQ;AAC9B,MAAM,EAAE,2BAA2B,QAAQ;AAE3C,OAAO,UAAU,SAAU,SAAS,SAAS;AAC3C,SAAO,iCACF,UADE;AAAA,IAEL,OAAO,CAAC,wBAAwB,QAAQ;AAAA,IACxC,WAAW;AAAA,MACT,cAAc;AAAA,QACZ,WAAW,CAAC;AAAA;AAAA;AAAA,IAGhB,SAAS;AAAA,MACP,GAAG,QAAQ;AAAA,MACX,IAAI,QAAQ;AAAA,MACZ,IAAI,QAAQ,kBAAkB;AAAA,QAC5B,OAAO,CAAC,SAAS;AAAA;AAAA,MAEnB,IAAI,uBAAuB,EAAE,MAAM,QAAQ,OAAO;AAAA;AAAA;AAAA;",
-  "names": []
-}

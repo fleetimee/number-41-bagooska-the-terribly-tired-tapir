@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/analisa_karakter/analisa_karakter.service.d.ts"],
-  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { AnalisaKarakter } from './entities/analisa_karakter.entity';\nexport declare class AnalisaKarakterService extends TypeOrmCrudService<AnalisaKarakter> {\n    constructor(repo: any);\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

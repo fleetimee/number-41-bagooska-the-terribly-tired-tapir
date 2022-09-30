@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/analisa_karakter/entities/analisa_karakter.entity.d.ts"],
-  "sourcesContent": ["import { Debitur } from './../../debiturs/entities/debitur.entity';\nexport declare class AnalisaKarakter {\n    id: number;\n    nilai_umur: number;\n    score_umur: number;\n    crr_umur: number;\n    score_pendidikan: number;\n    crr_pendidikan: number;\n    nilai_lamanya_berusaha: number;\n    score_lamanya_berusaha: number;\n    crr_lamanya_berusaha: number;\n    score_ulet: number;\n    keterangan_ulet: string;\n    crr_ulet: number;\n    score_kaku: number;\n    keterangan_kaku: string;\n    crr_kaku: number;\n    score_kreatif: number;\n    keterangan_kreatif: string;\n    crr_kreatif: number;\n    score_kejujuran: number;\n    keterangan_kejujuran: string;\n    crr_kejujuran: number;\n    deskripsi_karakter: string;\n    total_crr_karakter: number;\n    debitur: Debitur;\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/uploads/uploads.controller.d.ts"],
-  "sourcesContent": ["/// <reference types=\"multer\" />\nimport { CrudController, CrudRequest } from '@rewiko/crud';\nimport { Upload } from './entities/upload.entity';\nimport { UploadsService } from './uploads.service';\nimport { Response } from 'express';\nexport declare class UploadsController implements CrudController<Upload> {\n    service: UploadsService;\n    constructor(service: UploadsService);\n    get base(): CrudController<Upload>;\n    createOne(req: CrudRequest, dto: Upload, files: Express.Multer.File): {\n        message: string;\n        filePath: string;\n    };\n    getPdf(res: Response, filename: any): Promise<void>;\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

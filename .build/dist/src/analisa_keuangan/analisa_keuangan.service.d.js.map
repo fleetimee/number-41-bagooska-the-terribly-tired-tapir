@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/analisa_keuangan/analisa_keuangan.service.d.ts"],
-  "sourcesContent": ["import { AnalisaKeuangan } from './entities/analisa_keuangan.entity';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nexport declare class AnalisaKeuanganService extends TypeOrmCrudService<AnalisaKeuangan> {\n    constructor(repo: any);\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

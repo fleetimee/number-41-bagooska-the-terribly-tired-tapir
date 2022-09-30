@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/fixeds/enum/jenis-pengajuan.enum.ts"],
-  "sourcesContent": ["export enum JenisPengajuan {\n  BARU = 'BARU',\n  ADENDUM = 'ADENDUM',\n  RESTRUK = 'RESTRUK',\n}\n"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,IAAK;AAAL,UAAK,iBAAL;AACL,4BAAO;AACP,+BAAU;AACV,+BAAU;AAAA,GAHA;",
-  "names": []
-}

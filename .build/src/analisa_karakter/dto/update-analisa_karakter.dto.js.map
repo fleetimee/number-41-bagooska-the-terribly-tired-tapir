@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../src/analisa_karakter/dto/update-analisa_karakter.dto.ts"],
-  "sourcesContent": ["import { PartialType } from '@nestjs/swagger';\nimport { CreateAnalisaKarakterDto } from './create-analisa_karakter.dto';\n\nexport class UpdateAnalisaKarakterDto extends PartialType(CreateAnalisaKarakterDto) {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA4B;AAC5B,qCAAyC;AAElC,uCAAuC,gCAAY,yDAA0B;AAAA;",
-  "names": []
-}

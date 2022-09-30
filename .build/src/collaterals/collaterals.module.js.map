@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/collaterals/collaterals.module.ts"],
-  "sourcesContent": ["import { TypeOrmModule } from '@nestjs/typeorm';\nimport { Module } from '@nestjs/common';\nimport { CollateralsService } from './collaterals.service';\nimport { CollateralsController } from './collaterals.controller';\nimport { Collateral } from './entities/collateral.entity';\n\n@Module({\n  imports: [TypeOrmModule.forFeature([Collateral])],\n  controllers: [CollateralsController],\n  providers: [CollateralsService],\n})\nexport class CollateralsModule {}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAA8B;AAC9B,oBAAuB;AACvB,yBAAmC;AACnC,0BAAsC;AACtC,wBAA2B;AAOpB,8BAAwB;AAAA;AAAxB;AAAA,EALN,0BAAO;AAAA,IACN,SAAS,CAAC,6BAAc,WAAW,CAAC;AAAA,IACpC,aAAa,CAAC;AAAA,IACd,WAAW,CAAC;AAAA;AAAA,GAEP;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/input_keuangan/input_keuangan.controller.ts"],
-  "sourcesContent": ["import { InputKeuangan } from './entities/input_keuangan.entity';\nimport { Controller } from '@nestjs/common';\nimport { Crud, CrudController } from '@rewiko/crud';\nimport { InputKeuanganService } from './input_keuangan.service';\n\n@Crud({\n  model: {\n    type: InputKeuangan,\n  },\n  query: {\n    join: {\n      debitur: {\n        eager: true,\n        allow: ['peminjam1', 'no_debitur'],\n      },\n      rugilaba: {\n        eager: true,\n      },\n    },\n  },\n})\n@Controller('input-keuangan')\nexport class InputKeuanganController implements CrudController<InputKeuangan> {\n  constructor(public service: InputKeuanganService) {}\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,4BAA8B;AAC9B,oBAA2B;AAC3B,kBAAqC;AAoB9B,oCAAuE;AAAA,EAC5E,YAAmB,SAA+B;AAA/B;AAAA;AAAA;AADd;AAAA,EAjBN,sBAAK;AAAA,IACJ,OAAO;AAAA,MACL,MAAM;AAAA;AAAA,IAER,OAAO;AAAA,MACL,MAAM;AAAA,QACJ,SAAS;AAAA,UACP,OAAO;AAAA,UACP,OAAO,CAAC,aAAa;AAAA;AAAA,QAEvB,UAAU;AAAA,UACR,OAAO;AAAA;AAAA;AAAA;AAAA;AAAA,EAKd,8BAAW;AAAA,GACL;",
-  "names": []
-}

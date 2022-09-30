@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/debiturs/dto/create-debitur.dto.d.ts"],
-  "sourcesContent": ["export declare class CreateDebiturDto {\n    nik: number;\n    nama_debitur: string;\n    alamat: string;\n    tempat_lahir: string;\n    tanggal_lahir: string;\n    pekerjaan: string;\n    instansi: string;\n    agama: string;\n    gender: string;\n    no_telp: string;\n    no_seluler: string;\n    email: string;\n    nama_ibu: string;\n    relationship: string;\n    nama_pasangan: string;\n    pekerjaan_pasangan: string;\n    tgl_lahir_pasangan: string;\n    tempat_lahir_pasangan: string;\n    nik_pasangan: number;\n    total_income: string;\n    bidang_usaha: string;\n    jumlah_tanggungan: number;\n    provinsi: string;\n    kabupaten: string;\n    kecamatan: string;\n    kelurahan: string;\n    rt: number;\n    rw: number;\n    kode_pos: number;\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

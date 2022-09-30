@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../dist/src/input_rugi_laba/dto/update-input_rugi_laba.dto.d.ts"],
-  "sourcesContent": ["import { CreateInputRugiLabaDto } from './create-input_rugi_laba.dto';\ndeclare const UpdateInputRugiLabaDto_base: import(\"@nestjs/common\").Type<Partial<CreateInputRugiLabaDto>>;\nexport declare class UpdateInputRugiLabaDto extends UpdateInputRugiLabaDto_base {\n}\nexport {};\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

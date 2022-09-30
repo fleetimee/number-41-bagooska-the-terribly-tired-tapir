@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/business_analysis/analysis.service.ts"],
-  "sourcesContent": ["import { Analysis } from './entities/analysis.entity';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Injectable } from '@nestjs/common';\nimport { InjectRepository } from '@nestjs/typeorm';\n\n@Injectable()\nexport class AnalysisService extends TypeOrmCrudService<Analysis> {\n  constructor(@InjectRepository(Analysis) repo) {\n    super(repo);\n  }\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,sBAAyB;AACzB,0BAAmC;AACnC,oBAA2B;AAC3B,qBAAiC;AAG1B,oCAA8B,uCAA6B;AAAA,EAChE,YAAwC,MAAM;AAC5C,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
-  "names": []
-}

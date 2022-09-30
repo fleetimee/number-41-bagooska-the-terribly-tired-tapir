@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/debiturs/debiturs.service.ts"],
-  "sourcesContent": ["import { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Injectable } from '@nestjs/common';\nimport { Debitur } from './entities/debitur.entity';\nimport { InjectRepository } from '@nestjs/typeorm';\n\n@Injectable()\nexport class DebitursService extends TypeOrmCrudService<Debitur> {\n  constructor(@InjectRepository(Debitur) repo) {\n    super(repo);\n  }\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,0BAAmC;AACnC,oBAA2B;AAC3B,qBAAwB;AACxB,qBAAiC;AAG1B,oCAA8B,uCAA4B;AAAA,EAC/D,YAAuC,MAAM;AAC3C,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
-  "names": []
-}

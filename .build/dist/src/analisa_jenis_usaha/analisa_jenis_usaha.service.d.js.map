@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/analisa_jenis_usaha/analisa_jenis_usaha.service.d.ts"],
-  "sourcesContent": ["import { AnalisaJenisUsaha } from './entities/analisa_jenis_usaha.entity';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nexport declare class AnalisaJenisUsahaService extends TypeOrmCrudService<AnalisaJenisUsaha> {\n    constructor(repo: any);\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

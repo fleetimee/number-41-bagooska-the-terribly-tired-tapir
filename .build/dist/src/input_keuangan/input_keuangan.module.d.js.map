@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../dist/src/input_keuangan/input_keuangan.module.d.ts"],
-  "sourcesContent": ["export declare class InputKeuanganModule {\n}\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}

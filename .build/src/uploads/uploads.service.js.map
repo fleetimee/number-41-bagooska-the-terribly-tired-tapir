@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/uploads/uploads.service.ts"],
-  "sourcesContent": ["import { Injectable } from '@nestjs/common';\nimport { InjectRepository } from '@nestjs/typeorm';\nimport { TypeOrmCrudService } from '@rewiko/crud-typeorm';\nimport { Upload } from './entities/upload.entity';\n\n@Injectable()\nexport class UploadsService extends TypeOrmCrudService<Upload> {\n  constructor(@InjectRepository(Upload) repo) {\n    super(repo);\n  }\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,oBAA2B;AAC3B,qBAAiC;AACjC,0BAAmC;AACnC,oBAAuB;AAGhB,mCAA6B,uCAA2B;AAAA,EAC7D,YAAsC,MAAM;AAC1C,UAAM;AAAA;AAAA;AAFH;AAAA,EADN;AAAA,EAEc,wDAAiB;AAAA,GADzB;",
-  "names": []
-}
