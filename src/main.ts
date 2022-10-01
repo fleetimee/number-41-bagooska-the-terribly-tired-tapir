@@ -41,7 +41,11 @@ async function bootstrap() {
 
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('/', app, document, {
+    swaggerOptions: {
+      defaultModelsExpandDepth: -1,
+    },
+  });
 
   /* A global pipe that validates the data that is passed to the controller. */
   app.useGlobalPipes(new ValidationPipe());

@@ -8,8 +8,8 @@ import { AgunanService } from './agunan.service';
     type: Agunan,
   },
   params: {
-    id: {
-      field: 'id',
+    debiturId: {
+      field: 'debiturId',
       type: 'number',
     },
   },
@@ -17,11 +17,18 @@ import { AgunanService } from './agunan.service';
     join: {
       debitur: {
         eager: true,
+        allow: ['peminjam1'],
+      },
+      form_tanah: {
+        eager: true,
+      },
+      form_kendaraan: {
+        eager: true,
       },
     },
   },
 })
-@Controller('/debitur/:id/agunan')
+@Controller('/debiturs/:debiturId/agunan')
 export class AgunanController implements CrudController<Agunan> {
   constructor(public service: AgunanService) {}
 }

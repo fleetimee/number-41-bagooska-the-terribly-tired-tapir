@@ -22,7 +22,7 @@ import { AnalisaJenisUsahaModule } from './analisa_jenis_usaha/analisa_jenis_usa
 import { AgunanModule } from './agunan/agunan.module';
 import { AgunanTanahModule } from './agunan_tanah/agunan_tanah.module';
 import { AgunanKendaraanModule } from './agunan_kendaraan/agunan_kendaraan.module';
-import { AgunanKiosModule } from './agunan_kios/agunan_kios.module';
+import { AgunanLosModule } from './agunan_los/agunan_los.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -77,7 +77,7 @@ import { AgunanKiosModule } from './agunan_kios/agunan_kios.module';
     AgunanModule,
     AgunanTanahModule,
     AgunanKendaraanModule,
-    AgunanKiosModule,
+    AgunanLosModule,
   ],
   controllers: [AppController],
   providers: [AppService],

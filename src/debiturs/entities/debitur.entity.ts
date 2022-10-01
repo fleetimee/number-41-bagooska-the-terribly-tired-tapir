@@ -13,9 +13,8 @@ import {
   Entity,
   Generated,
   JoinColumn,
-  JoinTable,
-  ManyToMany,
   ManyToOne,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
@@ -189,9 +188,9 @@ value generation strategy. */
   // @JoinTable()
   // agunan: Agunan[];
 
-  // @OneToMany(() => Agunan, (agunan) => agunan.debitur, {
-  //   onDelete: 'SET NULL',
-  //   onUpdate: 'CASCADE',
-  // })
-  // agunan: Agunan[];
+  @OneToMany(() => Agunan, (agunan) => agunan.debitur, {
+    onDelete: 'SET NULL',
+    onUpdate: 'CASCADE',
+  })
+  agunan: Agunan[];
 }

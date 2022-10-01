@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Agunan } from './../../agunan/entities/agunan.entity';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class AgunanTanah {
@@ -14,23 +15,23 @@ export class AgunanTanah {
   @Column()
   bukti_kepemilikan: string;
 
-  @Column()
+  @Column('int')
   luas_tanah: number;
 
   @Column('date')
   tanggal: Date;
 
-  @Column()
+  @Column('bigint')
   nilai_pasar: number;
 
-  @Column()
+  @Column('bigint')
   nilai_liquidasi: number;
 
-  @Column()
+  @Column('bigint')
   nilai_pengikatan: number;
 
   @Column()
-  pengikatan: number;
+  pengikatan: string;
 
   @Column('text')
   lokasi: string;
@@ -40,4 +41,12 @@ export class AgunanTanah {
 
   @Column('text')
   deskripsi_panjang: string;
+
+  @ManyToOne(() => Agunan, (agunan) => agunan.form_tanah, {
+    onDelete: 'CASCADE',
+  })
+  agunan: Agunan;
+
+  @Column()
+  agunanId: number;
 }

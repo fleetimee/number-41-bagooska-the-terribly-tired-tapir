@@ -1,0 +1,14 @@
+{
+  "deskripsi_pendek": "Tes",
+  "nama_pemilik": "Ponireah",
+  "bukti_kepemilikan": "BPKB",
+  "luas_tanah": 20,
+  "tanggal": "1997-09-09",
+  "nilai_pasar": "25000000",
+  "nilai_liquidasi": "12000000",
+  "nilai_pengikatan": "200000000",
+  "pengikatan": "SURAT KUASA",
+  "lokasi": "Jl. Kebon Jeruk",
+  "titik_koordinat": "123.123",
+  "deskripsi_panjang": "Lorem"
+}

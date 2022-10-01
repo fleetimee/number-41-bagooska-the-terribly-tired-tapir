@@ -1,11 +1,12 @@
+import { AgunanKendaraan } from './../../agunan_kendaraan/entities/agunan_kendaraan.entity';
+import { AgunanTanah } from './../../agunan_tanah/entities/agunan_tanah.entity';
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,
   Column,
-  ManyToMany,
-  OneToOne,
   ManyToOne,
+  OneToMany,
 } from 'typeorm';
 
 @Entity()
@@ -19,18 +20,32 @@ export class Agunan {
   @Column()
   jenis_agunan: string;
 
-  // @OneToOne(
-  //   () => KeteranganAgunan,
-  //   (keteranganAgunan) => keteranganAgunan.agunan,
-  //   {
-  //     onDelete: 'CASCADE',
-  //   },
-  // )
-  // keteranganAgunan: KeteranganAgunan;
+  @Column('bool')
+  is_tanah: boolean;
 
-  // @ManyToMany(() => Debitur, (debitur) => debitur.agunan)
-  // debitur: Debitur[];
+  @Column('bool')
+  is_los: boolean;
 
-  // @ManyToOne(() => Debitur, (debitur) => debitur.agunan)
-  // debitur: Debitur;
+  @Column('bool')
+  is_kendaraan: boolean;
+
+  @OneToMany(() => AgunanTanah, (agunanTanah) => agunanTanah.agunan, {
+    onDelete: 'CASCADE',
+  })
+  form_tanah: AgunanTanah[];
+
+  @OneToMany(
+    () => AgunanKendaraan,
+    (agunanKendaraan) => agunanKendaraan.agunan,
+    {
+      onDelete: 'CASCADE',
+    },
+  )
+  form_kendaraan: AgunanKendaraan[];
+
+  @ManyToOne(() => Debitur, (debitur) => debitur.agunan)
+  debitur: Debitur;
+
+  @Column()
+  debiturId: number;
 }

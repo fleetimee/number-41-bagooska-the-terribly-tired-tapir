@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Agunan } from 'src/agunan/entities/agunan.entity';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class AgunanKendaraan {
@@ -38,13 +39,13 @@ export class AgunanKendaraan {
   @Column()
   kondisi: string;
 
-  @Column()
+  @Column('bigint')
   nilai_pasar: number;
 
-  @Column()
+  @Column('bigint')
   nilai_liquidasi: number;
 
-  @Column()
+  @Column('bigint')
   nilai_pengikatan: number;
 
   @Column()
@@ -52,4 +53,12 @@ export class AgunanKendaraan {
 
   @Column('text')
   deskripsi_panjang: string;
+
+  @ManyToOne(() => Agunan, (agunan) => agunan.form_kendaraan, {
+    onDelete: 'CASCADE',
+  })
+  agunan: Agunan;
+
+  @Column()
+  agunanId: number;
 }

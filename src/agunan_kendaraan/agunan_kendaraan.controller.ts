@@ -7,8 +7,25 @@ import { AgunanKendaraanService } from './agunan_kendaraan.service';
   model: {
     type: AgunanKendaraan,
   },
+  params: {
+    agunanId: {
+      field: 'agunanId',
+      type: 'number',
+    },
+  },
+  query: {
+    join: {
+      agunan: {
+        eager: true,
+      },
+      'agunan.debitur': {
+        eager: true,
+        allow: ['peminjam1'],
+      },
+    },
+  },
 })
-@Controller('agunan-kendaraan')
+@Controller('/agunan/:agunanId/agunan-kendaraan')
 export class AgunanKendaraanController
   implements CrudController<AgunanKendaraan>
 {

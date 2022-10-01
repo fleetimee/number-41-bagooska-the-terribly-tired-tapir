@@ -11,6 +11,7 @@ import { Debitur } from './entities/debitur.entity';
     type: Debitur,
   },
   query: {
+    // alwaysPaginate: true,
     join: {
       inputNeraca: {
         eager: true,
@@ -34,6 +35,12 @@ import { Debitur } from './entities/debitur.entity';
         eager: true,
       },
       agunan: {
+        eager: true,
+      },
+      'agunan.form_tanah': {
+        eager: true,
+      },
+      'agunan.form_kendaraan': {
         eager: true,
       },
       createdBy: {
