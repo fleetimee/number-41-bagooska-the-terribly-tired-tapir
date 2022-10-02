@@ -11,37 +11,44 @@ import { Debitur } from './entities/debitur.entity';
     type: Debitur,
   },
   query: {
-    // alwaysPaginate: true,
+    alwaysPaginate: true,
+    sort: [{ field: 'id', order: 'ASC' }],
     join: {
       inputNeraca: {
-        eager: true,
+        // eager: true,
       },
       inputRugiLaba: {
-        eager: true,
+        // eager: true,
       },
       inputKeuangan: {
-        eager: true,
+        // eager: true,
       },
       analisaKeuangan: {
-        eager: true,
+        // eager: true,
       },
       analisaBisnis: {
-        eager: true,
+        // eager: true,
       },
       analisaKarakter: {
-        eager: true,
+        // eager: true,
       },
       analisaJenisUsaha: {
-        eager: true,
+        // eager: true,
       },
       agunan: {
-        eager: true,
+        // eager: true,
       },
       'agunan.form_tanah': {
-        eager: true,
+        // eager: true,
       },
       'agunan.form_kendaraan': {
-        eager: true,
+        // eager: true,
+      },
+      'agunan.form_los': {
+        // eager: true,
+      },
+      'agunan.form_peralatan': {
+        // eager: true,
       },
       createdBy: {
         eager: true,

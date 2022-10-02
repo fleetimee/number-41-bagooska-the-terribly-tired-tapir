@@ -23,6 +23,9 @@ import { AgunanModule } from './agunan/agunan.module';
 import { AgunanTanahModule } from './agunan_tanah/agunan_tanah.module';
 import { AgunanKendaraanModule } from './agunan_kendaraan/agunan_kendaraan.module';
 import { AgunanLosModule } from './agunan_los/agunan_los.module';
+import { AgunanCashModule } from './agunan_cash/agunan_cash.module';
+import { AgunanLainnyaModule } from './agunan_lainnya/agunan_lainnya.module';
+import { AgunanPeralatanModule } from './agunan_peralatan/agunan_peralatan.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -78,6 +81,9 @@ import { AgunanLosModule } from './agunan_los/agunan_los.module';
     AgunanTanahModule,
     AgunanKendaraanModule,
     AgunanLosModule,
+    AgunanCashModule,
+    AgunanLainnyaModule,
+    AgunanPeralatanModule,
   ],
   controllers: [AppController],
   providers: [AppService],

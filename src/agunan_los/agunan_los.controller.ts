@@ -7,8 +7,25 @@ import { AgunanLo } from './entities/agunan_lo.entity';
   model: {
     type: AgunanLo,
   },
+  params: {
+    agunanId: {
+      field: 'agunanId',
+      type: 'number',
+    },
+  },
+  query: {
+    join: {
+      agunan: {
+        eager: true,
+      },
+      'agunan.debitur': {
+        eager: true,
+        allow: ['peminjam1'],
+      },
+    },
+  },
 })
-@Controller('agunan-los')
+@Controller('/agunan/:agunanId/agunan-los')
 export class AgunanLosController implements CrudController<AgunanLo> {
   constructor(public service: AgunanLosService) {}
 }

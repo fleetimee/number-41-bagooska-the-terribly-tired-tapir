@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Agunan } from 'src/agunan/entities/agunan.entity';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class AgunanLo {
@@ -58,4 +59,12 @@ export class AgunanLo {
 
   @Column()
   deskripsi_panjang: string;
+
+  @ManyToOne(() => Agunan, (agunan) => agunan.form_los, {
+    onDelete: 'CASCADE',
+  })
+  agunan: Agunan;
+
+  @Column()
+  agunanId: number;
 }

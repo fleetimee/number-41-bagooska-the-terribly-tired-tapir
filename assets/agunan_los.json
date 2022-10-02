@@ -1,0 +1,20 @@
+{
+  "deskripsi_pendek": "Lorem ipsum",
+  "nama_pemilik": "Lorem ipsum",
+  "tempat_lahir": "Lorem ipsum",
+  "tanggal_lahir": "1997-01-01",
+  "alamat_pemilik": "Lorem ipsum",
+  "tempat_dasaran": "Lorem ipsum",
+  "no_registrasi": "5454545",
+  "luas_los": "100",
+  "jenis_dagangan": "Lorem ipsum",
+  "lokasi_pasar": "Lorem ipsum",
+  "waktu_buka": "08:00:00",
+  "waktu_tutup": "17:00:00",
+  "berlaku_sampai": "2020-01-01",
+  "nilai_pasar": "1000000",
+  "nilai_liquidasi": "1000000",
+  "nilai_pengikatan": "1000000",
+  "pengikatan": "Lorem ipsum",
+  "deskripsi_panjang": "Lorem ipsum"
+}
