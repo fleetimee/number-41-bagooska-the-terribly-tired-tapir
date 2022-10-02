@@ -25,10 +25,13 @@ import { AgunanService } from './agunan.service';
       form_kendaraan: {
         eager: true,
       },
-      form_los: {
+      form_peralatan: {
         eager: true,
       },
-      form_peralatan: {
+      form_cash: {
+        eager: true,
+      },
+      form_los: {
         eager: true,
       },
     },

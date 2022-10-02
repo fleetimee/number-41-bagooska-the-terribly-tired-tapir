@@ -50,6 +50,9 @@ import { Debitur } from './entities/debitur.entity';
       'agunan.form_peralatan': {
         // eager: true,
       },
+      'agunan.form_cash': {
+        // eager: true,
+      },
       createdBy: {
         eager: true,
         exclude: ['password'],

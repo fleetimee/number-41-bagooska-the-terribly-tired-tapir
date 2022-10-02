@@ -1,34 +1,31 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { AgunanCash } from './entities/agunan_cash.entity';
+import { Crud, CrudController } from '@rewiko/crud';
+import { Controller } from '@nestjs/common';
 import { AgunanCashService } from './agunan_cash.service';
-import { CreateAgunanCashDto } from './dto/create-agunan_cash.dto';
-import { UpdateAgunanCashDto } from './dto/update-agunan_cash.dto';
 
-@Controller('agunan-cash')
-export class AgunanCashController {
-  constructor(private readonly agunanCashService: AgunanCashService) {}
-
-  @Post()
-  create(@Body() createAgunanCashDto: CreateAgunanCashDto) {
-    return this.agunanCashService.create(createAgunanCashDto);
-  }
-
-  @Get()
-  findAll() {
-    return this.agunanCashService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.agunanCashService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateAgunanCashDto: UpdateAgunanCashDto) {
-    return this.agunanCashService.update(+id, updateAgunanCashDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.agunanCashService.remove(+id);
-  }
+@Crud({
+  model: {
+    type: AgunanCash,
+  },
+  params: {
+    agunanId: {
+      field: 'agunanId',
+      type: 'number',
+    },
+  },
+  query: {
+    join: {
+      agunan: {
+        eager: true,
+      },
+      'agunan.debitur': {
+        eager: true,
+        allow: ['peminjam1'],
+      },
+    },
+  },
+})
+@Controller('/agunan/:agunanId/agunan-cash')
+export class AgunanCashController implements CrudController<AgunanCash> {
+  constructor(public service: AgunanCashService) {}
 }
