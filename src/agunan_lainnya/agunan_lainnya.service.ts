@@ -1,26 +1,11 @@
+import { TypeOrmCrudService } from '@rewiko/crud-typeorm';
 import { Injectable } from '@nestjs/common';
-import { CreateAgunanLainnyaDto } from './dto/create-agunan_lainnya.dto';
-import { UpdateAgunanLainnyaDto } from './dto/update-agunan_lainnya.dto';
+import { AgunanLainnya } from './entities/agunan_lainnya.entity';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
-export class AgunanLainnyaService {
-  create(createAgunanLainnyaDto: CreateAgunanLainnyaDto) {
-    return 'This action adds a new agunanLainnya';
-  }
-
-  findAll() {
-    return `This action returns all agunanLainnya`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} agunanLainnya`;
-  }
-
-  update(id: number, updateAgunanLainnyaDto: UpdateAgunanLainnyaDto) {
-    return `This action updates a #${id} agunanLainnya`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} agunanLainnya`;
+export class AgunanLainnyaService extends TypeOrmCrudService<AgunanLainnya> {
+  constructor(@InjectRepository(AgunanLainnya) repo) {
+    super(repo);
   }
 }

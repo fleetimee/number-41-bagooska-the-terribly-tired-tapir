@@ -590,11 +590,11 @@
     "colId": "3e42347a-acbf-4266-ae30-f61da3c0cc82",
     "containerId": "e9deb1b2-3088-4fc0-9c9f-4ae39119ec95",
     "name": "Get Debitur By Id",
-    "url": "{{baseUrl}}api/v1/debiturs/103?join=inputNeraca&join=inputRugiLaba&join=inputKeuangan&join=analisaKeuangan&join=analisaKarakter&join=analisaBisnis&join=analisaJenisUsaha&join=agunan&join=agunan.form_tanah&join=agunan.form_kendaraan&join=agunan.form_los&join=agunan.form_peralatan&join=agunan.form_cash",
+    "url": "{{baseUrl}}api/v1/debiturs/103?join=inputNeraca&join=inputRugiLaba&join=inputKeuangan&join=analisaKeuangan&join=analisaKarakter&join=analisaBisnis&join=analisaJenisUsaha&join=agunan&join=agunan.form_tanah&join=agunan.form_kendaraan&join=agunan.form_los&join=agunan.form_peralatan&join=agunan.form_cash&join=agunan.form_lainnya",
     "method": "GET",
     "sortNum": 280000,
     "created": "2022-08-20T00:12:21.220Z",
-    "modified": "2022-10-02T22:49:23.560Z",
+    "modified": "2022-10-03T01:13:23.649Z",
     "headers": [],
     "params": [
       {
@@ -660,6 +660,11 @@
       {
         "name": "join",
         "value": "agunan.form_cash",
+        "isPath": false
+      },
+      {
+        "name": "join",
+        "value": "agunan.form_lainnya",
         "isPath": false
       }
     ],
@@ -1227,11 +1232,11 @@
     "colId": "3e42347a-acbf-4266-ae30-f61da3c0cc82",
     "containerId": "e9deb1b2-3088-4fc0-9c9f-4ae39119ec95",
     "name": "Get",
-    "url": "{{baseUrl}}api/v1/debiturs/?limit=7&page=1&fields=peminjam1,pekerjaan1,tgl_sekarang",
+    "url": "{{baseUrl}}api/v1/debiturs/?limit=7&page=1&fields=peminjam1,bidang_usaha,tgl_sekarang",
     "method": "GET",
     "sortNum": 140000,
     "created": "2022-10-01T12:22:30.534Z",
-    "modified": "2022-10-01T12:41:01.907Z",
+    "modified": "2022-10-03T02:07:42.045Z",
     "headers": [],
     "params": [
       {
@@ -1252,7 +1257,7 @@
       },
       {
         "name": "fields",
-        "value": "peminjam1,pekerjaan1,tgl_sekarang",
+        "value": "peminjam1,bidang_usaha,tgl_sekarang",
         "isPath": false
       }
     ],
@@ -1372,6 +1377,39 @@
     "body": {
       "type": "json",
       "raw": "{\r\n  \"deskripsi_panjang\": \"Lorem\",\r\n  \"nilai_pasar\": 100000000,\r\n  \"nilai_liquidasi\": 100000000,\r\n  \"nilai_pengikatan\": 100000000,\r\n  \"pengikatan\": \"Lorem\"\r\n}\r\n",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "955d34a9-adfb-40c8-af26-3638efafcc73",
+    "colId": "3e42347a-acbf-4266-ae30-f61da3c0cc82",
+    "containerId": "e13763d4-42eb-4d2e-bbb9-0c8de16e2aa4",
+    "name": "Get",
+    "url": "{{baseUrl}}api/v1/agunan/15/agunan-lainnya",
+    "method": "GET",
+    "sortNum": 660000,
+    "created": "2022-10-03T01:48:16.801Z",
+    "modified": "2022-10-03T01:48:29.704Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "587da26e-106b-4d13-b29b-073587f4ba52",
+    "colId": "3e42347a-acbf-4266-ae30-f61da3c0cc82",
+    "containerId": "e13763d4-42eb-4d2e-bbb9-0c8de16e2aa4",
+    "name": "Post",
+    "url": "{{baseUrl}}api/v1/agunan/15/agunan-lainnya",
+    "method": "POST",
+    "sortNum": 670000,
+    "created": "2022-10-03T01:48:45.058Z",
+    "modified": "2022-10-03T01:49:50.738Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\r\n  \"deskripsi_panjang\": \"Lorem\",\r\n  \"nama_asuransi_penjamin\": \"ASKRINDO\",\r\n  \"nilai_pasar\": 100000000,\r\n  \"nilai_liquidasi\": 100000000,\r\n  \"nilai_pengikatan\": 100000000,\r\n  \"pengikatan\": \"Lorem\"\r\n}\r\n",
       "form": []
     },
     "tests": []

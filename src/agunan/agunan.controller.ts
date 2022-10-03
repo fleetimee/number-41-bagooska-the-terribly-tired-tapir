@@ -34,6 +34,9 @@ import { AgunanService } from './agunan.service';
       form_los: {
         eager: true,
       },
+      form_lainnya: {
+        eager: true,
+      },
     },
   },
 })

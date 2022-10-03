@@ -44,13 +44,16 @@ import { Debitur } from './entities/debitur.entity';
       'agunan.form_kendaraan': {
         // eager: true,
       },
-      'agunan.form_los': {
-        // eager: true,
-      },
       'agunan.form_peralatan': {
         // eager: true,
       },
       'agunan.form_cash': {
+        // eager: true,
+      },
+      'agunan.form_los': {
+        // eager: true,
+      },
+      'agunan.form_lainnya': {
         // eager: true,
       },
       createdBy: {

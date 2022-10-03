@@ -1,3 +1,4 @@
+import { AgunanLainnya } from './../../agunan_lainnya/entities/agunan_lainnya.entity';
 import { AgunanCash } from './../../agunan_cash/entities/agunan_cash.entity';
 import { AgunanPeralatan } from './../../agunan_peralatan/entities/agunan_peralatan.entity';
 import { AgunanLo } from './../../agunan_los/entities/agunan_lo.entity';
@@ -79,6 +80,11 @@ export class Agunan {
     onDelete: 'CASCADE',
   })
   form_los: AgunanLo[];
+
+  @OneToMany(() => AgunanLainnya, (agunanLainnya) => agunanLainnya.agunan, {
+    onDelete: 'CASCADE',
+  })
+  form_lainnya: AgunanLainnya[];
 
   /*
     Relasi dengan debitur yang memiliki agunan
