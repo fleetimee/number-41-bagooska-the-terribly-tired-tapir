@@ -594,7 +594,7 @@
     "method": "GET",
     "sortNum": 280000,
     "created": "2022-08-20T00:12:21.220Z",
-    "modified": "2022-10-03T04:37:22.196Z",
+    "modified": "2022-10-04T01:39:57.244Z",
     "headers": [],
     "params": [
       {
@@ -816,12 +816,12 @@
     "method": "POST",
     "sortNum": 380000,
     "created": "2022-09-07T02:09:37.792Z",
-    "modified": "2022-09-20T05:20:35.711Z",
+    "modified": "2022-10-04T04:21:04.896Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"tanggal_input\": \"2022-10-01\",\n  \"kas_on_hand\": 1500000,\n  \"tabungan\": 1000000,\n  \"jumlah_kas_dan_tabungan\": 2500000,\n  \"jumlah_piutang\": 1000000,\n  \"jumlah_persediaan\": 500000,\n  \"hutang_usaha\": 500000,\n  \"hutang_bank\": 500000,\n  \"aktiva_tetap\": 1000000,\n  \"debitur\": 90\n}\n",
+      "raw": "{\n  \"tanggal_input\": \"2022-10-01\",\n  \"kas_on_hand\": 1500000,\n  \"tabungan\": 1000000,\n  \"jumlah_kas_dan_tabungan\": 2500000,\n  \"jumlah_piutang\": 1000000,\n  \"jumlah_persediaan\": 500000,\n  \"hutang_usaha\": 500000,\n  \"hutang_bank\": 500000,\n  \"aktiva_tetap\": 1000000,\n  \"debitur\": 110\n}\n",
       "form": []
     },
     "tests": []
@@ -1412,6 +1412,20 @@
       "raw": "{\n  \"deskripsi_panjang\": \"Lorem\",\n  \"nama_asuransi_penjamin\": \"ASKRINDO\",\n  \"nilai_pasar\": 100000000,\n  \"nilai_liquidasi\": 100000000,\n  \"nilai_pengikatan\": 100000000,\n  \"pengikatan\": \"Lorem\"\n}\n",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "175aa899-3c11-45e0-804e-23322a1dbb4f",
+    "colId": "3e42347a-acbf-4266-ae30-f61da3c0cc82",
+    "containerId": "1e65817b-0416-4927-90a8-0a86d78e4647",
+    "name": "Delete",
+    "url": "{{baseUrl}}api/v1/input-neraca/50",
+    "method": "DELETE",
+    "sortNum": 680000,
+    "created": "2022-10-04T04:21:50.586Z",
+    "modified": "2022-10-04T07:20:44.734Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]
