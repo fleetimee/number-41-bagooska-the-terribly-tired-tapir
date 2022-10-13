@@ -16,13 +16,13 @@ export class AgunanLainnya {
   @Column('bigint')
   nilai_pasar: number;
 
-  @Column('bigint')
+  @Column('bigint', { nullable: true, default: 0 })
   nilai_liquidasi: number;
 
-  @Column('bigint')
+  @Column('bigint', { nullable: true, default: 0 })
   nilai_pengikatan: number;
 
-  @Column()
+  @Column({ nullable: true, default: 'null' })
   pengikatan: string;
 
   @ManyToOne(() => Agunan, (agunan) => agunan.form_lainnya, {

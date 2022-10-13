@@ -11,6 +11,7 @@ import { Debitur } from './entities/debitur.entity';
     type: Debitur,
   },
   query: {
+    limit: 7,
     alwaysPaginate: true,
     sort: [{ field: 'id', order: 'ASC' }],
     join: {
@@ -39,6 +40,9 @@ import { Debitur } from './entities/debitur.entity';
         // eager: true,
       },
       'agunan.form_tanah': {
+        // eager: true,
+      },
+      'agunan.form_tanah_bangunan': {
         // eager: true,
       },
       'agunan.form_kendaraan': {

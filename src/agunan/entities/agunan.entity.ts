@@ -1,3 +1,4 @@
+import { AgunanTanahBangunan } from './../../agunan_tanah_bangunan/entities/agunan_tanah_bangunan.entity';
 import { AgunanLainnya } from './../../agunan_lainnya/entities/agunan_lainnya.entity';
 import { AgunanCash } from './../../agunan_cash/entities/agunan_cash.entity';
 import { AgunanPeralatan } from './../../agunan_peralatan/entities/agunan_peralatan.entity';
@@ -41,10 +42,11 @@ export class Agunan {
     Ini adalah Relasi dengan form form agunan berbgai jenis'nya
     yang terdiri dari :
 
+    - Agunan Tanah
     - Agunan Tanah & Bangunan
-    - Agunan Low
     - Agunan Kendaraan
     - Agunan Peralatan
+    - Agunan Los
     - Agunan Cash
     - Agunan lainnya
   */
@@ -52,6 +54,15 @@ export class Agunan {
     onDelete: 'CASCADE',
   })
   form_tanah: AgunanTanah[];
+
+  @OneToMany(
+    () => AgunanTanahBangunan,
+    (agunanTanahBangunan) => agunanTanahBangunan.agunan,
+    {
+      onDelete: 'CASCADE',
+    },
+  )
+  form_tanah_bangunan: AgunanTanahBangunan[];
 
   @OneToMany(
     () => AgunanKendaraan,
