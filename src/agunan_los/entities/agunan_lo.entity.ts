@@ -13,6 +13,9 @@ export class AgunanLo {
   nama_pemilik: string;
 
   @Column()
+  komponen: string;
+
+  @Column()
   tempat_lahir: string;
 
   @Column('date')
@@ -53,6 +56,9 @@ export class AgunanLo {
 
   @Column()
   lokasi_pasar: string;
+
+  @Column()
+  titik_koordinat: string;
 
   @Column()
   pengikatan: string;

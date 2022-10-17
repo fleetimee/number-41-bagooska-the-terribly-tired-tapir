@@ -34,9 +34,6 @@ export class InputKeuangan {
   @Column('bigint')
   angsuran_rp: number;
 
-  @Column('int')
-  hpp: number;
-
   @Column('bigint')
   penjualan_kini: number;
 
