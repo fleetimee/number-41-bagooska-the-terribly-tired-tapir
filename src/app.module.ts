@@ -27,6 +27,7 @@ import { AgunanCashModule } from './agunan_cash/agunan_cash.module';
 import { AgunanLainnyaModule } from './agunan_lainnya/agunan_lainnya.module';
 import { AgunanPeralatanModule } from './agunan_peralatan/agunan_peralatan.module';
 import { AgunanTanahBangunanModule } from './agunan_tanah_bangunan/agunan_tanah_bangunan.module';
+import { SyaratLainModule } from './syarat_lain/syarat_lain.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -86,6 +87,7 @@ import { AgunanTanahBangunanModule } from './agunan_tanah_bangunan/agunan_tanah_
     AgunanLainnyaModule,
     AgunanPeralatanModule,
     AgunanTanahBangunanModule,
+    SyaratLainModule,
   ],
   controllers: [AppController],
   providers: [AppService],

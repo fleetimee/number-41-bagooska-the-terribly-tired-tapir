@@ -590,11 +590,11 @@
     "colId": "3e42347a-acbf-4266-ae30-f61da3c0cc82",
     "containerId": "e9deb1b2-3088-4fc0-9c9f-4ae39119ec95",
     "name": "Get Debitur By Id",
-    "url": "{{baseUrl}}api/v1/debiturs/99?join=inputNeraca&join=inputRugiLaba&join=inputKeuangan&join=analisaKeuangan&join=analisaKarakter&join=analisaBisnis&join=analisaJenisUsaha&join=agunan&join=agunan.form_tanah&join=agunan.form_kendaraan&join=agunan.form_los&join=agunan.form_peralatan&join=agunan.form_cash&join=agunan.form_lainnya",
+    "url": "{{baseUrl}}api/v1/debiturs/99?join=inputNeraca&join=inputRugiLaba&join=inputKeuangan&join=analisaKeuangan&join=analisaKarakter&join=analisaBisnis&join=analisaJenisUsaha&join=agunan&join=agunan.form_tanah&join=agunan.form_kendaraan&join=agunan.form_los&join=agunan.form_peralatan&join=agunan.form_cash&join=agunan.form_lainnya&join=syaratLain",
     "method": "GET",
     "sortNum": 280000,
     "created": "2022-08-20T00:12:21.220Z",
-    "modified": "2022-10-04T01:39:57.244Z",
+    "modified": "2022-10-19T06:40:46.332Z",
     "headers": [],
     "params": [
       {
@@ -665,6 +665,11 @@
       {
         "name": "join",
         "value": "agunan.form_lainnya",
+        "isPath": false
+      },
+      {
+        "name": "join",
+        "value": "syaratLain",
         "isPath": false
       }
     ],
@@ -1424,6 +1429,20 @@
     "sortNum": 680000,
     "created": "2022-10-04T04:21:50.586Z",
     "modified": "2022-10-04T07:20:44.734Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "feac254c-00f1-4475-8758-497b384476ab",
+    "colId": "3e42347a-acbf-4266-ae30-f61da3c0cc82",
+    "containerId": "458724f0-d1d0-431d-973c-954c195421d4",
+    "name": "Get",
+    "url": "{{baseUrl}}api/v1/debiturs/99/syarat-lain/",
+    "method": "GET",
+    "sortNum": 690000,
+    "created": "2022-10-19T06:41:14.318Z",
+    "modified": "2022-10-19T06:41:32.110Z",
     "headers": [],
     "params": [],
     "tests": []

@@ -1,3 +1,4 @@
+import { SyaratLain } from './../../syarat_lain/entities/syarat_lain.entity';
 import { Agunan } from './../../agunan/entities/agunan.entity';
 import { AnalisaJenisUsaha } from './../../analisa_jenis_usaha/entities/analisa_jenis_usaha.entity';
 import { AnalisaKarakter } from './../../analisa_karakter/entities/analisa_karakter.entity';
@@ -193,4 +194,10 @@ value generation strategy. */
     onUpdate: 'CASCADE',
   })
   agunan: Agunan[];
+
+  @OneToMany(() => SyaratLain, (syaratLain) => syaratLain.debitur, {
+    onDelete: 'SET NULL',
+    onUpdate: 'CASCADE',
+  })
+  syaratLain: SyaratLain[];
 }
