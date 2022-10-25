@@ -60,6 +60,9 @@ import { Debitur } from './entities/debitur.entity';
       'agunan.form_lainnya': {
         // eager: true,
       },
+      analisaAgunan: {
+        // eager: true,
+      },
       syaratLain: {
         // eager: true,
       },

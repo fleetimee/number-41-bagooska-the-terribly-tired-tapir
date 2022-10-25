@@ -1,3 +1,4 @@
+import { AnalisaAgunan } from './../../analisa_agunan/entities/analisa_agunan.entity';
 import { SyaratLain } from './../../syarat_lain/entities/syarat_lain.entity';
 import { Agunan } from './../../agunan/entities/agunan.entity';
 import { AnalisaJenisUsaha } from './../../analisa_jenis_usaha/entities/analisa_jenis_usaha.entity';
@@ -182,12 +183,10 @@ value generation strategy. */
   )
   analisaJenisUsaha: AnalisaJenisUsaha;
 
-  // @ManyToMany(() => Agunan, (agunan) => agunan.debitur, {
-  //   onDelete: 'SET NULL',
-  //   cascade: true,
-  // })
-  // @JoinTable()
-  // agunan: Agunan[];
+  @OneToOne(() => AnalisaAgunan, (analisaAgunan) => analisaAgunan.debitur, {
+    onDelete: 'CASCADE',
+  })
+  analisaAgunan: AnalisaAgunan;
 
   @OneToMany(() => Agunan, (agunan) => agunan.debitur, {
     onDelete: 'SET NULL',

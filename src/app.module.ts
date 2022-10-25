@@ -28,6 +28,7 @@ import { AgunanLainnyaModule } from './agunan_lainnya/agunan_lainnya.module';
 import { AgunanPeralatanModule } from './agunan_peralatan/agunan_peralatan.module';
 import { AgunanTanahBangunanModule } from './agunan_tanah_bangunan/agunan_tanah_bangunan.module';
 import { SyaratLainModule } from './syarat_lain/syarat_lain.module';
+import { AnalisaAgunanModule } from './analisa_agunan/analisa_agunan.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -88,6 +89,7 @@ import { SyaratLainModule } from './syarat_lain/syarat_lain.module';
     AgunanPeralatanModule,
     AgunanTanahBangunanModule,
     SyaratLainModule,
+    AnalisaAgunanModule,
   ],
   controllers: [AppController],
   providers: [AppService],
