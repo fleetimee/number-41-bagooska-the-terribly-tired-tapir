@@ -22,34 +22,34 @@ export class AnalisaKeuangan {
   @Column('bigint')
   total_angsuran_keseluruhan: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_omzet_kini: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_omzet_yad: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_biaya_bahan_kini: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_biaya_bahan_yad: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_biaya_operasi_kini: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_biaya_operasi_yad: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_biaya_upah_kini: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_biaya_upah_yad: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_biaya_hidup_kini: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_biaya_hidup_yad: number;
 
   @Column('bigint')
@@ -58,22 +58,22 @@ export class AnalisaKeuangan {
   @Column('bigint')
   total_laba_usaha_yad: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_laba_usaha_kini: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_laba_usaha_yad: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_ratio_kini: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_ratio_yad: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_roe_kini: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_roe_yad: number;
 
   @Column()

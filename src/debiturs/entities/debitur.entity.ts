@@ -72,8 +72,14 @@ value generation strategy. */
   @Column('date')
   tanggal_lahir: Date;
 
+  @Column({ nullable: true })
+  no_hp: string;
+
   @Column()
   umur: number;
+
+  @Column({ nullable: true })
+  npwp: string;
 
   @Column()
   status_keluarga: string;
@@ -86,6 +92,9 @@ value generation strategy. */
 
   @Column()
   lokasi_usaha: string;
+
+  @Column('int', { nullable: true })
+  jumlah_karyawan: number;
 
   @Column()
   jenis_usaha: string;
@@ -111,6 +120,9 @@ value generation strategy. */
   @Column('text')
   deskripsi_debitur: string;
 
+  @Column('numeric', { precision: 5, scale: 1, default: 0.0 })
+  progress: number;
+
   /* End of data lokasi debitur */
 
   // @OneToMany(() => NonFixed, (nonfixed) => nonfixed.debitur, {
@@ -125,7 +137,6 @@ value generation strategy. */
   // fixed: Fixed[];
 
   // Relation
-
   @ManyToOne(() => User, (user) => user, {
     nullable: true,
     onDelete: 'CASCADE',
