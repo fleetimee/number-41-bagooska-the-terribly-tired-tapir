@@ -65,7 +65,7 @@ import { AnalisaAgunanModule } from './analisa_agunan/analisa_agunan.module';
       port: 5432,
       username: 'postgres',
       password: 'postgres',
-      database: 'webservice',
+      database: 'fleetime',
       autoLoadEntities: true,
       synchronize: true,
       logging: true,

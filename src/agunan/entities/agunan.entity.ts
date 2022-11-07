@@ -100,7 +100,9 @@ export class Agunan {
   /*
     Relasi dengan debitur yang memiliki agunan
   */
-  @ManyToOne(() => Debitur, (debitur) => debitur.agunan)
+  @ManyToOne(() => Debitur, (debitur) => debitur.agunan, {
+    onDelete: 'CASCADE',
+  })
   debitur: Debitur;
 
   @Column()
