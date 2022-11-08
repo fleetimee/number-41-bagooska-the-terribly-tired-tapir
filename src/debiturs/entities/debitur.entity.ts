@@ -1,3 +1,4 @@
+import { IjinLegitimasi } from './../../ijin_legitimasi/entities/ijin_legitimasi.entity';
 import { AnalisaAgunan } from './../../analisa_agunan/entities/analisa_agunan.entity';
 import { SyaratLain } from './../../syarat_lain/entities/syarat_lain.entity';
 import { Agunan } from './../../agunan/entities/agunan.entity';
@@ -198,6 +199,11 @@ value generation strategy. */
     onDelete: 'CASCADE',
   })
   analisaAgunan: AnalisaAgunan;
+
+  @OneToOne(() => IjinLegitimasi, (ijinLegitimasi) => ijinLegitimasi.debitur, {
+    onDelete: 'CASCADE',
+  })
+  ijinLegitimasi: IjinLegitimasi;
 
   @OneToMany(() => Agunan, (agunan) => agunan.debitur, {
     onDelete: 'SET NULL',

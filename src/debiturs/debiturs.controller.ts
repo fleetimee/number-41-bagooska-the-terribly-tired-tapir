@@ -15,6 +15,12 @@ import { Debitur } from './entities/debitur.entity';
     alwaysPaginate: true,
     sort: [{ field: 'id', order: 'ASC' }],
     join: {
+      syaratLain: {
+        // eager: true,
+      },
+      ijinLegitimasi: {
+        // eager: true,
+      },
       inputNeraca: {
         // eager: true,
       },
@@ -39,6 +45,9 @@ import { Debitur } from './entities/debitur.entity';
       agunan: {
         // eager: true,
       },
+      analisaAgunan: {
+        // eager: true,
+      },
       'agunan.form_tanah': {
         // eager: true,
       },
@@ -58,12 +67,6 @@ import { Debitur } from './entities/debitur.entity';
         // eager: true,
       },
       'agunan.form_lainnya': {
-        // eager: true,
-      },
-      analisaAgunan: {
-        // eager: true,
-      },
-      syaratLain: {
         // eager: true,
       },
       createdBy: {
