@@ -21,6 +21,18 @@ export class AgunanTanahBangunan {
   @Column('date')
   tanggal: Date;
 
+  @Column('bigint', { nullable: true })
+  nilai_pasar_tanah: number;
+
+  @Column('bigint', { nullable: true })
+  nilai_liquidasi_tanah: number;
+
+  @Column('bigint', { nullable: true })
+  nilai_pasar_bangunan: number;
+
+  @Column('bigint', { nullable: true })
+  nilai_liquidasi_bangunan: number;
+
   @Column('bigint')
   nilai_pasar: number;
 

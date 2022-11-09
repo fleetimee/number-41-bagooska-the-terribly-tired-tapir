@@ -21,6 +21,9 @@ import { Debitur } from './entities/debitur.entity';
       ijinLegitimasi: {
         // eager: true,
       },
+      asuransi: {
+        // eager: true,
+      },
       inputNeraca: {
         // eager: true,
       },

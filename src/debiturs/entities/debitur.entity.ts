@@ -1,3 +1,4 @@
+import { Asuransi } from './../../asuransi/entities/asuransi.entity';
 import { IjinLegitimasi } from './../../ijin_legitimasi/entities/ijin_legitimasi.entity';
 import { AnalisaAgunan } from './../../analisa_agunan/entities/analisa_agunan.entity';
 import { SyaratLain } from './../../syarat_lain/entities/syarat_lain.entity';
@@ -204,6 +205,11 @@ value generation strategy. */
     onDelete: 'CASCADE',
   })
   ijinLegitimasi: IjinLegitimasi;
+
+  @OneToOne(() => Asuransi, (asuransi) => asuransi.debitur, {
+    onDelete: 'CASCADE',
+  })
+  asuransi: Asuransi;
 
   @OneToMany(() => Agunan, (agunan) => agunan.debitur, {
     onDelete: 'SET NULL',
