@@ -12,6 +12,9 @@ export class Asuransi {
   @PrimaryGeneratedColumn()
   id: number;
 
+  @Column({ nullable: true })
+  nama_perusahaan: string;
+
   @Column('numeric')
   premi: number;
 
