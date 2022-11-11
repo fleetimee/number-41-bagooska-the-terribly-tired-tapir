@@ -51,6 +51,12 @@ value generation strategy. */
   ktp2: string;
 
   @Column({ nullable: true })
+  peminjam3: string;
+
+  @Column({ nullable: true })
+  peminjam4: string;
+
+  @Column({ nullable: true })
   pemilik_agunan_1: string;
 
   @Column('bigint', { nullable: true })
@@ -67,6 +73,12 @@ value generation strategy. */
 
   @Column({ nullable: true })
   alamat_2: string;
+
+  @Column({ nullable: true })
+  alamat_3: string;
+
+  @Column({ nullable: true })
+  alamat_4: string;
 
   @Column()
   tempat_lahir: string;
