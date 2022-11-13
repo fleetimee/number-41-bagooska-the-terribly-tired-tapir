@@ -11,7 +11,7 @@ import { Debitur } from './entities/debitur.entity';
     type: Debitur,
   },
   query: {
-    limit: 7,
+    // limit: 100,
     alwaysPaginate: true,
     sort: [{ field: 'id', order: 'ASC' }],
     join: {
