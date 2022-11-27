@@ -1,3 +1,5 @@
+import { Asuransi } from './../../asuransi/entities/asuransi.entity';
+import { IjinLegitimasi } from './../../ijin_legitimasi/entities/ijin_legitimasi.entity';
 import { AnalisaAgunan } from './../../analisa_agunan/entities/analisa_agunan.entity';
 import { SyaratLain } from './../../syarat_lain/entities/syarat_lain.entity';
 import { Agunan } from './../../agunan/entities/agunan.entity';
@@ -49,6 +51,12 @@ value generation strategy. */
   ktp2: string;
 
   @Column({ nullable: true })
+  peminjam3: string;
+
+  @Column({ nullable: true })
+  peminjam4: string;
+
+  @Column({ nullable: true })
   pemilik_agunan_1: string;
 
   @Column('bigint', { nullable: true })
@@ -65,6 +73,12 @@ value generation strategy. */
 
   @Column({ nullable: true })
   alamat_2: string;
+
+  @Column({ nullable: true })
+  alamat_3: string;
+
+  @Column({ nullable: true })
+  alamat_4: string;
 
   @Column()
   tempat_lahir: string;
@@ -198,6 +212,16 @@ value generation strategy. */
     onDelete: 'CASCADE',
   })
   analisaAgunan: AnalisaAgunan;
+
+  @OneToOne(() => IjinLegitimasi, (ijinLegitimasi) => ijinLegitimasi.debitur, {
+    onDelete: 'CASCADE',
+  })
+  ijinLegitimasi: IjinLegitimasi;
+
+  @OneToOne(() => Asuransi, (asuransi) => asuransi.debitur, {
+    onDelete: 'CASCADE',
+  })
+  asuransi: Asuransi;
 
   @OneToMany(() => Agunan, (agunan) => agunan.debitur, {
     onDelete: 'SET NULL',

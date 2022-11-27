@@ -79,28 +79,28 @@ export class AnalisaKeuangan {
   @Column()
   keterangan_roe: string;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_roa_kini: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_roa_yad: number;
 
   @Column()
   keterangan_roa: string;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_der_kini: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_der_yad: number;
 
   @Column()
   keterangan_der: string;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_dsc_kini: number;
 
-  @Column('decimal', { precision: 5, scale: 2 })
+  @Column('numeric')
   persen_dsc_yad: number;
 
   @Column()
