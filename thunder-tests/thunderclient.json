@@ -360,7 +360,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-07-12T02:10:15.768Z",
-    "modified": "2022-11-27T13:31:12.048Z",
+    "modified": "2022-11-28T02:41:48.129Z",
     "headers": [
       {
         "name": "Content-Type",
@@ -380,8 +380,8 @@
       ],
       "files": [
         {
-          "name": "files",
-          "value": "c:\\Users\\Novian Andika\\Desktop\\93862969.jpeg"
+          "name": "file",
+          "value": "c:\\Users\\Novian Andika\\Documents\\asd.pdf"
         }
       ]
     },

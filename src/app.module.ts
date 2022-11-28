@@ -31,6 +31,7 @@ import { SyaratLainModule } from './syarat_lain/syarat_lain.module';
 import { AnalisaAgunanModule } from './analisa_agunan/analisa_agunan.module';
 import { IjinLegitimasiModule } from './ijin_legitimasi/ijin_legitimasi.module';
 import { AsuransiModule } from './asuransi/asuransi.module';
+import { CloudinaryModule } from './cloudinary/cloudinary.module';
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -94,6 +95,7 @@ import { AsuransiModule } from './asuransi/asuransi.module';
     AnalisaAgunanModule,
     IjinLegitimasiModule,
     AsuransiModule,
+    CloudinaryModule,
   ],
   controllers: [AppController],
   providers: [AppService],

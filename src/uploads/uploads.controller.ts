@@ -41,30 +41,31 @@ export class UploadsController implements CrudController<Upload> {
     return this;
   }
 
-  @UseInterceptors(
-    FileInterceptor('files', {
-      storage: diskStorage({
-        destination: './uploads/files',
-        filename: (req, files, cb) => {
-          const randomName = Array(32)
-            .fill(null)
-            .map(() => Math.round(Math.random() * 16).toString(16))
-            .join('');
-          return cb(null, `${randomName}${extname(files.originalname)}`);
-        },
-      }),
-      fileFilter: (req, files, cb) => {
-        if (!files.originalname.match(/\.(jpeg|jpg|png)$/)) {
-          return cb(null, false);
-        }
-        cb(null, true);
-      },
-      limits: {
-        // max file size 2MB
-        fileSize: 2 * 1024 * 1024,
-      },
-    }),
-  )
+  // @UseInterceptors(
+  //   FileInterceptor('files', {
+  //     storage: diskStorage({
+  //       destination: './uploads/files',
+  //       filename: (req, files, cb) => {
+  //         const randomName = Array(32)
+  //           .fill(null)
+  //           .map(() => Math.round(Math.random() * 16).toString(16))
+  //           .join('');
+  //         return cb(null, `${randomName}${extname(files.originalname)}`);
+  //       },
+  //     }),
+  //     fileFilter: (req, files, cb) => {
+  //       if (!files.originalname.match(/\.(jpeg|jpg|png)$/)) {
+  //         return cb(null, false);
+  //       }
+  //       cb(null, true);
+  //     },
+  //     limits: {
+  //       // max file size 2MB
+  //       fileSize: 2 * 1024 * 1024,
+  //     },
+  //   }),
+  // )
+  @UseInterceptors(FileInterceptor('file'))
   @Override()
   createOne(
     @ParsedRequest() req: CrudRequest,
@@ -77,10 +78,19 @@ export class UploadsController implements CrudController<Upload> {
     dto.file = files.filename; // log to see all available data
 
     const response = {
-      message: 'File berhasil diupload',
-      filePath: `http://localhost:3000/uploads/files/${files.filename}`,
+      originalname: files.originalname,
+      filename: files.filename,
+
+      path: files.path,
     };
-    return this.base.createOneBase(req, dto) && response;
+
+    return this.service.uploadImageToCloudinary(files).then((result) => {
+      dto.file = result.url;
+      return this.base.createOneBase(req, dto);
+    });
+
+    // const upload = this.service.uploadImageToCloudinary(files);
+    // return upload;
   }
 
   @Override()
