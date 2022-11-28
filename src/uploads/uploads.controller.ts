@@ -19,8 +19,6 @@ import { Upload } from './entities/upload.entity';
 import { UploadsService } from './uploads.service';
 import { Response } from 'express';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { diskStorage } from 'multer';
-import { extname } from 'path';
 // import fs
 import * as fs from 'fs';
 
@@ -76,13 +74,6 @@ export class UploadsController implements CrudController<Upload> {
       throw new BadRequestException('File bukan pdf/docx/doc');
     }
     dto.file = files.filename; // log to see all available data
-
-    const response = {
-      originalname: files.originalname,
-      filename: files.filename,
-
-      path: files.path,
-    };
 
     return this.service.uploadImageToCloudinary(files).then((result) => {
       dto.file = result.url;
