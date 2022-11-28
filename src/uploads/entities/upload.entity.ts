@@ -1,12 +1,9 @@
-import { User } from 'src/users/entities/user.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
   UpdateDateColumn,
-  JoinColumn,
-  OneToOne,
 } from 'typeorm';
 
 @Entity()
@@ -15,10 +12,7 @@ export class Upload {
   id: number;
 
   @Column()
-  test: string;
-
-  @Column()
-  files: string;
+  file: string;
 
   @CreateDateColumn()
   createdDate: Date;
@@ -33,10 +27,6 @@ export class Upload {
   //   onDelete: 'CASCADE',
   // })
   // createdBy: User;
-
-  @OneToOne(() => User, (user) => user, { nullable: true })
-  @JoinColumn()
-  updatedBy: User;
 
   // @ManyToOne(() => Submission, (submission) => submission.uploads, {
   //   cascade: true,

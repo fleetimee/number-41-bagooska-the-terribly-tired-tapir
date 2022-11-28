@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "_id": "680b9068-d09f-4018-a41b-70e721916a07",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://pomf2.lain.la/upload.php",
+    "url": "https://pomf2.lain.la/upload.php",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-27T22:28:24.527Z",
+    "modified": "2022-11-27T22:28:51.633Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "file",
+          "value": "..\\src\\uploads\\uploads.controller.ts"
+        }
+      ]
+    },
+    "tests": []
+  }
+]

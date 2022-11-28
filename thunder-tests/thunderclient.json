@@ -356,37 +356,32 @@
     "colId": "55df9d89-9cac-4748-9c41-d53dff5232d8",
     "containerId": "0e776d57-21a5-43fe-b762-89c20d81d1ef",
     "name": "Upload file",
-    "url": "localhost:3000/uploads/",
+    "url": "localhost:3000/api/v1/uploads",
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-07-12T02:10:15.768Z",
-    "modified": "2022-09-11T10:37:29.235Z",
-    "headers": [],
+    "modified": "2022-11-27T13:31:12.048Z",
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "multipart/form-data; boundary",
+        "isDisabled": true
+      }
+    ],
     "params": [],
     "body": {
       "type": "formdata",
       "raw": "",
       "form": [
         {
-          "name": "submission",
-          "value": "9",
-          "isDisabled": true
-        },
-        {
-          "name": "createdBy",
-          "value": "1",
-          "isDisabled": true
-        },
-        {
-          "name": "test",
-          "value": "1"
+          "name": "name",
+          "value": "Novian"
         }
       ],
       "files": [
         {
           "name": "files",
-          "value": "D:\\Download\\Pengumuman Jasa Lainnya Perorangan.pdf",
-          "isDisabled": true
+          "value": "c:\\Users\\Novian Andika\\Desktop\\93862969.jpeg"
         }
       ]
     },
@@ -397,11 +392,11 @@
     "colId": "55df9d89-9cac-4748-9c41-d53dff5232d8",
     "containerId": "0e776d57-21a5-43fe-b762-89c20d81d1ef",
     "name": "List of uploaded files",
-    "url": "localhost:3000/uploads/",
+    "url": "localhost:3000/api/v1/uploads",
     "method": "GET",
     "sortNum": 5000,
     "created": "2022-07-13T02:39:23.039Z",
-    "modified": "2022-07-13T02:39:36.459Z",
+    "modified": "2022-11-27T13:31:33.547Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -411,11 +406,11 @@
     "colId": "55df9d89-9cac-4748-9c41-d53dff5232d8",
     "containerId": "0e776d57-21a5-43fe-b762-89c20d81d1ef",
     "name": "Delete file",
-    "url": "localhost:3000/uploads/11",
+    "url": "localhost:3000/api/v1/uploads/13",
     "method": "DELETE",
     "sortNum": 180000,
     "created": "2022-07-13T02:40:03.818Z",
-    "modified": "2022-07-13T02:40:26.283Z",
+    "modified": "2022-11-27T15:03:45.633Z",
     "headers": [],
     "params": [],
     "tests": []
