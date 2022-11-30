@@ -26,8 +26,22 @@ import * as fs from 'fs';
   model: {
     type: Upload,
   },
+  params: {
+    debiturId: {
+      field: 'debiturId',
+      type: 'number',
+    },
+  },
+  query: {
+    join: {
+      debitur: {
+        eager: true,
+        allow: ['peminjam1'],
+      },
+    },
+  },
 })
-@Controller('uploads')
+@Controller('/debiturs/:debiturId/uploads')
 export class UploadsController implements CrudController<Upload> {
   constructor(public service: UploadsService) {}
 

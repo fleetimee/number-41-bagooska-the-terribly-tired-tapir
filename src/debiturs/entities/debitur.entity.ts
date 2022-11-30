@@ -1,3 +1,4 @@
+import { Upload } from './../../uploads/entities/upload.entity';
 import { Asuransi } from './../../asuransi/entities/asuransi.entity';
 import { IjinLegitimasi } from './../../ijin_legitimasi/entities/ijin_legitimasi.entity';
 import { AnalisaAgunan } from './../../analisa_agunan/entities/analisa_agunan.entity';
@@ -234,4 +235,10 @@ value generation strategy. */
     onUpdate: 'CASCADE',
   })
   syaratLain: SyaratLain[];
+
+  @OneToMany(() => Upload, (upload) => upload.debitur, {
+    onDelete: 'SET NULL',
+    onUpdate: 'CASCADE',
+  })
+  upload: Upload[];
 }
