@@ -4,11 +4,11 @@
     "colId": "55df9d89-9cac-4748-9c41-d53dff5232d8",
     "containerId": "856c36ff-0fa5-49eb-b2b5-b199bfefc8fa",
     "name": "Get all debitur",
-    "url": "http://localhost:3000/debiturs/",
+    "url": "http://localhost:3000/api/v1/debiturs/",
     "method": "GET",
     "sortNum": 10000,
     "created": "2022-07-01T21:33:08.123Z",
-    "modified": "2022-08-24T04:19:41.862Z",
+    "modified": "2022-11-30T11:14:27.949Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -356,11 +356,11 @@
     "colId": "55df9d89-9cac-4748-9c41-d53dff5232d8",
     "containerId": "0e776d57-21a5-43fe-b762-89c20d81d1ef",
     "name": "Upload file",
-    "url": "localhost:3000/api/v1/uploads",
+    "url": "localhost:3000/api/v1/debiturs/2/uploads",
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-07-12T02:10:15.768Z",
-    "modified": "2022-11-28T02:51:30.839Z",
+    "modified": "2022-11-30T11:31:13.003Z",
     "headers": [
       {
         "name": "Content-Type",
@@ -374,14 +374,14 @@
       "raw": "",
       "form": [
         {
-          "name": "name",
-          "value": "Novian"
+          "name": "keterangan",
+          "value": "docs"
         }
       ],
       "files": [
         {
           "name": "file",
-          "value": "c:\\Users\\Novian Andika\\Desktop\\309421581_127269553428428_767736233585113781_n.jpg"
+          "value": "c:\\Users\\Novian Andika\\Desktop\\1. FORM PERMOHONAN EUC.docx"
         }
       ]
     },
