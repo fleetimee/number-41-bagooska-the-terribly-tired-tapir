@@ -1,12 +1,11 @@
-import { User } from 'src/users/entities/user.entity';
+import { Debitur } from './../../debiturs/entities/debitur.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
   UpdateDateColumn,
-  JoinColumn,
-  OneToOne,
+  ManyToOne,
 } from 'typeorm';
 
 @Entity()
@@ -15,10 +14,10 @@ export class Upload {
   id: number;
 
   @Column()
-  test: string;
+  keterangan: string;
 
   @Column()
-  files: string;
+  file: string;
 
   @CreateDateColumn()
   createdDate: Date;
@@ -26,22 +25,9 @@ export class Upload {
   @UpdateDateColumn()
   updatedDate: Date;
 
-  // Relation
+  @ManyToOne(() => Debitur, (debitur) => debitur.upload)
+  debitur: Debitur;
 
-  // @ManyToOne(() => User, (user) => user, {
-  //   nullable: false,
-  //   onDelete: 'CASCADE',
-  // })
-  // createdBy: User;
-
-  @OneToOne(() => User, (user) => user, { nullable: true })
-  @JoinColumn()
-  updatedBy: User;
-
-  // @ManyToOne(() => Submission, (submission) => submission.uploads, {
-  //   cascade: true,
-  //   onDelete: 'CASCADE',
-  //   nullable: false,
-  // })
-  // submission: Submission;
+  @Column()
+  debiturId: number;
 }

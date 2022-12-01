@@ -1,4 +1,3 @@
-import { FileInterceptor } from '@nestjs/platform-express';
 import {
   BadRequestException,
   Controller,
@@ -18,34 +17,31 @@ import {
 } from '@rewiko/crud';
 import { Upload } from './entities/upload.entity';
 import { UploadsService } from './uploads.service';
-import { diskStorage } from 'multer';
-import { extname } from 'path';
 import { Response } from 'express';
+import { FileInterceptor } from '@nestjs/platform-express';
+// import fs
+import * as fs from 'fs';
 
 @Crud({
   model: {
     type: Upload,
   },
+  params: {
+    debiturId: {
+      field: 'debiturId',
+      type: 'number',
+    },
+  },
   query: {
     join: {
-      submission: {
+      debitur: {
         eager: true,
-      },
-      'submission.nonfixed': {
-        eager: true,
-      },
-      'submission.fixed': {
-        eager: true,
-      },
-      createdBy: {
-        eager: true,
-        exclude: ['password'],
-        allow: ['username'],
+        allow: ['peminjam1'],
       },
     },
   },
 })
-@Controller('uploads')
+@Controller('/debiturs/:debiturId/uploads')
 export class UploadsController implements CrudController<Upload> {
   constructor(public service: UploadsService) {}
 
@@ -57,47 +53,31 @@ export class UploadsController implements CrudController<Upload> {
     return this;
   }
 
-  /* This is a decorator that intercepts the request and saves the file to the specified location. */
-  @UseInterceptors(
-    FileInterceptor('files', {
-      storage: diskStorage({
-        destination: './uploads/files',
-        filename: (req, files, cb) => {
-          const randomName = Array(32)
-            .fill(null)
-            .map(() => Math.round(Math.random() * 16).toString(16))
-            .join('');
-          return cb(null, `${randomName}${extname(files.originalname)}`);
-        },
-      }),
-      fileFilter: (req, files, cb) => {
-        if (!files.originalname.match(/\.(pdf|docx|doc)$/)) {
-          return cb(null, false);
-        }
-        cb(null, true);
-      },
-    }),
-  )
-  @UseInterceptors(
-    FileInterceptor('files', {
-      storage: diskStorage({
-        destination: './uploads/files',
-        filename: (req, files, cb) => {
-          const randomName = Array(32)
-            .fill(null)
-            .map(() => Math.round(Math.random() * 16).toString(16))
-            .join('');
-          return cb(null, `${randomName}${extname(files.originalname)}`);
-        },
-      }),
-      fileFilter: (req, files, cb) => {
-        if (!files.originalname.match(/\.(pdf|docx|doc)$/)) {
-          return cb(null, false);
-        }
-        cb(null, true);
-      },
-    }),
-  )
+  // @UseInterceptors(
+  //   FileInterceptor('files', {
+  //     storage: diskStorage({
+  //       destination: './uploads/files',
+  //       filename: (req, files, cb) => {
+  //         const randomName = Array(32)
+  //           .fill(null)
+  //           .map(() => Math.round(Math.random() * 16).toString(16))
+  //           .join('');
+  //         return cb(null, `${randomName}${extname(files.originalname)}`);
+  //       },
+  //     }),
+  //     fileFilter: (req, files, cb) => {
+  //       if (!files.originalname.match(/\.(jpeg|jpg|png)$/)) {
+  //         return cb(null, false);
+  //       }
+  //       cb(null, true);
+  //     },
+  //     limits: {
+  //       // max file size 2MB
+  //       fileSize: 2 * 1024 * 1024,
+  //     },
+  //   }),
+  // )
+  @UseInterceptors(FileInterceptor('file'))
   @Override()
   createOne(
     @ParsedRequest() req: CrudRequest,
@@ -107,18 +87,50 @@ export class UploadsController implements CrudController<Upload> {
     if (!files) {
       throw new BadRequestException('File bukan pdf/docx/doc');
     }
-    dto.files = files.filename; // log to see all available data
+    dto.file = files.filename; // log to see all available data
 
-    const response = {
-      message: 'File berhasil diupload',
-      filePath: `http://localhost:3000/uploads/files/${files.filename}`,
-    };
-    return this.base.createOneBase(req, dto) && response;
+    return this.service.uploadImageToCloudinary(files).then((result) => {
+      dto.file = result.url;
+      return this.base.createOneBase(req, dto);
+    });
+
+    // const upload = this.service.uploadImageToCloudinary(files);
+    // return upload;
+  }
+
+  @Override()
+  deleteOne(@ParsedRequest() req: CrudRequest) {
+    // find one file from database
+    const selectFile = this.service.findOne(
+      // Get the id from the request
+      { where: { id: req.parsed.paramsFilter[0].value } },
+    );
+
+    // Parse selectFile to string
+    const parseFile = JSON.stringify(selectFile);
+
+    // Parse parseFile to object
+    const parseFileToObject = JSON.parse(parseFile);
+
+    // Get the file name from the object
+    const fileName = parseFileToObject.file;
+
+    // Delete file from the folder
+    fs.unlink(`./uploads/files/${fileName}`, (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+
+    console.log('File berhasil dihapus');
+    // delete file from database
+
+    return this.base.deleteOneBase(req);
   }
 
   /* A method to get the file from the server. */
-  @Get('/files/:filename')
-  async getPdf(@Res() res: Response, @Param('filename') filename) {
-    res.sendFile(filename, { root: './uploads/files' });
+  @Get('files/:file')
+  async getFile(@Param('file') file, @Res() res: Response) {
+    return res.sendFile(file, { root: './uploads/files' });
   }
 }

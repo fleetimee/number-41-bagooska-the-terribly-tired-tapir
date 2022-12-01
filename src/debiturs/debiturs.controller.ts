@@ -51,6 +51,9 @@ import { Debitur } from './entities/debitur.entity';
       analisaAgunan: {
         // eager: true,
       },
+      upload: {
+        // eager: true,
+      },
       'agunan.form_tanah': {
         // eager: true,
       },
