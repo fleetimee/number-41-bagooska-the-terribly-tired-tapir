@@ -25,7 +25,9 @@ export class Upload {
   @UpdateDateColumn()
   updatedDate: Date;
 
-  @ManyToOne(() => Debitur, (debitur) => debitur.upload)
+  @ManyToOne(() => Debitur, (debitur) => debitur.upload, {
+    onDelete: 'CASCADE',
+  })
   debitur: Debitur;
 
   @Column()

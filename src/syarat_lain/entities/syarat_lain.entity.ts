@@ -9,7 +9,9 @@ export class SyaratLain {
   @Column()
   keterangan: string;
 
-  @ManyToOne(() => Debitur, (debitur) => debitur.syaratLain)
+  @ManyToOne(() => Debitur, (debitur) => debitur.syaratLain, {
+    onDelete: 'CASCADE',
+  })
   debitur: Debitur;
 
   @Column()

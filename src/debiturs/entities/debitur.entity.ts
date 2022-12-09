@@ -138,25 +138,20 @@ value generation strategy. */
   @Column('numeric', { precision: 5, scale: 1, default: 0.0 })
   progress: number;
 
-  /* End of data lokasi debitur */
-
-  // @OneToMany(() => NonFixed, (nonfixed) => nonfixed.debitur, {
-  //   onDelete: 'SET NULL',
-  //   onUpdate: 'CASCADE',
-  // })
-  // nonfixed: NonFixed[];
-
-  // @OneToMany(() => Fixed, (fixed) => fixed.debitur, {
-  //   onDelete: 'CASCADE',
-  // })
-  // fixed: Fixed[];
+  @Column()
+  userId: string;
 
   // Relation
   @ManyToOne(() => User, (user) => user, {
-    nullable: true,
     onDelete: 'CASCADE',
   })
   createdBy: User;
+
+  // Many to one to debiturs
+  @ManyToOne(() => User, (user) => user.debiturs, {
+    onDelete: 'CASCADE',
+  })
+  user: User;
 
   @OneToOne(() => User, (user) => user, { nullable: true })
   @JoinColumn()
