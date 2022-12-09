@@ -32,6 +32,16 @@ import { AnalisaAgunanModule } from './analisa_agunan/analisa_agunan.module';
 import { IjinLegitimasiModule } from './ijin_legitimasi/ijin_legitimasi.module';
 import { AsuransiModule } from './asuransi/asuransi.module';
 import { CloudinaryModule } from './cloudinary/cloudinary.module';
+import { AuthModule } from './auth/auth.module';
+
+// import firebase admin
+import * as admin from 'firebase-admin';
+import { FirebaseAdminModule } from '@redredgroup/nestjs-firebase-admin';
+import { ConfigModule } from '@nestjs/config';
+
+import * as serviceAccount from './serviceAccountKey.json';
+
+// import service account from json file
 
 // const config = parse(process.env.DATABASE_URL);
 // TypeOrmModule.forRoot({
@@ -50,6 +60,11 @@ import { CloudinaryModule } from './cloudinary/cloudinary.module';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      cache: true,
+    }),
+    AuthModule,
     DebitursModule,
     // TypeOrmModule.forRoot({
     //   type: 'postgres',
@@ -72,6 +87,17 @@ import { CloudinaryModule } from './cloudinary/cloudinary.module';
       autoLoadEntities: true,
       synchronize: true,
       logging: true,
+    }),
+    FirebaseAdminModule.forRootAsync({
+      useFactory: () => ({
+        credential: admin.credential.cert(
+          serviceAccount as admin.ServiceAccount,
+        ),
+        databaseURL: process.env.FIREBASE_DATABASE_URL,
+        projectId: 'analisis-kredit-mikro',
+        serviceAccountId: process.env.FIREBASE_SERVICE_ACCOUNT_ID,
+        storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+      }),
     }),
     UsersModule,
     RolesModule,

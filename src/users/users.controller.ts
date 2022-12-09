@@ -7,12 +7,26 @@ import { UsersService } from './users.service';
   model: {
     type: User,
   },
+  params: {
+    // id: {
+    //   field: 'id',
+    //   disabled: true,
+    // },
+    id: {
+      field: 'id',
+      type: 'string',
+      primary: true,
+    },
+  },
   query: {
     exclude: ['password'],
     join: {
       roles: {
         eager: true,
         allow: ['name'],
+      },
+      debiturs: {
+        eager: true,
       },
       createdBy: {
         eager: true,
@@ -38,4 +52,15 @@ import { UsersService } from './users.service';
 @Controller('users')
 export class UsersController implements CrudController<User> {
   constructor(public service: UsersService) {}
+
+  get base(): CrudController<User> {
+    return this;
+  }
+
+  // @Override()
+  // async createOne(@ParsedRequest() req: CrudRequest, @ParsedBody() dto: User) {
+  //   const user = await this.service.createUser(dto);
+  //   dto.uid = user.uid;
+  //   return await this.base.createOneBase(req, user);
+  // }
 }

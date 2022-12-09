@@ -75,6 +75,9 @@ import { Debitur } from './entities/debitur.entity';
       'agunan.form_lainnya': {
         // eager: true,
       },
+      user: {
+        eager: true,
+      },
       createdBy: {
         eager: true,
         exclude: ['password'],
