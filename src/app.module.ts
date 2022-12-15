@@ -38,6 +38,7 @@ import { AuthModule } from './auth/auth.module';
 import * as admin from 'firebase-admin';
 import { FirebaseAdminModule } from '@redredgroup/nestjs-firebase-admin';
 import { ConfigModule } from '@nestjs/config';
+import { FirebaseRemoteModule } from './firebase-remote/firebase-remote.module';
 
 import * as serviceAccount from './serviceAccountKey.json';
 
@@ -122,6 +123,8 @@ import * as serviceAccount from './serviceAccountKey.json';
     IjinLegitimasiModule,
     AsuransiModule,
     CloudinaryModule,
+    FirebaseAdminModule,
+    FirebaseRemoteModule,
   ],
   controllers: [AppController],
   providers: [AppService],
