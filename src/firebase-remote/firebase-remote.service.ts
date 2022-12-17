@@ -10,9 +10,99 @@ export class FirebaseRemoteService {
     try {
       const users = await this.firebaseAuth.listUsers(100);
 
+      // query user by custom claims
+
       return {
         status: 200,
         data: users,
+      };
+    } catch (error) {
+      return {
+        status: 'error',
+        message: error.message,
+      };
+    }
+  }
+
+  async findByReviewersCustomClaims() {
+    try {
+      // get all users first
+      const users = await this.firebaseAuth.listUsers(100);
+
+      // query user by custom claims
+      const reviewers = users.users.filter((user) => {
+        return user.customClaims.reviewer;
+      });
+
+      return {
+        status: 200,
+        data: reviewers,
+      };
+    } catch (error) {
+      return {
+        status: 'error',
+        message: error.message,
+      };
+    }
+  }
+
+  async findByAnalisCustomClaims() {
+    try {
+      // get all users first
+      const users = await this.firebaseAuth.listUsers(100);
+
+      // query user by custom claims
+      const analis = users.users.filter((user) => {
+        return user.customClaims.analis;
+      });
+
+      return {
+        status: 200,
+        data: analis,
+      };
+    } catch (error) {
+      return {
+        status: 'error',
+        message: error.message,
+      };
+    }
+  }
+
+  async findByPengutusCustomClaims() {
+    try {
+      // get all users first
+      const users = await this.firebaseAuth.listUsers(100);
+
+      // query user by custom claims
+      const pengutus = users.users.filter((user) => {
+        return user.customClaims.pengutus;
+      });
+
+      return {
+        status: 200,
+        data: pengutus,
+      };
+    } catch (error) {
+      return {
+        status: 'error',
+        message: error.message,
+      };
+    }
+  }
+
+  async findByAdminCustomClaims() {
+    try {
+      // get all users first
+      const users = await this.firebaseAuth.listUsers(100);
+
+      // query user by custom claims
+      const admin = users.users.filter((user) => {
+        return user.customClaims.admin;
+      });
+
+      return {
+        status: 200,
+        data: admin,
       };
     } catch (error) {
       return {

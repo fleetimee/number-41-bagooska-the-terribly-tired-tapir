@@ -13,6 +13,26 @@ export class FirebaseRemoteController {
     return this.firebaseRemoteService.findAll();
   }
 
+  @Get('analis')
+  findByAnalisCustomClaims() {
+    return this.firebaseRemoteService.findByAnalisCustomClaims();
+  }
+
+  @Get('pengutus')
+  findByPengutusCustomClaims() {
+    return this.firebaseRemoteService.findByPengutusCustomClaims();
+  }
+
+  @Get('admin')
+  findByAdminCustomClaims() {
+    return this.firebaseRemoteService.findByAdminCustomClaims();
+  }
+
+  @Get('reviewers')
+  findByReviewersCustomClaims() {
+    return this.firebaseRemoteService.findByReviewersCustomClaims();
+  }
+
   @Put(':uid')
   updateUser(
     @Param('uid') uid: string,
