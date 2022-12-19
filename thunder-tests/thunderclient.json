@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 720000,
     "created": "2022-12-01T20:28:47.355Z",
-    "modified": "2022-12-10T13:13:55.282Z",
+    "modified": "2022-12-09T01:24:43.077Z",
     "headers": [
       {
         "name": "Accept",
@@ -33,7 +33,7 @@
       "form": [
         {
           "name": "email",
-          "value": "admin@fleetime.my.id"
+          "value": "sonia@gmail.com"
         },
         {
           "name": "password",
@@ -41,7 +41,7 @@
         },
         {
           "name": "displayName",
-          "value": "Novian Andika"
+          "value": "Test User"
         },
         {
           "name": "phoneNumber",
@@ -165,7 +165,7 @@
     "method": "GET",
     "sortNum": 140000,
     "created": "2022-12-02T12:49:21.437Z",
-    "modified": "2022-12-07T18:21:16.372Z",
+    "modified": "2022-12-09T01:46:37.820Z",
     "headers": [],
     "params": [
       {
@@ -253,11 +253,11 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "97c566c9-7112-4d56-989a-b7f6548835d0",
     "name": "Get Debitur By Id",
-    "url": "{{baseUrl}}api/v1/debiturs/16?join=ijinLegitimasi&join=syaratLain&join=asuransi&join=inputNeraca&join=inputRugiLaba&join=inputKeuangan&join=analisaKeuangan&join=analisaKarakter&join=analisaBisnis&join=analisaJenisUsaha&join=agunan&join=agunan.form_tanah&join=agunan.form_kendaraan&join=agunan.form_los&join=agunan.form_peralatan&join=agunan.form_cash&join=agunan.form_lainnya&join=agunan.form_tanah_bangunan&join=analisaAgunan&join=upload",
+    "url": "{{baseUrl}}api/v1/debiturs/22?join=ijinLegitimasi&join=syaratLain&join=asuransi&join=inputNeraca&join=inputRugiLaba&join=inputKeuangan&join=analisaKeuangan&join=analisaKarakter&join=analisaBisnis&join=analisaJenisUsaha&join=agunan&join=agunan.form_tanah&join=agunan.form_kendaraan&join=agunan.form_los&join=agunan.form_peralatan&join=agunan.form_cash&join=agunan.form_lainnya&join=agunan.form_tanah_bangunan&join=analisaAgunan&join=upload",
     "method": "GET",
     "sortNum": 280000,
     "created": "2022-12-02T12:49:21.440Z",
-    "modified": "2022-12-07T07:25:48.332Z",
+    "modified": "2022-12-09T01:46:58.120Z",
     "headers": [],
     "params": [
       {
@@ -1371,7 +1371,7 @@
     "method": "POST",
     "sortNum": 940000,
     "created": "2022-12-02T22:22:41.288Z",
-    "modified": "2022-12-14T12:45:18.034Z",
+    "modified": "2022-12-07T07:14:51.639Z",
     "headers": [],
     "params": [],
     "body": {
@@ -1380,7 +1380,7 @@
       "form": [
         {
           "name": "email",
-          "value": "renji@gmail.com"
+          "value": "zane.227@gmail.com"
         },
         {
           "name": "password",
@@ -1419,12 +1419,12 @@
     "method": "POST",
     "sortNum": 960000,
     "created": "2022-12-05T05:25:05.626Z",
-    "modified": "2022-12-10T13:54:16.037Z",
+    "modified": "2022-12-05T14:13:13.578Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk3OGI1NmM2NmVhYmIwZDlhNmJhOGNhMzMwMTU2NGEyMzhlYWZjODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYW5hbGlzaXMta3JlZGl0LW1pa3JvIiwiYXVkIjoiYW5hbGlzaXMta3JlZGl0LW1pa3JvIiwiYXV0aF90aW1lIjoxNjcwNjgwMzc1LCJ1c2VyX2lkIjoiYzE0OGFkYmMtMWRiYy00MTMwLTgyOWUtY2JmYWEwODE2NmZmIiwic3ViIjoiYzE0OGFkYmMtMWRiYy00MTMwLTgyOWUtY2JmYWEwODE2NmZmIiwiaWF0IjoxNjcwNjgwMzc1LCJleHAiOjE2NzA2ODM5NzUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.dTCyUDlgE-8nVJwM1CPtGpIUBMOPpp9Zrfz58Of4WpKJhbgW1Vl1c7eEtWBn24XmpCi8KeK0GuHvm-qBUR8cZdShsrphu7TSoW9eSquxX1NTiwvchwBeF8PKt4NsAvjz-nCiGfbbGXS5MMrlR2BvcIV5QAX6JvXBvQ_gNoHqVlT382q7D8M1v_dhjmmFoRKUdciinKjf-MVQMDU4AroWFWMKw6Y0u3-CMbAPKshL7og70LWySbqA2R1ULa7fnfapyBNNTm0T9YKdW0dWg_ivyIX-ROPpcUas84ydbmcRUlwkDAaCM8ZtK4mg2GHsNsJVDMjuVgSSMJVMCz5jY_73lA\"\n\n}",
+      "raw": "{\n  \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjE4MzkyM2M4Y2ZlYzEwZjkyY2IwMTNkMDZlMWU3Y2RkNzg3NGFlYTUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzOTExNTMyNjA3MjEtdDVmamc0ZDJzZ2k1OGUzZTlmaGtrZzQzcW5yNm0xbHAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIzOTExNTMyNjA3MjEtc3YwMDFla3UwMDc1ajRjcXBwcmFtZXRkcTZzNzA0MjUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDc5ODA1MTM1MzA2NTAyNDIwNzkiLCJlbWFpbCI6InphbmUuMjI3QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoiTm92aWFuIEFuZGlrYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BRWRGVHA3ckFPWWxlcDVOZmF2MWo3UGRfcGVVVlRINkZTbWZWcEhIbVRLZmVBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6Ik5vdmlhbiIsImZhbWlseV9uYW1lIjoiQW5kaWthIiwibG9jYWxlIjoiZW4tR0IiLCJpYXQiOjE2NzAyNDcwNTksImV4cCI6MTY3MDI1MDY1OX0.ph1mgzainemwozCR_FTSmF97IKGfVPkOzFp77yWcwJp0-qx-nAVKeo8Xd_2VwP7iTQLc5WIMIhsDb00n4-8tnCMkBL1dVWTsg6uR5b11E_59zGuTuFCYFn2f8x21Ob-QHR5SaF02yxtslSCBzLJEh4HeQwaCKLRvloTVwANt5NYs7Ii_eYPOOWcQuH9ejRV8ejYExLgrWrEyR8z0Lrs6AH3WLJV8EB5ue5PlEdTJRsxBPUW\"\n\n}",
       "form": []
     },
     "tests": []
@@ -1448,11 +1448,11 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "441a228d-423a-4749-be19-2b42bd098312",
     "name": "Delete",
-    "url": "{{baseUrl}}api/v1/users/9b45f52f-1b21-4e7e-a9e3-3eb1b3d3a9a1",
+    "url": "{{baseUrl}}api/v1/users/d58bf452-4bee-4771-ae14-62547b2aa1fe",
     "method": "DELETE",
     "sortNum": 980000,
     "created": "2022-12-07T06:53:05.931Z",
-    "modified": "2022-12-09T00:18:59.689Z",
+    "modified": "2022-12-08T23:32:42.420Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -1518,6 +1518,263 @@
         "isPath": false
       }
     ],
+    "tests": []
+  },
+  {
+    "_id": "27972201-968d-4978-9dc1-10fa583c71f5",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "97c566c9-7112-4d56-989a-b7f6548835d0",
+    "name": "Get By NIK",
+    "url": "{{baseUrl}}api/v1/debiturs?limit=15&page=1&s={\"no_ktp1\": {\"$eq\": \"46464645445\"}}&sort=id,ASC&join=inputKeuangan||kredit_diusulkan,digunakan_untuk&fields=peminjam1,bidang_usaha,jenis_usaha,tgl_sekarang,no_ktp1,userId",
+    "method": "GET",
+    "sortNum": 175000,
+    "created": "2022-12-08T20:45:44.697Z",
+    "modified": "2022-12-08T22:25:30.840Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "limit",
+        "value": "15",
+        "isPath": false
+      },
+      {
+        "name": "page",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "s",
+        "value": "{\"no_ktp1\": {\"$eq\": \"46464645445\"}}",
+        "isPath": false
+      },
+      {
+        "name": "sort",
+        "value": "id,ASC",
+        "isPath": false
+      },
+      {
+        "name": "filter",
+        "value": "ktp1||$eq||Aceh Barat Daya",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "filter",
+        "value": "tgl_sekarang||$between||2022-11-03,2022-12-03",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "filter",
+        "value": "inputKeuangan.kredit_diusulkan||$between||0,120000000",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "join",
+        "value": "inputKeuangan||kredit_diusulkan,digunakan_untuk",
+        "isPath": false
+      },
+      {
+        "name": "fields",
+        "value": "peminjam1,bidang_usaha,jenis_usaha,tgl_sekarang,no_ktp1,userId",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "16f3ad21-5bb2-4274-a63a-2aa01665346f",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "d9a0235c-68d6-4377-97eb-8acd5f8f774d",
+    "name": "Get all users",
+    "url": "{{baseUrl}}api/v1/firebase-remote",
+    "method": "GET",
+    "sortNum": 990000,
+    "created": "2022-12-15T03:47:37.552Z",
+    "modified": "2022-12-15T04:04:43.592Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "574cd191-9793-4bcd-be51-6a8dd0b80368",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "d9a0235c-68d6-4377-97eb-8acd5f8f774d",
+    "name": "Delete a user",
+    "url": "{{baseUrl}}api/v1/firebase-remote/ea4d269b-f72e-464f-b93f-879b1811e165",
+    "method": "DELETE",
+    "sortNum": 1000000,
+    "created": "2022-12-15T03:50:37.210Z",
+    "modified": "2022-12-15T03:51:22.007Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "3ac66aa4-0ecf-4571-96c0-39479b53ac8a",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "d9a0235c-68d6-4377-97eb-8acd5f8f774d",
+    "name": "Update a user",
+    "url": "{{baseUrl}}api/v1/firebase-remote/aabdd11f-c633-4967-82eb-71debb331c73",
+    "method": "PUT",
+    "sortNum": 1010000,
+    "created": "2022-12-15T03:54:40.346Z",
+    "modified": "2022-12-15T06:53:39.017Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"haha@gmail.com\",\n  \"displayName\": \"Zanpakuto\",\n  \"photoUrl\": \"https://aniyuki.com/wp-content/uploads/2022/03/aniyuki-anime-girl-avatar-26.jpg\",\n  \"password\": \"BUGGY227\",\n  \"phoneNumber\": \"+62823193193\",\n  \"disabled\": false,\n  \"emailVerified\": false\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d680e931-5525-454c-9df8-a50ebd74944f",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "d9a0235c-68d6-4377-97eb-8acd5f8f774d",
+    "name": "Set a user claims",
+    "url": "{{baseUrl}}api/v1/firebase-remote/cd547839-c4bf-40ef-a359-9df2ee008692/set-user-claims",
+    "method": "POST",
+    "sortNum": 1020000,
+    "created": "2022-12-15T03:55:11.701Z",
+    "modified": "2022-12-15T03:56:13.252Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"admin\": false,\n  \"analis\": true,\n  \"reviewer\": true,\n  \"pengutus\": false\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "cbf95433-c84b-4758-9423-b8218b5ba07a",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "d9a0235c-68d6-4377-97eb-8acd5f8f774d",
+    "name": "Get reviewers",
+    "url": "",
+    "method": "GET",
+    "sortNum": 1030000,
+    "created": "2022-12-17T04:40:45.651Z",
+    "modified": "2022-12-17T04:40:45.651Z",
+    "headers": []
+  },
+  {
+    "_id": "fbacb63b-c841-4558-bce6-7c263ffbdc37",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "d9a0235c-68d6-4377-97eb-8acd5f8f774d",
+    "name": "Get reviewers",
+    "url": "{{baseUrl}}api/v1/firebase-remote/reviewers",
+    "method": "GET",
+    "sortNum": 995000,
+    "created": "2022-12-17T04:40:56.648Z",
+    "modified": "2022-12-17T04:50:44.576Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "de326a1d-aa36-4c6c-8860-6c04f0eea985",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "d9a0235c-68d6-4377-97eb-8acd5f8f774d",
+    "name": "Get analis",
+    "url": "{{baseUrl}}api/v1/firebase-remote/analis",
+    "method": "GET",
+    "sortNum": 992500,
+    "created": "2022-12-17T04:49:58.813Z",
+    "modified": "2022-12-17T04:50:46.366Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "13711f78-9229-4942-ac9c-ddc4bf6b034c",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "d9a0235c-68d6-4377-97eb-8acd5f8f774d",
+    "name": "Get admin",
+    "url": "{{baseUrl}}api/v1/firebase-remote/admin",
+    "method": "GET",
+    "sortNum": 991250,
+    "created": "2022-12-17T04:50:31.252Z",
+    "modified": "2022-12-17T04:50:50.335Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "88ea19d9-fe8e-4b35-9aa0-fed83bc2b243",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "d9a0235c-68d6-4377-97eb-8acd5f8f774d",
+    "name": "Get pengutus",
+    "url": "{{baseUrl}}api/v1/firebase-remote/pengutus",
+    "method": "GET",
+    "sortNum": 997500,
+    "created": "2022-12-17T04:50:56.324Z",
+    "modified": "2022-12-17T04:51:12.321Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "94c0b8b4-29b1-4f7a-9ad7-0cc5d2df2e2d",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "b4496258-a501-4164-8d31-3431aaebbe18",
+    "name": "Get",
+    "url": "{{baseUrl}}api/v1/pengajuan/P-skHA-20221219",
+    "method": "GET",
+    "sortNum": 1040000,
+    "created": "2022-12-19T03:23:05.812Z",
+    "modified": "2022-12-19T06:04:08.841Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "7f325441-d0c1-4dfa-bda6-b278d9a58e81",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "b4496258-a501-4164-8d31-3431aaebbe18",
+    "name": "Post",
+    "url": "{{baseUrl}}api/v1/pengajuan",
+    "method": "POST",
+    "sortNum": 1050000,
+    "created": "2022-12-19T03:32:06.460Z",
+    "modified": "2022-12-19T06:03:37.067Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "status",
+          "value": "PENDING"
+        },
+        {
+          "name": "tgl_submit",
+          "value": "2022-12-09"
+        },
+        {
+          "name": "tgl_review",
+          "value": "2022-12-09"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "28f0a027-b340-4de7-a592-5dad873eeb60",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "f33b7119-aff2-4dcc-accf-f728ede0bf19",
+    "name": "Get",
+    "url": "{{baseUrl}}api/v1/check-reviewer",
+    "method": "GET",
+    "sortNum": 1060000,
+    "created": "2022-12-19T05:38:58.068Z",
+    "modified": "2022-12-19T05:39:16.295Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]
