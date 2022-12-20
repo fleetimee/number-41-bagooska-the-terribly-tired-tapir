@@ -19,6 +19,7 @@ const neko = new client();
 
 import * as bcrypt from 'bcryptjs';
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
+import { Pengajuan } from 'src/pengajuan/entities/pengajuan.entity';
 
 @Entity({
   orderBy: {
@@ -67,6 +68,13 @@ export class User {
   })
   @JoinTable()
   roles: Role[];
+
+  @ManyToMany(() => Pengajuan, (pengajuan) => pengajuan.user, {
+    cascade: true,
+    onDelete: 'SET NULL',
+  })
+  @JoinTable()
+  pengajuan: Pengajuan[];
 
   @BeforeInsert()
   async hashPassword() {

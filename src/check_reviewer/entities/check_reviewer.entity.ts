@@ -1,4 +1,11 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Pengajuan } from 'src/pengajuan/entities/pengajuan.entity';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class CheckReviewer {
@@ -19,4 +26,14 @@ export class CheckReviewer {
 
   @Column()
   is_jenis_usaha_approved: boolean;
+
+  @OneToOne(() => Pengajuan, (pengajuan) => pengajuan, {
+    onDelete: 'CASCADE',
+    cascade: true,
+  })
+  @JoinColumn()
+  pengajuan: Pengajuan;
+
+  @Column()
+  pengajuanId: string;
 }

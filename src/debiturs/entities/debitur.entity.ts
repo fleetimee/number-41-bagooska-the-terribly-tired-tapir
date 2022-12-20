@@ -24,6 +24,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { User } from 'src/users/entities/user.entity';
+import { Pengajuan } from 'src/pengajuan/entities/pengajuan.entity';
 
 /* It's a decorator that tells TypeORM that this class is an entity. */
 @Entity()
@@ -224,6 +225,12 @@ value generation strategy. */
     onUpdate: 'CASCADE',
   })
   agunan: Agunan[];
+
+  @OneToMany(() => Pengajuan, (pengajuan) => pengajuan.debitur, {
+    onDelete: 'SET NULL',
+    onUpdate: 'CASCADE',
+  })
+  pengajuan: Pengajuan[];
 
   @OneToMany(() => SyaratLain, (syaratLain) => syaratLain.debitur, {
     onDelete: 'SET NULL',

@@ -7,8 +7,21 @@ import { CheckReviewer } from './entities/check_reviewer.entity';
   model: {
     type: CheckReviewer,
   },
+  query: {
+    join: {
+      pengajuan: {
+        eager: true,
+      },
+    },
+  },
+  params: {
+    pengajuanId: {
+      field: 'pengajuanId',
+      type: 'string',
+    },
+  },
 })
-@Controller('check-reviewer')
+@Controller('/pengajuan/:pengajuanId/check-reviewer')
 export class CheckReviewerController implements CrudController<CheckReviewer> {
   constructor(public service: CheckReviewerService) {}
 }

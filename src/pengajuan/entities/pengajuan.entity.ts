@@ -1,5 +1,17 @@
 import { nanoid } from 'nanoid';
-import { BeforeInsert, Column, Entity, PrimaryColumn } from 'typeorm';
+import { CheckReviewer } from 'src/check_reviewer/entities/check_reviewer.entity';
+import { Debitur } from 'src/debiturs/entities/debitur.entity';
+import { User } from 'src/users/entities/user.entity';
+import {
+  BeforeInsert,
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToMany,
+  ManyToOne,
+  OneToOne,
+  PrimaryColumn,
+} from 'typeorm';
 
 @Entity()
 export class Pengajuan {
@@ -15,6 +27,22 @@ export class Pengajuan {
 
   @Column('date')
   tgl_review: Date;
+
+  @ManyToMany(() => User, (user) => user.pengajuan)
+  user: User[];
+
+  @ManyToOne(() => Debitur, (debitur) => debitur.pengajuan, {
+    onDelete: 'CASCADE',
+  })
+  debitur: Debitur;
+
+  @OneToOne(() => CheckReviewer, (checkReviewer) => checkReviewer.pengajuan, {
+    onDelete: 'CASCADE',
+  })
+  checkReviewer: CheckReviewer;
+
+  @Column({ nullable: true })
+  debiturId: number;
 
   @BeforeInsert()
   beforeInsert() {

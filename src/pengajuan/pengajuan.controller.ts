@@ -14,6 +14,21 @@ import { Pengajuan } from './entities/pengajuan.entity';
       primary: true,
     },
   },
+  query: {
+    join: {
+      user: {
+        eager: true,
+        exclude: ['password'],
+      },
+      debitur: {
+        eager: true,
+        allow: ['id', 'no_debitur', 'peminjam1'],
+      },
+      checkReviewer: {
+        eager: true,
+      },
+    },
+  },
 })
 @Controller('pengajuan')
 export class PengajuanController implements CrudController<Pengajuan> {
