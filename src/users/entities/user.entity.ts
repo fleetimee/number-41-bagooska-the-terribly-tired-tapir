@@ -92,6 +92,10 @@ export class User {
 }
 
 async function generateNekosLife(): Promise<string> {
-  const url = await neko.avatar();
-  return url.url;
+  try {
+    const url = await neko.avatar();
+    return url.url;
+  } catch (error) {
+    return 'https://i.imgur.com/removed.png';
+  }
 }

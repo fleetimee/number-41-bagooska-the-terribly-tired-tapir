@@ -9,9 +9,6 @@ export class FirebaseRemoteService {
   async findAll() {
     try {
       const users = await this.firebaseAuth.listUsers(100);
-
-      // query user by custom claims
-
       return {
         status: 200,
         data: users,

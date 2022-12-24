@@ -1353,11 +1353,11 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "441a228d-423a-4749-be19-2b42bd098312",
     "name": "Get",
-    "url": "{{baseUrl}}api/v1/users",
+    "url": "{{baseUrl}}api/v1/users/",
     "method": "GET",
     "sortNum": 475000,
     "created": "2022-12-02T22:18:24.713Z",
-    "modified": "2022-12-02T22:18:46.496Z",
+    "modified": "2022-12-20T07:57:14.437Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -1462,11 +1462,11 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "97c566c9-7112-4d56-989a-b7f6548835d0",
     "name": "Get Filter By Penginput",
-    "url": "{{baseUrl}}api/v1/debiturs/?limit=15&page=1&fields=peminjam1,bidang_usaha,jenis_usaha,tgl_sekarang,umur,ktp1,progress&sort=id,ASC&join=inputKeuangan||kredit_diusulkan,digunakan_untuk&filter=userId||$eq||e0c43436-0e97-4a81-ba29-e2b907b86144",
+    "url": "{{baseUrl}}api/v1/debiturs/?limit=15&page=1&fields=peminjam1,bidang_usaha,jenis_usaha,tgl_sekarang,umur,ktp1,progress&sort=id,ASC&join=inputKeuangan||kredit_diusulkan,digunakan_untuk&filter=userId||$eq||cd547839-c4bf-40ef-a359-9df2ee008692",
     "method": "GET",
     "sortNum": 210000,
     "created": "2022-12-07T18:10:20.005Z",
-    "modified": "2022-12-07T18:12:09.390Z",
+    "modified": "2022-12-20T07:15:24.302Z",
     "headers": [],
     "params": [
       {
@@ -1502,7 +1502,7 @@
       },
       {
         "name": "filter",
-        "value": "userId||$eq||e0c43436-0e97-4a81-ba29-e2b907b86144",
+        "value": "userId||$eq||cd547839-c4bf-40ef-a359-9df2ee008692",
         "isPath": false
       },
       {
@@ -1602,11 +1602,11 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "d9a0235c-68d6-4377-97eb-8acd5f8f774d",
     "name": "Delete a user",
-    "url": "{{baseUrl}}api/v1/firebase-remote/ea4d269b-f72e-464f-b93f-879b1811e165",
+    "url": "{{baseUrl}}api/v1/firebase-remote/YQVPqkO6foPK4ssYSpwcvbgtqK62",
     "method": "DELETE",
     "sortNum": 1000000,
     "created": "2022-12-15T03:50:37.210Z",
-    "modified": "2022-12-15T03:51:22.007Z",
+    "modified": "2022-12-22T08:24:15.229Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -1635,16 +1635,16 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "d9a0235c-68d6-4377-97eb-8acd5f8f774d",
     "name": "Set a user claims",
-    "url": "{{baseUrl}}api/v1/firebase-remote/cd547839-c4bf-40ef-a359-9df2ee008692/set-user-claims",
+    "url": "{{baseUrl}}api/v1/firebase-remote/27e875a0-9aec-4626-8d54-f7f61d5ac21e/set-user-claims",
     "method": "POST",
     "sortNum": 1020000,
     "created": "2022-12-15T03:55:11.701Z",
-    "modified": "2022-12-15T03:56:13.252Z",
+    "modified": "2022-12-23T02:36:55.636Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"admin\": false,\n  \"analis\": true,\n  \"reviewer\": true,\n  \"pengutus\": false\n}",
+      "raw": "{\n  \"admin\": true,\n  \"analis\": true,\n  \"reviewer\": true,\n  \"pengutus\": true\n}",
       "form": []
     },
     "tests": []
@@ -1670,7 +1670,7 @@
     "method": "GET",
     "sortNum": 995000,
     "created": "2022-12-17T04:40:56.648Z",
-    "modified": "2022-12-17T04:50:44.576Z",
+    "modified": "2022-12-22T08:18:54.762Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -1722,11 +1722,11 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "b4496258-a501-4164-8d31-3431aaebbe18",
     "name": "Get",
-    "url": "{{baseUrl}}api/v1/pengajuan/",
+    "url": "{{baseUrl}}api/v1/pengajuan/P-pXS4-20221222",
     "method": "GET",
     "sortNum": 1040000,
     "created": "2022-12-19T03:23:05.812Z",
-    "modified": "2022-12-19T07:38:34.795Z",
+    "modified": "2022-12-22T07:19:14.073Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -1740,26 +1740,13 @@
     "method": "POST",
     "sortNum": 1050000,
     "created": "2022-12-19T03:32:06.460Z",
-    "modified": "2022-12-19T06:03:37.067Z",
+    "modified": "2022-12-20T07:42:56.634Z",
     "headers": [],
     "params": [],
     "body": {
-      "type": "formencoded",
-      "raw": "",
-      "form": [
-        {
-          "name": "status",
-          "value": "PENDING"
-        },
-        {
-          "name": "tgl_submit",
-          "value": "2022-12-09"
-        },
-        {
-          "name": "tgl_review",
-          "value": "2022-12-09"
-        }
-      ]
+      "type": "json",
+      "raw": "{\n  \"status\": \"PENDING\",\n  \"tgl_submit\": \"2022-12-09\",\n  \"tgl_review\": \"2022-12-09\",\n  \"user\": [\n    {\n      \"id\": \"cd547839-c4bf-40ef-a359-9df2ee008692\"\n    }\n  ],\n  \"debiturId\": 22\n}",
+      "form": []
     },
     "tests": []
   },
@@ -1782,16 +1769,16 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "b4496258-a501-4164-8d31-3431aaebbe18",
     "name": "Patch User",
-    "url": "{{baseUrl}}api/v1/pengajuan/P-skHA-20221219",
-    "method": "PATCH",
+    "url": "{{baseUrl}}api/v1/pengajuan/P-FNyt-20221220",
+    "method": "PUT",
     "sortNum": 1070000,
     "created": "2022-12-19T07:11:09.367Z",
-    "modified": "2022-12-19T07:30:13.856Z",
+    "modified": "2022-12-21T12:58:06.186Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"user\": [\n    {\n      \"id\": \"27e875a0-9aec-4626-8d54-f7f61d5ac21e\"\n    },\n    {\n      \"id\": \"6a6a2154-4dea-4d4f-b869-b9b50dd25847\"\n    }\n  ]\n}",
+      "raw": "{\n  \"user\": [\n    {\n      \"id\": \"cd547839-c4bf-40ef-a359-9df2ee008692\"\n    },\n    {\n      \"id\": \"cd547839-c4bf-40ef-a359-9df2ee008692\"\n    },\n    {\n      \"id\": \"cd547839-c4bf-40ef-a359-9df2ee008692\"\n    }\n  ]\n}",
       "form": []
     },
     "tests": []
@@ -1801,16 +1788,16 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "b4496258-a501-4164-8d31-3431aaebbe18",
     "name": "Put",
-    "url": "{{baseUrl}}api/v1/pengajuan/P-skHA-20221219",
+    "url": "{{baseUrl}}api/v1/pengajuan/P-pXS4-20221222",
     "method": "PUT",
     "sortNum": 1080000,
     "created": "2022-12-19T08:20:32.539Z",
-    "modified": "2022-12-19T08:21:12.175Z",
+    "modified": "2022-12-22T06:37:36.244Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"debiturId\": 22\n}",
+      "raw": "{\n  \"tgl_submit\": \"2022-12-09\"\n}",
       "form": []
     },
     "tests": []
@@ -1846,6 +1833,54 @@
     "modified": "2022-12-19T12:16:44.253Z",
     "headers": [],
     "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a6d56465-cd69-4df4-a190-abd8a02d1bb2",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "b4496258-a501-4164-8d31-3431aaebbe18",
+    "name": "Delete",
+    "url": "{{baseUrl}}api/v1/pengajuan/P-Pr1a-20221219",
+    "method": "DELETE",
+    "sortNum": 1110000,
+    "created": "2022-12-20T07:36:56.767Z",
+    "modified": "2022-12-21T12:49:39.732Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "fe0e6454-d8f5-4285-9470-debb37879d16",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "441a228d-423a-4749-be19-2b42bd098312",
+    "name": "Get user by id",
+    "url": "{{baseUrl}}api/v1/users/cd547839-c4bf-40ef-a359-9df2ee008692",
+    "method": "GET",
+    "sortNum": 597500,
+    "created": "2022-12-20T07:57:20.509Z",
+    "modified": "2022-12-20T07:57:25.622Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6723947c-5a24-4665-8258-cdc191f1c03a",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "441a228d-423a-4749-be19-2b42bd098312",
+    "name": "Get user by id Copy",
+    "url": "{{baseUrl}}api/v1/users/6a6a2154-4dea-4d4f-b869-b9b50dd25847?fields=pengajuan",
+    "method": "GET",
+    "sortNum": 658750,
+    "created": "2022-12-20T07:57:33.511Z",
+    "modified": "2022-12-22T06:47:45.929Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "fields",
+        "value": "pengajuan",
+        "isPath": false
+      }
+    ],
     "tests": []
   }
 ]
