@@ -7,6 +7,7 @@ import { Pengajuan } from './entities/pengajuan.entity';
   model: {
     type: Pengajuan,
   },
+
   params: {
     id: {
       field: 'id',
@@ -15,6 +16,7 @@ import { Pengajuan } from './entities/pengajuan.entity';
     },
   },
   query: {
+    sort: [{ field: 'id', order: 'ASC' }],
     join: {
       user: {
         eager: true,
@@ -22,9 +24,12 @@ import { Pengajuan } from './entities/pengajuan.entity';
       },
       debitur: {
         eager: true,
-        allow: ['id', 'no_debitur', 'peminjam1'],
+        allow: ['id', 'no_debitur', 'peminjam1', 'alamat_1'],
       },
       checkReviewer: {
+        eager: true,
+      },
+      checkPengutus: {
         eager: true,
       },
     },

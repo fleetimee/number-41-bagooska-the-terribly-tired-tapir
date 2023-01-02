@@ -8,7 +8,7 @@ import {
 } from 'typeorm';
 
 @Entity()
-export class CheckReviewer {
+export class CheckPengutus {
   @PrimaryGeneratedColumn()
   id: number;
 

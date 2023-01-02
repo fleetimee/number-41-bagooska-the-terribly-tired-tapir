@@ -109,11 +109,11 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "bc3a3cb6-18b9-485c-9b61-18a055231b82",
     "name": "Get",
-    "url": "{{baseUrl}}api/v1/debiturs/1/agunan/",
+    "url": "{{baseUrl}}api/v1/debiturs/28/agunan/",
     "method": "GET",
     "sortNum": 20000,
     "created": "2022-12-02T12:49:21.434Z",
-    "modified": "2022-12-02T12:49:21.434Z",
+    "modified": "2022-12-31T10:09:53.608Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -253,11 +253,11 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "97c566c9-7112-4d56-989a-b7f6548835d0",
     "name": "Get Debitur By Id",
-    "url": "{{baseUrl}}api/v1/debiturs/22?join=ijinLegitimasi&join=syaratLain&join=asuransi&join=inputNeraca&join=inputRugiLaba&join=inputKeuangan&join=analisaKeuangan&join=analisaKarakter&join=analisaBisnis&join=analisaJenisUsaha&join=agunan&join=agunan.form_tanah&join=agunan.form_kendaraan&join=agunan.form_los&join=agunan.form_peralatan&join=agunan.form_cash&join=agunan.form_lainnya&join=agunan.form_tanah_bangunan&join=analisaAgunan&join=upload",
+    "url": "{{baseUrl}}api/v1/debiturs/28?join=ijinLegitimasi&join=syaratLain&join=asuransi&join=inputNeraca&join=inputRugiLaba&join=inputKeuangan&join=analisaKeuangan&join=analisaKarakter&join=analisaBisnis&join=analisaJenisUsaha&join=agunan&join=agunan.form_tanah&join=agunan.form_kendaraan&join=agunan.form_los&join=agunan.form_peralatan&join=agunan.form_cash&join=agunan.form_lainnya&join=agunan.form_tanah_bangunan&join=analisaAgunan&join=upload",
     "method": "GET",
     "sortNum": 280000,
     "created": "2022-12-02T12:49:21.440Z",
-    "modified": "2022-12-09T01:46:58.120Z",
+    "modified": "2022-12-31T10:02:48.583Z",
     "headers": [],
     "params": [
       {
@@ -1290,11 +1290,11 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "cfa639f0-01ff-45a0-9c14-286b83e679b1",
     "name": "Post",
-    "url": "{{baseUrl}}api/v1/debiturs/1/uploads/",
+    "url": "{{baseUrl}}api/v1/debiturs/23/uploads/",
     "method": "POST",
     "sortNum": 890000,
     "created": "2022-12-02T12:49:21.497Z",
-    "modified": "2022-12-02T12:49:21.497Z",
+    "modified": "2022-12-25T00:06:02.085Z",
     "headers": [],
     "params": [],
     "body": {
@@ -1309,7 +1309,7 @@
       "files": [
         {
           "name": "file",
-          "value": "..\\..\\..\\..\\College\\Pengumpulan Perpus\\4. Pdf Naskah Publikasi\\Publikasi-18.01.4133-Novian Andika.pdf"
+          "value": "c:\\Users\\Novian Andika\\Desktop\\7zDGjsVE_400x400.jpg"
         }
       ]
     },
@@ -1722,11 +1722,11 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "b4496258-a501-4164-8d31-3431aaebbe18",
     "name": "Get",
-    "url": "{{baseUrl}}api/v1/pengajuan/P-pXS4-20221222",
+    "url": "{{baseUrl}}api/v1/pengajuan/",
     "method": "GET",
     "sortNum": 1040000,
     "created": "2022-12-19T03:23:05.812Z",
-    "modified": "2022-12-22T07:19:14.073Z",
+    "modified": "2022-12-28T19:27:01.204Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -1881,6 +1881,25 @@
         "isPath": false
       }
     ],
+    "tests": []
+  },
+  {
+    "_id": "15edac24-3b1f-460a-9c8e-63ed65d6ce8c",
+    "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
+    "containerId": "b4496258-a501-4164-8d31-3431aaebbe18",
+    "name": "Patch Bahasan",
+    "url": "{{baseUrl}}api/v1/pengajuan/P-pXS4-20221222",
+    "method": "GET",
+    "sortNum": 1120000,
+    "created": "2022-12-28T23:12:00.278Z",
+    "modified": "2022-12-28T23:13:38.246Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"bahasan_analis\": [\"penis\", \"vagina\", \"nigger\"]\n}",
+      "form": []
+    },
     "tests": []
   }
 ]
