@@ -78,6 +78,13 @@ import { Debitur } from './entities/debitur.entity';
       user: {
         eager: true,
       },
+      pengajuan: {
+        eager: true,
+      },
+      'pengajuan.user': {
+        eager: true,
+        alias: 'pengajuan_user',
+      },
       createdBy: {
         eager: true,
         exclude: ['password'],

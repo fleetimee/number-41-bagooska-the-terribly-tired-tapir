@@ -39,6 +39,9 @@ import * as admin from 'firebase-admin';
 import { FirebaseAdminModule } from '@redredgroup/nestjs-firebase-admin';
 import { ConfigModule } from '@nestjs/config';
 import { FirebaseRemoteModule } from './firebase-remote/firebase-remote.module';
+import { PengajuanModule } from './pengajuan/pengajuan.module';
+import { CheckReviewerModule } from './check_reviewer/check_reviewer.module';
+import { CheckPengutusModule } from './check_pengutus/check_pengutus.module';
 
 import * as serviceAccount from './serviceAccountKey.json';
 
@@ -125,6 +128,9 @@ import * as serviceAccount from './serviceAccountKey.json';
     CloudinaryModule,
     FirebaseAdminModule,
     FirebaseRemoteModule,
+    PengajuanModule,
+    CheckReviewerModule,
+    CheckPengutusModule,
   ],
   controllers: [AppController],
   providers: [AppService],

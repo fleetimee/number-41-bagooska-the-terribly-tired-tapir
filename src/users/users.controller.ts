@@ -28,6 +28,12 @@ import { UsersService } from './users.service';
       debiturs: {
         eager: true,
       },
+      pengajuan: {
+        eager: true,
+      },
+      'pengajuan.user': {
+        eager: true,
+      },
       createdBy: {
         eager: true,
         exclude: ['password', 'createdAt'],

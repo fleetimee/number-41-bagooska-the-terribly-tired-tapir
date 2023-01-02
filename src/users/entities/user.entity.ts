@@ -19,6 +19,7 @@ const neko = new client();
 
 import * as bcrypt from 'bcryptjs';
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
+import { Pengajuan } from 'src/pengajuan/entities/pengajuan.entity';
 
 @Entity({
   orderBy: {
@@ -68,6 +69,13 @@ export class User {
   @JoinTable()
   roles: Role[];
 
+  @ManyToMany(() => Pengajuan, (pengajuan) => pengajuan.user, {
+    cascade: true,
+    onDelete: 'SET NULL',
+  })
+  @JoinTable()
+  pengajuan: Pengajuan[];
+
   @BeforeInsert()
   async hashPassword() {
     this.password = await bcrypt.hash(this.password, 10);
@@ -84,6 +92,10 @@ export class User {
 }
 
 async function generateNekosLife(): Promise<string> {
-  const url = await neko.avatar();
-  return url.url;
+  try {
+    const url = await neko.avatar();
+    return url.url;
+  } catch (error) {
+    return 'https://i.imgur.com/removed.png';
+  }
 }

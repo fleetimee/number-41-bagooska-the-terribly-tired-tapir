@@ -12,6 +12,10 @@ export class AuthService {
     private readonly usersService: UsersService,
   ) {}
 
+  // customClaims = {
+  //   analis: true,
+  // };
+
   async login(authLoginDto: AuthLoginDto) {
     const user = await this.validateUser(authLoginDto);
 

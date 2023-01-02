@@ -2,12 +2,16 @@ import { TypeOrmCrudService } from '@rewiko/crud-typeorm';
 import { Injectable } from '@nestjs/common';
 import { User } from './entities/user.entity';
 import { InjectRepository } from '@nestjs/typeorm';
-import { FirebaseAuthenticationService } from '@redredgroup/nestjs-firebase-admin';
+import {
+  FirebaseAuthenticationService,
+  FirebaseMessagingService,
+} from '@redredgroup/nestjs-firebase-admin';
 
 @Injectable()
 export class UsersService extends TypeOrmCrudService<User> {
   constructor(
     private firebaseAuth: FirebaseAuthenticationService,
+    private firebaseMessaging: FirebaseMessagingService,
     @InjectRepository(User) repo,
   ) {
     super(repo);
@@ -51,6 +55,22 @@ export class UsersService extends TypeOrmCrudService<User> {
         return token;
       });
     return token;
+  }
+
+  async sendNotification(uid: string, title: string, body: string) {
+    const message = {
+      notification: {
+        title,
+        body,
+      },
+      token: uid,
+    };
+    const response = await this.firebaseMessaging
+      .send(message)
+      .then((response) => {
+        return response;
+      });
+    return response;
   }
 
   async findByEmail(email: string) {
