@@ -1,10 +1,14 @@
-import { Inject } from '@nestjs/common/decorators';
-import { FirebaseMessagingService } from '@redredgroup/nestjs-firebase-admin';
+import { Inject, Injectable } from '@nestjs/common/decorators';
+import {
+  FirebaseAdminCoreModule,
+  FirebaseMessagingService,
+} from '@redredgroup/nestjs-firebase-admin';
 import { nanoid } from 'nanoid';
 import { CheckPengutus } from 'src/check_pengutus/entities/check_pengutus.entity';
 import { CheckReviewer } from 'src/check_reviewer/entities/check_reviewer.entity';
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
 import { User } from 'src/users/entities/user.entity';
+import * as admin from 'firebase-admin';
 import {
   AfterLoad,
   AfterUpdate,
@@ -18,9 +22,15 @@ import {
 } from 'typeorm';
 import { PengajuanService } from '../pengajuan.service';
 import { UsersService } from 'src/users/users.service';
+import * as serviceAccount from 'src/serviceAccountKey.json';
 
 @Entity()
 export class Pengajuan {
+  constructor(
+    // @Inject(FirebaseMessagingService)
+    private readonly firebaseMessagingService: FirebaseMessagingService,
+  ) {}
+
   // generate primary key from custom function
   @PrimaryColumn()
   id: string;
@@ -94,35 +104,29 @@ export class Pengajuan {
     this.id = customOutput();
   }
 
-  // constructor(
-  //   // private readonly firebaseMessagingService: FirebaseMessagingService,
-  //   private readonly usersService: UsersService,
-  // ) {}
+  @AfterUpdate()
+  async sendNotification() {
+    // Initialize Firebase Messaging Service if the service is already initialized in app module
 
-  // @AfterUpdate()
-  // async sendNotification() {
-  //   // Initialize Firebase Messaging Service if the service is already initialized in app module
+    // Get all users token
+    const tokens = this.user.map((user) => user.fcmToken);
 
-  //   // Get all users token
-  //   const tokens = this.user.map((user) => user.fcmToken);
+    // create the message
+    const message = {
+      notification: {
+        title: 'Status Pengajuan Anda Telah Berubah',
+        body: `Status pengajuan anda telah berubah menjadi ${this.status}`,
+      },
+      tokens: tokens,
+    };
 
-  //   // create the message
-  //   const message = {
-  //     notification: {
-  //       title: 'Status Pengajuan Anda Telah Berubah',
-  //       body: `Status pengajuan anda telah berubah menjadi ${this.status}`,
-  //     },
-  //     tokens: tokens,
-  //   };
-
-  //   // send the message
-  //   try {
-  //     const response = await this.pengajuanService.notifyUser(message);
-  //     console.log(response);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+    // send the message
+    try {
+      await this.firebaseMessagingService.sendMulticast(message);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 function customOutput() {

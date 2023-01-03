@@ -60,4 +60,55 @@ export class PengajuanService extends TypeOrmCrudService<Pengajuan> {
 
     return response;
   }
+
+  // Send notification back to analis when pengajuan is reviewed
+  async sendNotificationToAnalis(
+    token: string,
+    title: string,
+    body: string,
+  ): Promise<any> {
+    const message = {
+      notification: {
+        title: title,
+        body: body,
+      },
+      token: token,
+    };
+
+    const response = await this.firebaseMessaging
+      .send(message)
+      .then((response) => {
+        return response;
+      })
+      .catch((error) => {
+        return error;
+      });
+
+    return response;
+  }
+
+  async sendNotificationToAnalisAndReviewer(
+    token: string[],
+    title: string,
+    body: string,
+  ): Promise<any> {
+    const message = {
+      notification: {
+        title: title,
+        body: body,
+      },
+      tokens: token,
+    };
+
+    const response = await this.firebaseMessaging
+      .sendMulticast(message)
+      .then((response) => {
+        return response;
+      })
+      .catch((error) => {
+        return error;
+      });
+
+    return response;
+  }
 }
