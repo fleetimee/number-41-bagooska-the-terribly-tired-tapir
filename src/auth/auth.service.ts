@@ -1,5 +1,8 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
-import { FirebaseAuthenticationService } from '@redredgroup/nestjs-firebase-admin';
+import {
+  FirebaseAuthenticationService,
+  FirebaseMessagingService,
+} from '@redredgroup/nestjs-firebase-admin';
 
 import { User } from 'src/users/entities/user.entity';
 import { UsersService } from 'src/users/users.service';
@@ -10,6 +13,7 @@ export class AuthService {
   constructor(
     private firebaseAuth: FirebaseAuthenticationService,
     private readonly usersService: UsersService,
+    private firebaseMessaging: FirebaseMessagingService,
   ) {}
 
   // customClaims = {
@@ -62,5 +66,12 @@ export class AuthService {
     }
 
     return user;
+  }
+
+  async notifyUser(message: any) {
+    // send multicast
+    const response = this.firebaseMessaging;
+
+    return response.sendMulticast(message);
   }
 }
