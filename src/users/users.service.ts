@@ -57,13 +57,13 @@ export class UsersService extends TypeOrmCrudService<User> {
     return token;
   }
 
-  async sendNotification(uid: string, title: string, body: string) {
+  async sendNotification(token: string, title: string, body: string) {
     const message = {
       notification: {
         title,
         body,
       },
-      token: uid,
+      token: token,
     };
     const response = await this.firebaseMessaging
       .send(message)
@@ -81,5 +81,19 @@ export class UsersService extends TypeOrmCrudService<User> {
     });
 
     return user;
+  }
+
+  async putFcmToken(id: string, fcmToken: string) {
+    const user = await this.repo.findOne({
+      where: { id }, // email: email
+    });
+
+    user.fcmToken = fcmToken;
+
+    await this.repo.save(user);
+
+    return {
+      message: 'Fcm token updated',
+    };
   }
 }

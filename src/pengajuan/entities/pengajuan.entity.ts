@@ -1,3 +1,5 @@
+import { Inject } from '@nestjs/common/decorators';
+import { FirebaseMessagingService } from '@redredgroup/nestjs-firebase-admin';
 import { nanoid } from 'nanoid';
 import { CheckPengutus } from 'src/check_pengutus/entities/check_pengutus.entity';
 import { CheckReviewer } from 'src/check_reviewer/entities/check_reviewer.entity';
@@ -5,6 +7,7 @@ import { Debitur } from 'src/debiturs/entities/debitur.entity';
 import { User } from 'src/users/entities/user.entity';
 import {
   AfterLoad,
+  AfterUpdate,
   BeforeInsert,
   Column,
   Entity,
@@ -13,6 +16,8 @@ import {
   OneToOne,
   PrimaryColumn,
 } from 'typeorm';
+import { PengajuanService } from '../pengajuan.service';
+import { UsersService } from 'src/users/users.service';
 
 @Entity()
 export class Pengajuan {
@@ -88,6 +93,36 @@ export class Pengajuan {
   beforeInsert() {
     this.id = customOutput();
   }
+
+  // constructor(
+  //   // private readonly firebaseMessagingService: FirebaseMessagingService,
+  //   private readonly usersService: UsersService,
+  // ) {}
+
+  // @AfterUpdate()
+  // async sendNotification() {
+  //   // Initialize Firebase Messaging Service if the service is already initialized in app module
+
+  //   // Get all users token
+  //   const tokens = this.user.map((user) => user.fcmToken);
+
+  //   // create the message
+  //   const message = {
+  //     notification: {
+  //       title: 'Status Pengajuan Anda Telah Berubah',
+  //       body: `Status pengajuan anda telah berubah menjadi ${this.status}`,
+  //     },
+  //     tokens: tokens,
+  //   };
+
+  //   // send the message
+  //   try {
+  //     const response = await this.pengajuanService.notifyUser(message);
+  //     console.log(response);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 }
 
 function customOutput() {

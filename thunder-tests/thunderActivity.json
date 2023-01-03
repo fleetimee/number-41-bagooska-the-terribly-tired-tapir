@@ -300,5 +300,43 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "54ad2b28-c642-4ba7-8d7c-333d5ffbce0f",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://localhost:3000/api/v1/users/edc3cd74-60f6-4eaf-83b1-cfc2fa38fdcb/fcmToken",
+    "url": "https://localhost:3000/api/v1/users/edc3cd74-60f6-4eaf-83b1-cfc2fa38fdcb/fcmToken",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-01-02T12:02:21.871Z",
+    "modified": "2023-01-02T12:02:21.871Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"fcmToken\": \"jkahdijhaikjdh18u891\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "14c7f3a2-995d-4d55-a216-44b87d923375",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/v1/users/edc3cd74-60f6-4eaf-83b1-cfc2fa38fdcb/fcmToken",
+    "url": "http://localhost:3000/api/v1/users/edc3cd74-60f6-4eaf-83b1-cfc2fa38fdcb/fcmToken",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-01-02T12:02:28.894Z",
+    "modified": "2023-01-02T12:17:10.012Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"fcmToken\": \"jkahdijhaikjdh18u891\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]

@@ -1,6 +1,13 @@
 import { User } from './entities/user.entity';
-import { Controller } from '@nestjs/common';
-import { Crud, CrudController } from '@rewiko/crud';
+import { Body, Controller, Param, Patch, Put } from '@nestjs/common';
+import {
+  Crud,
+  CrudController,
+  CrudRequest,
+  Override,
+  ParsedBody,
+  ParsedRequest,
+} from '@rewiko/crud';
 import { UsersService } from './users.service';
 
 @Crud({
@@ -69,4 +76,18 @@ export class UsersController implements CrudController<User> {
   //   dto.uid = user.uid;
   //   return await this.base.createOneBase(req, user);
   // }
+
+  // @Override()
+  // async createOne(@ParsedRequest() req: CrudRequest, @ParsedBody() dto: User) {
+  //   return await this.base.createOneBase(req, dto).then((user) => {
+  //     // send notification
+  //     this.service.sendNotification(user.id, 'Welcome', 'Welcome to our app');
+  //   });
+  // }
+
+  // patch fcmToken
+  @Put(':id/fcmToken')
+  patchFcmToken(@Param('id') id: string, @Body() dto: User) {
+    return this.service.putFcmToken(id, dto.fcmToken);
+  }
 }

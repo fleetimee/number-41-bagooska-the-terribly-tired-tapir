@@ -45,6 +45,9 @@ export class User {
   @Column({ nullable: true, default: generateNekosLife() })
   photoURL: string;
 
+  @Column({ nullable: true })
+  fcmToken: string;
+
   @Column({ default: () => 'CURRENT_TIMESTAMP' })
   createdAt: Date;
 
