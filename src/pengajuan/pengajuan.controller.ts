@@ -23,7 +23,7 @@ import { Pengajuan } from './entities/pengajuan.entity';
     },
   },
   query: {
-    sort: [{ field: 'id', order: 'ASC' }],
+    sort: [{ field: 'tgl_submit', order: 'ASC' }],
     join: {
       user: {
         eager: true,
@@ -74,36 +74,6 @@ export class PengajuanController implements CrudController<Pengajuan> {
     @ParsedBody() dto: Pengajuan,
   ) {
     return this.base.updateOneBase(req, dto).then((res) => {
-      const tokens = res.user.map((user) => user.fcmToken).slice(0, 2);
-
-      if (res.status === 'DONE') {
-        // send notification to analis and reviewer
-
-        this.service.sendNotificationToAnalisAndReviewer(
-          tokens,
-          'Pengajuan Disetujui',
-          'Pengajuan ' + res.id + ' disetujui',
-        );
-      } else {
-        // send notification to analis
-        this.service.sendNotificationToAnalisAndReviewer(
-          // return token from user
-          tokens,
-          'Pengajuan Ditolak',
-          'Pengajuan ' + res.id + ' ditolak',
-        );
-      }
-
-      return res;
-    });
-  }
-
-  @Override()
-  async replaceOne(
-    @ParsedRequest() req: CrudRequest,
-    @ParsedBody() dto: Pengajuan,
-  ) {
-    return this.base.replaceOneBase(req, dto).then((res) => {
       // send notification
       this.service.sendNotification(
         // return token from user
@@ -125,6 +95,36 @@ export class PengajuanController implements CrudController<Pengajuan> {
             res.id +
             ' sudah diperiksa oleh ' +
             res.user[1].displayName,
+        );
+      }
+
+      return res;
+    });
+  }
+
+  @Override()
+  async replaceOne(
+    @ParsedRequest() req: CrudRequest,
+    @ParsedBody() dto: Pengajuan,
+  ) {
+    return this.base.replaceOneBase(req, dto).then((res) => {
+      const tokens = res.user.map((user) => user.fcmToken).slice(0, 2);
+
+      if (res.status === 'DONE') {
+        // send notification to analis and reviewer
+
+        this.service.sendNotificationToAnalisAndReviewer(
+          tokens,
+          'Pengajuan Disetujui',
+          'Pengajuan ' + res.id + ' disetujui',
+        );
+      } else {
+        // send notification to analis
+        this.service.sendNotificationToAnalisAndReviewer(
+          // return token from user
+          tokens,
+          'Pengajuan Ditolak',
+          'Pengajuan ' + res.id + ' ditolak',
         );
       }
 

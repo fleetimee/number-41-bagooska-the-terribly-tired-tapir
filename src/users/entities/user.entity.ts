@@ -21,6 +21,8 @@ import * as bcrypt from 'bcryptjs';
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
 import { Pengajuan } from 'src/pengajuan/entities/pengajuan.entity';
 
+const nekos = new client();
+
 @Entity({
   orderBy: {
     id: 'ASC',
@@ -42,8 +44,14 @@ export class User {
   @Column({ nullable: true })
   displayName: string;
 
-  @Column({ nullable: true, default: generateNekosLife() })
+  @Column({ nullable: true })
   photoURL: string;
+
+  constructor() {
+    neko.avatar().then((url) => {
+      this.photoURL = url.url;
+    });
+  }
 
   @Column({ nullable: true })
   fcmToken: string;
@@ -99,6 +107,6 @@ async function generateNekosLife(): Promise<string> {
     const url = await neko.avatar();
     return url.url;
   } catch (error) {
-    return 'https://i.imgur.com/removed.png';
+    return 'https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg';
   }
 }
