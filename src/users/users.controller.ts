@@ -41,6 +41,10 @@ import { UsersService } from './users.service';
       'pengajuan.user': {
         eager: true,
       },
+      'pengajuan.debitur': {
+        eager: true,
+        allow: ['peminjam1', 'alamat1', 'bidang_usaha', 'jenis_usaha'],
+      },
       createdBy: {
         eager: true,
         exclude: ['password', 'createdAt'],
