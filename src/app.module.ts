@@ -83,15 +83,26 @@ import * as serviceAccount from './serviceAccountKey.json';
     // }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'john.db.elephantsql.com',
       port: 5432,
-      username: 'postgres',
-      password: 'postgres',
-      database: 'fleetime',
+      username: 'vrjfixpq',
+      password: '1h_mjJHhiuKuI8McAq4_-sKJ2Go7QwdU',
+      database: 'vrjfixpq',
       autoLoadEntities: true,
       synchronize: true,
-      logging: true,
+      // logging: true,
     }),
+    // TypeOrmModule.forRoot({
+    //   type: 'postgres',
+    //   host: 'localhost',
+    //   port: 5432,
+    //   username: 'postgres',
+    //   password: 'postgres',
+    //   database: 'fleetime',
+    //   autoLoadEntities: true,
+    //   synchronize: true,
+    //   logging: true,
+    // }),
     FirebaseAdminModule.forRootAsync({
       useFactory: () => ({
         credential: admin.credential.cert(
