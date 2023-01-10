@@ -23,11 +23,16 @@ import { Pengajuan } from './entities/pengajuan.entity';
     },
   },
   query: {
-    sort: [{ field: 'tgl_submit', order: 'ASC' }],
+    sort: [
+      { field: 'tgl_submit', order: 'ASC' },
+      // sort user by createdAt
+      { field: 'user.createdAt', order: 'ASC' },
+    ],
     join: {
       user: {
         eager: true,
         exclude: ['password'],
+        // sort user
       },
       debitur: {
         eager: true,
@@ -56,6 +61,9 @@ export class PengajuanController implements CrudController<Pengajuan> {
     @ParsedBody() dto: Pengajuan,
   ) {
     return this.base.createOneBase(req, dto).then((res) => {
+      // sorted user// sorted user
+      res.user.sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+
       // send notification
       this.service.sendNotification(
         // return token from user
@@ -74,14 +82,19 @@ export class PengajuanController implements CrudController<Pengajuan> {
     @ParsedBody() dto: Pengajuan,
   ) {
     return this.base.updateOneBase(req, dto).then((res) => {
+      // sorted user
+      res.user.sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+
+      console.log(res.user);
+
       // send notification
       this.service.sendNotification(
         // return token from user
         res.user[2].fcmToken,
-        'Pengajuan ' + res.id + ' Telah Diperiksa',
+        'Ada Pengajuan baru yang sudah di review',
         'Pengajuan ' +
           res.id +
-          ' telah diperiksa oleh ' +
+          ' telah direview oleh ' +
           res.user[1].displayName,
       );
 
@@ -108,6 +121,11 @@ export class PengajuanController implements CrudController<Pengajuan> {
     @ParsedBody() dto: Pengajuan,
   ) {
     return this.base.replaceOneBase(req, dto).then((res) => {
+      // sorted user
+      res.user.sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+
+      console.log(res.user);
+
       const tokens = res.user.map((user) => user.fcmToken).slice(0, 2);
 
       if (res.status === 'DONE') {

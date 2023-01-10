@@ -26,6 +26,10 @@ import { UsersService } from './users.service';
     },
   },
   query: {
+    sort: [
+      { field: 'createdAt', order: 'DESC' },
+      { field: 'debiturs.tgl_sekarang', order: 'DESC' },
+    ],
     exclude: ['password'],
     join: {
       roles: {
