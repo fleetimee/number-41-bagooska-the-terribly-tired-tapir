@@ -55,6 +55,12 @@ export class InputNeraca {
   @Column('bigint')
   aktiva_tetap: number;
 
+  @Column('bigint', { default: 0, nullable: true })
+  pinjaman_lain: number;
+
+  @Column('bigint', { default: 0, nullable: true })
+  angsuran_pinjaman_lain: number;
+
   // Relationship
   // @ManyToOne(() => Debitur, (debitur) => debitur.inputNeraca, {
   //   cascade: true,

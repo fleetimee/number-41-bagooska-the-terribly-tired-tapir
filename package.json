@@ -43,6 +43,7 @@
     "nanoid": "3.3.4",
     "nekos.life": "^3.0.0",
     "nestjs-firebase-auth": "fleetimee/nestjs-firebase-auth",
+    "node-fetch": "^3.3.0",
     "passport": "^0.6.0",
     "passport-firebase-jwt": "^1.2.1",
     "passport-jwt": "^4.0.0",

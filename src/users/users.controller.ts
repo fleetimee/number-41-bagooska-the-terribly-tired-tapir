@@ -26,6 +26,10 @@ import { UsersService } from './users.service';
     },
   },
   query: {
+    sort: [
+      { field: 'createdAt', order: 'DESC' },
+      { field: 'debiturs.tgl_sekarang', order: 'DESC' },
+    ],
     exclude: ['password'],
     join: {
       roles: {
@@ -40,6 +44,10 @@ import { UsersService } from './users.service';
       },
       'pengajuan.user': {
         eager: true,
+      },
+      'pengajuan.debitur': {
+        eager: true,
+        allow: ['peminjam1', 'alamat1', 'bidang_usaha', 'jenis_usaha'],
       },
       createdBy: {
         eager: true,

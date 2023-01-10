@@ -1,14 +1,9 @@
-import { Inject, Injectable } from '@nestjs/common/decorators';
-import {
-  FirebaseAdminCoreModule,
-  FirebaseMessagingService,
-} from '@redredgroup/nestjs-firebase-admin';
+import { FirebaseMessagingService } from '@redredgroup/nestjs-firebase-admin';
 import { nanoid } from 'nanoid';
 import { CheckPengutus } from 'src/check_pengutus/entities/check_pengutus.entity';
 import { CheckReviewer } from 'src/check_reviewer/entities/check_reviewer.entity';
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
 import { User } from 'src/users/entities/user.entity';
-import * as admin from 'firebase-admin';
 import {
   AfterLoad,
   AfterUpdate,
@@ -20,9 +15,6 @@ import {
   OneToOne,
   PrimaryColumn,
 } from 'typeorm';
-import { PengajuanService } from '../pengajuan.service';
-import { UsersService } from 'src/users/users.service';
-import * as serviceAccount from 'src/serviceAccountKey.json';
 
 @Entity()
 export class Pengajuan {
@@ -58,7 +50,7 @@ export class Pengajuan {
 
   // return bahasan_analis to [] even if it's null
 
-  @ManyToMany(() => User, (user) => user.pengajuan)
+  @ManyToMany(() => User, (user) => user.pengajuan, { onDelete: 'CASCADE' })
   user: User[];
 
   @ManyToOne(() => Debitur, (debitur) => debitur.pengajuan, {

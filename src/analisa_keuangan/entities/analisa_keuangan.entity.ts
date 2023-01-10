@@ -22,6 +22,9 @@ export class AnalisaKeuangan {
   @Column('bigint')
   total_angsuran_keseluruhan: number;
 
+  @Column('bigint', { default: 0, nullable: true })
+  angsuran_fix: number;
+
   @Column('numeric')
   persen_omzet_kini: number;
 

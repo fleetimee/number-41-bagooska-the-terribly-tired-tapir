@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 720000,
     "created": "2022-12-01T20:28:47.355Z",
-    "modified": "2022-12-09T01:24:43.077Z",
+    "modified": "2023-01-03T11:23:38.744Z",
     "headers": [
       {
         "name": "Accept",
@@ -33,7 +33,7 @@
       "form": [
         {
           "name": "email",
-          "value": "sonia@gmail.com"
+          "value": "jgjhjhhasdd@gmail.com"
         },
         {
           "name": "password",
@@ -41,7 +41,7 @@
         },
         {
           "name": "displayName",
-          "value": "Test User"
+          "value": "Test User 2"
         },
         {
           "name": "phoneNumber",
@@ -57,11 +57,11 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "7587599c-f1e6-4a0b-9e7e-16b9466dfc92",
     "name": "Get Input Keuangan",
-    "url": "{{baseUrl}}api/v1/input-keuangan/2",
+    "url": "{{baseUrl}}api/v1/input-keuangan/",
     "method": "GET",
     "sortNum": 5000,
     "created": "2022-12-02T12:49:21.431Z",
-    "modified": "2022-12-02T12:49:21.431Z",
+    "modified": "2023-01-09T18:49:49.439Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -1769,16 +1769,16 @@
     "colId": "88488ef4-ac34-4f75-a2b7-60519b187bc4",
     "containerId": "b4496258-a501-4164-8d31-3431aaebbe18",
     "name": "Patch User",
-    "url": "{{baseUrl}}api/v1/pengajuan/P-FNyt-20221220",
-    "method": "PUT",
+    "url": "{{baseUrl}}api/v1/pengajuan/P-bus7-202316",
+    "method": "PATCH",
     "sortNum": 1070000,
     "created": "2022-12-19T07:11:09.367Z",
-    "modified": "2022-12-21T12:58:06.186Z",
+    "modified": "2023-01-10T03:20:27.619Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"user\": [\n    {\n      \"id\": \"cd547839-c4bf-40ef-a359-9df2ee008692\"\n    },\n    {\n      \"id\": \"cd547839-c4bf-40ef-a359-9df2ee008692\"\n    },\n    {\n      \"id\": \"cd547839-c4bf-40ef-a359-9df2ee008692\"\n    }\n  ]\n}",
+      "raw": "{\n  \"user\": [\n    {\n      \"id\": \"edc3cd74-60f6-4eaf-83b1-cfc2fa38fdcb\"\n    },\n    {\n      \"id\": \"6a6a2154-4dea-4d4f-b869-b9b50dd25847\"\n    }\n  ]\n}",
       "form": []
     },
     "tests": []
