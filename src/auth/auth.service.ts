@@ -21,22 +21,29 @@ export class AuthService {
   // };
 
   async login(authLoginDto: AuthLoginDto) {
-    const user = await this.validateUser(authLoginDto);
+    try {
+      const user = await this.validateUser(authLoginDto);
 
-    const token = await this.firebaseAuth
-      .createCustomToken(user.id)
-      .then((token) => {
-        return token;
+      const token = await this.firebaseAuth
+        .createCustomToken(user.id)
+        .then((token) => {
+          return token;
+        });
+
+      return {
+        status: 200,
+        message: 'Login successful',
+        data: {
+          user,
+        },
+        access_token: token,
+      };
+    } catch (error) {
+      throw new UnauthorizedException({
+        status: 401,
+        message: 'Invalid credentials',
       });
-
-    return {
-      status: 200,
-      message: 'Login successful',
-      data: {
-        user,
-      },
-      access_token: token,
-    };
+    }
   }
 
   async verify(token: string) {

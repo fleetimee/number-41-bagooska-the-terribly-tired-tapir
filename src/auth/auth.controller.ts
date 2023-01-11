@@ -10,7 +10,11 @@ export class AuthController {
 
   @Post()
   async login(@Body() authLoginDto: AuthLoginDto) {
-    return this.authService.login(authLoginDto);
+    try {
+      return this.authService.login(authLoginDto);
+    } catch (error) {
+      return error;
+    }
   }
 
   @Post('/verify')
