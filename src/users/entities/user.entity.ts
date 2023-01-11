@@ -44,14 +44,12 @@ export class User {
   @Column({ nullable: true })
   displayName: string;
 
-  @Column({ nullable: true })
+  @Column({
+    nullable: true,
+    default:
+      'https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg',
+  })
   photoURL: string;
-
-  constructor() {
-    neko.avatar().then((url) => {
-      this.photoURL = url.url;
-    });
-  }
 
   @Column({ nullable: true })
   fcmToken: string;
@@ -94,19 +92,5 @@ export class User {
 
   async validatePassword(password: string): Promise<boolean> {
     return bcrypt.compare(password, this.password);
-  }
-
-  @BeforeInsert()
-  async insertPhotoURL() {
-    this.photoURL = await generateNekosLife();
-  }
-}
-
-async function generateNekosLife(): Promise<string> {
-  try {
-    const url = await neko.avatar();
-    return url.url;
-  } catch (error) {
-    return 'https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg';
   }
 }
