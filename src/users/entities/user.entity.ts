@@ -13,15 +13,9 @@ import {
 import { Role } from 'src/roles/entities/role.entity';
 // import { AvatarGenerator } from 'random-avatar-generator';
 
-import client from 'nekos.life';
-
-const neko = new client();
-
 import * as bcrypt from 'bcryptjs';
 import { Debitur } from 'src/debiturs/entities/debitur.entity';
 import { Pengajuan } from 'src/pengajuan/entities/pengajuan.entity';
-
-const nekos = new client();
 
 @Entity({
   orderBy: {
